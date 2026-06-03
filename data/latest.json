@@ -1,30 +1,46 @@
 {
   "meta": {
     "schemaVersion": 3,
-    "generatedAt": null,
-    "tradingDate": null,
-    "mode": "等待 GitHub Action 首次自动更新",
+    "generatedAt": "2026-06-03T22:22:12.408726+08:00",
+    "tradingDate": "2026-06-03",
+    "mode": "行情源暂时不可用，已生成空推荐数据",
     "sourceHealth": [
       {
-        "name": "东方财富",
+        "name": "行业板块",
         "ok": false,
-        "url": "https://quote.eastmoney.com/",
-        "note": "首次运行 scripts/update_data.py 后写入实时行情"
+        "url": "https://82.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=300&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "note": "请求失败：Remote end closed connection without response"
+      },
+      {
+        "name": "概念板块",
+        "ok": false,
+        "url": "https://82.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=300&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "note": "请求失败：Remote end closed connection without response"
+      },
+      {
+        "name": "东方财富",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "新闻线索已更新"
       },
       {
         "name": "同花顺",
-        "ok": false,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "首次运行 scripts/update_data.py 后写入新闻线索"
+        "ok": true,
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "新闻线索已更新"
       },
       {
         "name": "第一财经",
-        "ok": false,
-        "url": "https://www.yicai.com/",
-        "note": "首次运行 scripts/update_data.py 后写入新闻线索"
+        "ok": true,
+        "url": "https://www.yicai.com/news/",
+        "note": "新闻线索已更新"
       }
     ],
-    "errors": []
+    "errors": [
+      "行业板块列表失败：行业板块 多节点请求失败：行业板块 请求失败：Remote end closed connection without response",
+      "概念板块列表失败：概念板块 多节点请求失败：概念板块 请求失败：Remote end closed connection without response",
+      "东方财富板块接口本次未返回可用数据，Action 已不中断；稍后自动或手动重跑即可。"
+    ]
   },
   "market": {
     "recommendationCount": 0,
@@ -32,5 +48,66 @@
   },
   "boards": [],
   "recommendations": [],
-  "news": []
+  "news": [
+    {
+      "source": "东方财富",
+      "title": "突破传统传输极限！光纤领域取得重要技术突破 多只绩优股获资金关注(名单)",
+      "url": "https://finance.eastmoney.com/a/202606033758056786.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "A股“新股王” 股价突破2000元！",
+      "url": "https://finance.eastmoney.com/a/202606033758714343.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "创业板指冲高回落 收盘涨1.65% 光纤概念股涨幅居前",
+      "url": "https://finance.eastmoney.com/a/202606033758954993.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "早盘高歌猛进 午后突发跳水！A股今天发生了什么？",
+      "url": "https://finance.eastmoney.com/a/202606033758980376.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "中信证券：年内铜价高点有望冲击15000美元/吨",
+      "url": "https://finance.eastmoney.com/a/202606033758200071.html",
+      "time": ""
+    },
+    {
+      "source": "同花顺",
+      "title": "A股，登上新闻联播",
+      "url": "http://stock.10jqka.com.cn/20260603/c677198169.shtml",
+      "time": ""
+    },
+    {
+      "source": "同花顺",
+      "title": "上交所问询聚焦三大方向，国金证券逐项回应",
+      "url": "http://stock.10jqka.com.cn/20260603/c677198520.shtml",
+      "time": ""
+    },
+    {
+      "source": "同花顺",
+      "title": "全球股市行情>>",
+      "url": "http://q.10jqka.com.cn/qqsc/",
+      "time": ""
+    },
+    {
+      "source": "同花顺",
+      "title": "中顺洁柔：回购股份资金总额上调为1.5亿至2.5亿元",
+      "url": "http://stock.10jqka.com.cn/20260603/c677198416.shtml",
+      "time": ""
+    },
+    {
+      "source": "第一财经",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
+      "time": ""
+    }
+  ]
 }
