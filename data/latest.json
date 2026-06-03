@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "schemaVersion": 3,
+    "generatedAt": null,
+    "tradingDate": null,
+    "mode": "等待 GitHub Action 首次自动更新",
+    "sourceHealth": [
+      {
+        "name": "东方财富",
+        "ok": false,
+        "url": "https://quote.eastmoney.com/",
+        "note": "首次运行 scripts/update_data.py 后写入实时行情"
+      },
+      {
+        "name": "同花顺",
+        "ok": false,
+        "url": "https://www.10jqka.com.cn/",
+        "note": "首次运行 scripts/update_data.py 后写入新闻线索"
+      },
+      {
+        "name": "第一财经",
+        "ok": false,
+        "url": "https://www.yicai.com/",
+        "note": "首次运行 scripts/update_data.py 后写入新闻线索"
+      }
+    ],
+    "errors": []
+  },
+  "market": {
+    "recommendationCount": 0,
+    "qualifiedBoardCount": 0
+  },
+  "boards": [],
+  "recommendations": [],
+  "news": []
+}

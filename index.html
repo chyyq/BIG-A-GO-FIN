@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A股主升量化候选、买卖点计划、交易记录与卖点监控" />
+    <title>A股主升交易台</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">每日主升量化候选</p>
+          <h1>A股主升交易台</h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button" id="refreshButton" type="button" title="读取 GitHub Pages 上最新生成的数据">
+            <i data-lucide="refresh-cw"></i>
+          </button>
+          <button class="icon-button" id="notifyButton" type="button" title="开启卖点提醒">
+            <i data-lucide="bell"></i>
+          </button>
+          <button class="primary-button" id="openTradeButton" type="button">
+            <i data-lucide="plus"></i>
+            记录交易
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="status-grid" aria-label="今日状态">
+          <article class="metric-panel">
+            <span>数据生成时间</span>
+            <strong id="updatedAt">--</strong>
+            <small id="updateMode">等待数据</small>
+          </article>
+          <article class="metric-panel">
+            <span>严格达标</span>
+            <strong id="recommendationCount">0</strong>
+            <small>板块4条 + 个股5条</small>
+          </article>
+          <article class="metric-panel">
+            <span>持仓预警</span>
+            <strong id="alertCount">0</strong>
+            <small>本地记录持续监控</small>
+          </article>
+          <article class="metric-panel">
+            <span>数据源</span>
+            <strong id="sourceCount">0</strong>
+            <small>东方财富 / 同花顺 / 第一财经</small>
+          </article>
+        </section>
+
+        <div class="refresh-note" id="refreshHint">
+          页面刷新只会读取 GitHub Actions 已生成的最新数据；如果 Actions 还没再次运行，数据生成时间不会变化。
+        </div>
+
+        <section class="workspace-grid">
+          <div class="main-column">
+            <section class="section-block">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">按胜率排序</p>
+                  <h2>今日推荐</h2>
+                </div>
+                <div class="segmented" role="tablist" aria-label="推荐视图">
+                  <button class="segment active" data-view="cards" type="button">卡片</button>
+                  <button class="segment" data-view="table" type="button">表格</button>
+                </div>
+              </div>
+              <div id="recommendationCards" class="recommendation-list"></div>
+              <div id="recommendationTableWrap" class="table-wrap hidden">
+                <table class="recommendation-table">
+                  <thead>
+                    <tr>
+                      <th>序</th>
+                      <th>股票</th>
+                      <th>胜率</th>
+                      <th>买点</th>
+                      <th>峰值价</th>
+                      <th>预估时间</th>
+                      <th>止损</th>
+                      <th>板块</th>
+                    </tr>
+                  </thead>
+                  <tbody id="recommendationTable"></tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">只看主线</p>
+                  <h2>强势板块</h2>
+                </div>
+              </div>
+              <div id="sectorList" class="sector-list"></div>
+            </section>
+          </div>
+
+          <aside class="side-column">
+            <section class="section-block">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">本地记忆</p>
+                  <h2>交易记录</h2>
+                </div>
+                <button class="ghost-button" id="clearClosedButton" type="button">
+                  <i data-lucide="archive-x"></i>
+                  清理已卖
+                </button>
+              </div>
+              <div id="positionsList" class="positions-list"></div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">市场资讯</p>
+                  <h2>新闻线索</h2>
+                </div>
+              </div>
+              <div id="newsList" class="news-list"></div>
+            </section>
+
+            <section class="section-block">
+              <div class="section-title">
+                <div>
+                  <p class="eyebrow">引用来源</p>
+                  <h2>数据源状态</h2>
+                </div>
+              </div>
+              <div id="sourceList" class="source-list"></div>
+            </section>
+          </aside>
+        </section>
+
+        <section class="section-block rules-block">
+          <button class="accordion-toggle" id="rulesToggle" type="button" aria-expanded="false">
+            <span>
+              <span class="eyebrow">sk.docx 量化纪律</span>
+              <strong>展开严格筛选标准</strong>
+            </span>
+            <i data-lucide="chevron-down"></i>
+          </button>
+          <div class="rules-content" id="rulesContent" hidden>
+            <div class="rule-grid">
+              <article>
+                <h3>主升板块</h3>
+                <p>连续强势、涨停/大涨数量、成交额放大、龙头连续性、指数位置，满足4条以上。</p>
+              </article>
+              <article>
+                <h3>个股主升</h3>
+                <p>成交额放大、突破结构、资金连续流入、均线结构、换手率、分时强度，满足5条以上。</p>
+              </article>
+              <article>
+                <h3>买点</h3>
+                <p>只认弱转强突破、第一次分时回踩、回封板三种节点，10:00后无达标则空仓。</p>
+              </article>
+              <article>
+                <h3>止损</h3>
+                <p>跌破均价线10分钟不收回、跌破启动/平台位、单票亏损5%和账户日亏3%。</p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <p class="risk-note">量化候选仅用于交易研究和纪律执行，不构成个性化投资建议。</p>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="tradeModal" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="tradeModalTitle">
+        <div class="modal-head">
+          <h2 id="tradeModalTitle">记录交易</h2>
+          <button class="icon-button" id="closeTradeModal" type="button" title="关闭">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        <form id="tradeForm" class="trade-form">
+          <input type="hidden" id="tradeId" />
+          <label>
+            股票代码
+            <input id="tradeCode" required placeholder="如 600000" maxlength="6" />
+          </label>
+          <label>
+            股票名称
+            <input id="tradeName" required placeholder="如 浦发银行" />
+          </label>
+          <label>
+            买入价
+            <input id="tradeBuyPrice" required type="number" step="0.01" min="0" />
+          </label>
+          <label>
+            数量
+            <input id="tradeQuantity" type="number" step="100" min="0" placeholder="可选" />
+          </label>
+          <label>
+            止损价
+            <input id="tradeStopLoss" type="number" step="0.01" min="0" placeholder="默认买入价-5%" />
+          </label>
+          <label>
+            观察卖点
+            <input id="tradeTakeProfit" type="number" step="0.01" min="0" placeholder="可选" />
+          </label>
+          <label class="full-row">
+            交易备注
+            <textarea id="tradeNote" rows="3" placeholder="买点、板块、计划时间"></textarea>
+          </label>
+          <div class="modal-actions">
+            <button class="ghost-button" id="cancelTrade" type="button">取消</button>
+            <button class="primary-button" type="submit">
+              <i data-lucide="save"></i>
+              保存
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
