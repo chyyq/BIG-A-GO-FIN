@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 import re
@@ -20,10 +21,17 @@ UA = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 EASTMONEY_UT = "bd1d9ddb04089700cf9c27f6f7426281"
+EASTMONEY_HOSTS = (
+    "push2.eastmoney.com",
+    "4.push2.eastmoney.com",
+    "60.push2.eastmoney.com",
+    "61.push2.eastmoney.com",
+    "82.push2.eastmoney.com",
+)
 
 STARTED = time.monotonic()
 MAX_RUNTIME_SECONDS = 210
-HTTP_TIMEOUT_SECONDS = 5
+HTTP_TIMEOUT_SECONDS = 8
 MAX_BOARDS_FOR_MEMBERS = 6
 MAX_MEMBERS_PER_BOARD = 50
 MAX_STOCK_CANDIDATES = 45
@@ -56,7 +64,7 @@ def main() -> None:
             "schemaVersion": 4,
             "generatedAt": now.isoformat(),
             "tradingDate": today,
-            "mode": "快速快照更新",
+            "mode": "fast-snapshot",
             "sourceHealth": source_list(),
             "errors": errors[:30],
             "runtimeSeconds": round(time.monotonic() - STARTED, 2),
@@ -77,14 +85,23 @@ def main() -> None:
 def write_fallback(now: datetime, today: str, previous: dict[str, Any]) -> None:
     previous_boards = previous.get("boards", [])
     previous_recs = previous.get("recommendations", [])
+    previous_news = previous.get("news", [])
+    if previous_boards or previous_recs:
+        mark_source(
+            "Historical cache",
+            True,
+            "data/latest.json",
+            "External sources failed; kept the last successful snapshot.",
+        )
+
     latest = {
         "meta": {
             "schemaVersion": 4,
             "generatedAt": now.isoformat(),
             "tradingDate": today,
-            "mode": "行情源暂不可用，已快速结束",
-            "sourceHealth": source_list(),
-            "errors": (errors or ["东方财富板块接口本次未返回可用数据。"])[:30],
+            "mode": "cached-fallback" if (previous_boards or previous_recs) else "no-current-data",
+            "sourceHealth": source_list(previous),
+            "errors": (errors or ["No usable quote rows returned this run."])[:30],
             "runtimeSeconds": round(time.monotonic() - STARTED, 2),
         },
         "market": {
@@ -93,28 +110,37 @@ def write_fallback(now: datetime, today: str, previous: dict[str, Any]) -> None:
         },
         "boards": previous_boards[:12],
         "recommendations": previous_recs[:5],
-        "news": previous.get("news", [])[:8],
+        "news": previous_news[:8],
     }
     write_json(LATEST_PATH, latest)
 
 
 def fetch_all_boards() -> list[dict[str, Any]]:
     boards: list[dict[str, Any]] = []
-    boards.extend(fetch_board_list("行业板块", "m:90+t:2"))
-    boards.extend(fetch_board_list("概念板块", "m:90+t:3"))
+    boards.extend(fetch_board_list("Industry board", "m:90+t:2"))
+    boards.extend(fetch_board_list("Concept board", "m:90+t:3"))
 
-    deduped = {}
-    for board in boards:
-        if board.get("code"):
-            deduped[board["code"]] = board
-    result = list(deduped.values())
-    result.sort(key=lambda item: (item.get("pct") or -999), reverse=True)
-    return result[:60]
+    result = dedupe_boards(boards)
+    if result:
+        return result[:60]
+
+    stocks = fetch_all_a_shares()
+    if stocks:
+        mark_source(
+            "Eastmoney",
+            True,
+            "https://quote.eastmoney.com/",
+            "Board endpoint unavailable; used A-share quote snapshot grouped by industry.",
+        )
+        errors.append("Board endpoints returned no rows; used all-A-share industry fallback.")
+        return boards_from_a_shares(stocks)[:60]
+
+    return []
 
 
 def fetch_board_list(kind: str, fs: str) -> list[dict[str, Any]]:
     fields = "f12,f14,f2,f3,f4,f5,f6,f7,f8,f15,f16,f17,f18,f20,f62"
-    rows = safe_clist(kind, fs, fields, page_size=240)
+    rows = safe_clist("Eastmoney", fs, fields, page_size=240)
     result = []
     for row in rows:
         code = str(row.get("f12") or "")
@@ -137,6 +163,52 @@ def fetch_board_list(kind: str, fs: str) -> list[dict[str, Any]]:
     return result
 
 
+def fetch_all_a_shares() -> list[dict[str, Any]]:
+    fields = "f12,f13,f14,f2,f3,f4,f5,f6,f7,f8,f10,f15,f16,f17,f18,f20,f21,f62,f66,f100"
+    fs = "m:0+t:6,m:0+t:80,m:1+t:2,m:1+t:23"
+    rows = safe_clist("Eastmoney", fs, fields, page_size=5000)
+    stocks = [normalize_stock_quote(row) for row in rows]
+    stocks = [item for item in stocks if item.get("code") and item.get("price")]
+    stocks.sort(key=lambda item: (item.get("pct") or -999, item.get("amount") or 0), reverse=True)
+    return stocks
+
+
+def boards_from_a_shares(stocks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    grouped: dict[str, list[dict[str, Any]]] = {}
+    for stock in stocks:
+        industry = stock.get("industry") or "Unclassified"
+        grouped.setdefault(industry, []).append(stock)
+
+    boards = []
+    for name, members in grouped.items():
+        tradable = [item for item in members if item.get("pct") is not None]
+        if len(tradable) < 3:
+            continue
+        amount = sum(item.get("amount") or 0 for item in tradable)
+        pct = weighted_average(tradable, "pct", "amount")
+        turnover = weighted_average(tradable, "turnover", "amount")
+        main_net = sum(item.get("mainNet") or 0 for item in tradable)
+        code = "IND_" + hashlib.md5(name.encode("utf-8")).hexdigest()[:8]
+        tradable.sort(key=lambda item: (item.get("pct") or -999, item.get("amount") or 0), reverse=True)
+        boards.append(
+            {
+                "code": code,
+                "name": name,
+                "kind": "Industry fallback",
+                "price": None,
+                "pct": pct,
+                "amount": amount,
+                "turnover": turnover,
+                "open": None,
+                "preClose": None,
+                "mainNet": main_net,
+                "members": tradable[:MAX_MEMBERS_PER_BOARD],
+            }
+        )
+    boards.sort(key=lambda item: (item.get("pct") or -999, item.get("amount") or 0), reverse=True)
+    return boards
+
+
 def evaluate_boards(
     boards: list[dict[str, Any]],
     rank_map: dict[str, int],
@@ -145,9 +217,9 @@ def evaluate_boards(
     evaluated = []
     for board in boards[:MAX_BOARDS_FOR_MEMBERS]:
         if deadline_hit():
-            errors.append("达到运行时间上限，提前结束板块评估。")
+            errors.append("Runtime budget reached while evaluating boards.")
             break
-        members = fetch_board_members(board["code"])
+        members = board.get("members") or fetch_board_members(board["code"])
         limit_up_count = sum(1 for item in members if is_limit_up(item))
         big_up_count = sum(1 for item in members if (item.get("pct") or 0) >= 5)
         leader_ok = limit_up_count >= 1 or any((item.get("pct") or 0) >= 7 for item in members[:8])
@@ -157,11 +229,11 @@ def evaluate_boards(
         position_proxy_ok = rank <= 20 and (board.get("pct") or 0) >= 1
 
         criteria = [
-            ("板块排名靠前/连续强势", rank <= 10 or continuous_ok),
-            ("涨停或大涨家数活跃", limit_up_count >= 1 or big_up_count >= 4),
-            ("板块成交额活跃", amount_ok),
-            ("出现核心领涨股", leader_ok),
-            ("板块位置强势", position_proxy_ok),
+            ("Board rank is strong or improving", rank <= 10 or continuous_ok),
+            ("Limit-up or large-gain members are active", limit_up_count >= 1 or big_up_count >= 4),
+            ("Board turnover amount is active", amount_ok),
+            ("Leader stocks are visible", leader_ok),
+            ("Board momentum is positive", position_proxy_ok),
         ]
         passed_labels = [label for label, ok in criteria if ok]
         passed = len(passed_labels)
@@ -190,7 +262,7 @@ def evaluate_boards(
                 "passed": 2 if rank <= 12 else 1,
                 "qualified": False,
                 "score": max(0, 48 - rank),
-                "criteria": ["板块涨幅靠前"],
+                "criteria": ["Board is near the top of today's movers"],
                 "limitUpCount": 0,
                 "bigUpCount": 0,
                 "members": [],
@@ -254,12 +326,12 @@ def evaluate_stock_snapshot(quote: dict[str, Any], board: dict[str, Any]) -> dic
     super_net = quote.get("superNet") or 0
 
     criteria = [
-        ("板块主升达标", (board.get("passed") or 0) >= 4),
-        ("个股温和放量", volume_ratio >= 1.2),
-        ("资金净流入", main_net > 0 or super_net > 0),
-        ("换手处于活跃区", 4 <= turnover <= 32),
-        ("涨幅未到追高区", 1.2 <= pct <= 8.2),
-        ("开盘后保持强势", price >= open_price * 0.995),
+        ("Board is in main-rising condition", (board.get("passed") or 0) >= 4),
+        ("Stock volume is rising but not exhausted", volume_ratio >= 1.2),
+        ("Main capital flow is positive", main_net > 0 or super_net > 0),
+        ("Turnover is active", 4 <= turnover <= 32),
+        ("Gain is below chase-risk zone", 1.2 <= pct <= 8.2),
+        ("Price holds above opening area", price >= open_price * 0.995),
     ]
     passed_labels = [label for label, ok in criteria if ok]
     if len(passed_labels) < 5:
@@ -306,9 +378,9 @@ def evaluate_stock_snapshot(quote: dict[str, Any], board: dict[str, Any]) -> dic
         "stopPlan": {
             "stopLoss": stop_loss,
             "rules": [
-                "跌破均价线10分钟不收回",
-                "跌破启动点或平台位",
-                "单票最大亏损不超过5%",
+                "Lose VWAP and fail to recover within 10 minutes",
+                "Break the entry trigger or intraday platform low",
+                "Single-stock loss should stay within 5%",
             ],
         },
         "sourceLinks": stock_source_links(quote["code"]),
@@ -327,13 +399,13 @@ def choose_buy_plan_snapshot(quote: dict[str, Any]) -> dict[str, Any] | None:
 
     if 1 <= gap <= 4 and low_drawdown >= -2 and price >= open_price and pct <= 6.8:
         anchor = max(open_price, price * 0.992)
-        return make_buy_plan("弱转强早盘确认", anchor, "09:25-09:40", "高开后不追板，站稳开盘价附近确认", 16, 5)
+        return make_buy_plan("Early strength confirmation", anchor, "09:25-09:40", "Confirm near open/VWAP after a controlled gap-up.", 16, 5)
     if 2 <= pct <= 5.8 and price >= open_price * 0.995:
         anchor = max(open_price, price * 0.985)
-        return make_buy_plan("主升确认低吸", anchor, "09:30-10:00", "板块强势且个股温和放量，贴近开盘价/均价低吸", 13, 3)
+        return make_buy_plan("Main-rise pullback entry", anchor, "09:30-10:00", "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.", 13, 3)
     if 3 <= pct <= 7.2 and price > open_price:
         anchor = max(open_price, price * 0.985)
-        return make_buy_plan("第一次回踩预案", anchor, "09:40-10:10", "拉升后等第一次缩量回踩，不追涨停", 12, 2)
+        return make_buy_plan("First pullback plan", anchor, "09:40-10:10", "Wait for the first lower-volume pullback after the initial push.", 12, 2)
     return None
 
 
@@ -372,17 +444,16 @@ def estimate_target_snapshot(
         base_gain += 0.012
     limit_price = pre_close * (1.2 if quote["code"].startswith(("30", "68")) else 1.1)
     target_price = round2(min(max(entry * (1 + base_gain), price * 1.025), limit_price * 0.985))
-    target_time = "当日 10:00-14:30；若承接强可延至次日早盘"
     return {
         "targetPrice": target_price,
-        "targetTime": target_time,
-        "strategy": "到达预估峰值、分时走弱或板块退潮时分批卖出",
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
     }
 
 
 def fetch_board_members(board_code: str) -> list[dict[str, Any]]:
     fields = "f12,f13,f14,f2,f3,f4,f5,f6,f7,f8,f10,f15,f16,f17,f18,f20,f21,f62,f66,f100"
-    rows = safe_clist("东方财富", f"b:{board_code}+f:!50", fields, page_size=MAX_MEMBERS_PER_BOARD)
+    rows = safe_clist("Eastmoney", f"b:{board_code}+f:!50", fields, page_size=MAX_MEMBERS_PER_BOARD)
     members = [normalize_stock_quote(row) for row in rows]
     members = [item for item in members if item.get("code") and item.get("price")]
     members.sort(key=lambda item: (item.get("pct") or -999, item.get("amount") or 0), reverse=True)
@@ -434,9 +505,9 @@ def stock_prefilter(item: dict[str, Any]) -> bool:
 def fetch_news() -> list[dict[str, Any]]:
     news = []
     for source, url in [
-        ("东方财富", "https://finance.eastmoney.com/a/cjjsp.html"),
-        ("同花顺", "https://stock.10jqka.com.cn/"),
-        ("第一财经", "https://www.yicai.com/news/"),
+        ("Eastmoney News", "https://finance.eastmoney.com/a/cjjsp.html"),
+        ("10jqka", "https://stock.10jqka.com.cn/"),
+        ("Yicai", "https://www.yicai.com/news/"),
     ]:
         if deadline_hit():
             break
@@ -469,7 +540,7 @@ def safe_clist(source: str, fs: str, fields: str, page_size: int) -> list[dict[s
         data = eastmoney_json(source, "https://push2.eastmoney.com/api/qt/clist/get", params)
         return data.get("data", {}).get("diff", []) if data else []
     except Exception as exc:
-        message = f"{source} clist失败：{exc}"
+        message = f"{source} clist failed: {short_error(exc)}"
         print(message)
         errors.append(message)
         return []
@@ -479,7 +550,7 @@ def eastmoney_json(source: str, url: str, params: dict[str, Any]) -> dict[str, A
     query = parse.urlencode(params)
     urls = [f"{url}?{query}"]
     if "push2.eastmoney.com" in url:
-        urls.append(f"{url.replace('push2.eastmoney.com', '61.push2.eastmoney.com')}?{query}")
+        urls = [f"{url.replace('push2.eastmoney.com', host)}?{query}" for host in EASTMONEY_HOSTS]
 
     last_exc: Exception | None = None
     for full_url in urls:
@@ -487,21 +558,24 @@ def eastmoney_json(source: str, url: str, params: dict[str, Any]) -> dict[str, A
             break
         try:
             payload = fetch_bytes(source, full_url, referer="https://quote.eastmoney.com/").decode("utf-8", "ignore")
-            mark_source(source, True, full_url, "接口正常")
-            return json.loads(strip_jsonp(payload))
+            parsed = json.loads(strip_jsonp(payload))
+            rows = parsed.get("data", {}).get("diff")
+            if rows:
+                mark_source(source, True, full_url, "OK")
+            return parsed
         except Exception as exc:
             last_exc = exc
-    raise RuntimeError(last_exc or "请求超时")
+    raise RuntimeError(last_exc or "request timeout")
 
 
 def fetch_text(source: str, url: str) -> str:
     try:
         raw = fetch_bytes(source, url, accept="text/html,application/xhtml+xml")
-        mark_source(source, True, url, "网页可访问")
+        mark_source(source, True, url, "Optional news source OK")
         return raw.decode("utf-8", "ignore")
     except Exception as exc:
-        errors.append(f"{source} 新闻失败：{exc}")
-        mark_source(source, False, url, f"新闻失败：{exc}")
+        errors.append(f"{source} news skipped: {short_error(exc)}")
+        mark_source(source, True, url, "Optional news source skipped; quote data is unaffected.")
         return ""
 
 
@@ -518,17 +592,18 @@ def fetch_bytes(
             "Accept": accept,
             "Referer": referer or url,
             "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
         },
     )
     try:
         with request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as response:
             return response.read()
     except error.HTTPError as exc:
-        mark_source(source, False, url, f"HTTP {exc.code}")
+        if exc.code in (403, 404, 429, 500, 502, 503, 504):
+            raise RuntimeError(f"HTTP {exc.code}") from exc
         raise
     except (error.URLError, TimeoutError, OSError) as exc:
-        mark_source(source, False, url, str(exc))
-        raise
+        raise RuntimeError(short_error(exc)) from exc
 
 
 def strip_jsonp(payload: str) -> str:
@@ -537,6 +612,36 @@ def strip_jsonp(payload: str) -> str:
         return payload
     match = re.search(r"\((\{.*\})\)\s*;?$", payload, re.S)
     return match.group(1) if match else payload
+
+
+def dedupe_boards(boards: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    deduped = {}
+    for board in boards:
+        if board.get("code"):
+            deduped[board["code"]] = board
+    result = list(deduped.values())
+    result.sort(key=lambda item: (item.get("pct") or -999, item.get("amount") or 0), reverse=True)
+    return result
+
+
+def weighted_average(items: list[dict[str, Any]], value_key: str, weight_key: str) -> float | None:
+    weighted_sum = 0.0
+    total_weight = 0.0
+    simple_values = []
+    for item in items:
+        value = item.get(value_key)
+        if value is None:
+            continue
+        simple_values.append(value)
+        weight = item.get(weight_key) or 0
+        if weight > 0:
+            weighted_sum += value * weight
+            total_weight += weight
+    if total_weight:
+        return round2(weighted_sum / total_weight)
+    if simple_values:
+        return round2(sum(simple_values) / len(simple_values))
+    return None
 
 
 def strip_members(boards: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -607,10 +712,6 @@ def clean_html(raw: str) -> str:
     return raw.replace("&nbsp;", " ").strip()
 
 
-def stock_secid(code: str) -> str:
-    return f"1.{code}" if code.startswith(("6", "9")) else f"0.{code}"
-
-
 def stock_market(code: str) -> str:
     if code.startswith("6"):
         return "SH"
@@ -622,9 +723,9 @@ def stock_market(code: str) -> str:
 def stock_source_links(code: str) -> list[dict[str, str]]:
     prefix = "sh" if code.startswith("6") else "sz"
     return [
-        {"name": "东方财富行情", "url": f"https://quote.eastmoney.com/{prefix}{code}.html"},
-        {"name": "同花顺个股", "url": f"https://stockpage.10jqka.com.cn/{code}/"},
-        {"name": "第一财经资讯", "url": "https://www.yicai.com/news/"},
+        {"name": "Eastmoney quote", "url": f"https://quote.eastmoney.com/{prefix}{code}.html"},
+        {"name": "10jqka stock page", "url": f"https://stockpage.10jqka.com.cn/{code}/"},
+        {"name": "Yicai news", "url": "https://www.yicai.com/news/"},
     ]
 
 
@@ -679,15 +780,34 @@ def mark_source(name: str, ok: bool, url: str, note: str) -> None:
     }
 
 
-def source_list() -> list[dict[str, Any]]:
+def source_list(previous: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+    previous_sources = {}
+    if previous:
+        for item in previous.get("meta", {}).get("sourceHealth", []):
+            if item.get("name"):
+                previous_sources[item["name"]] = item
+
     defaults = [
-        ("东方财富", "https://quote.eastmoney.com/", "行情、板块、个股快照"),
-        ("同花顺", "https://www.10jqka.com.cn/", "新闻线索"),
-        ("第一财经", "https://www.yicai.com/", "新闻线索"),
+        ("Eastmoney", "https://quote.eastmoney.com/", "Quote, board, and stock snapshot source", False),
+        ("10jqka", "https://www.10jqka.com.cn/", "Optional news/reference source", True),
+        ("Yicai", "https://www.yicai.com/", "Optional news/reference source", True),
     ]
-    for name, url, note in defaults:
-        source_health.setdefault(name, {"name": name, "ok": False, "url": url, "note": note})
+    for name, url, note, optional_ok in defaults:
+        if name in source_health:
+            continue
+        previous_item = previous_sources.get(name)
+        if previous_item and previous_item.get("ok"):
+            source_health[name] = {**previous_item, "note": "Previous successful source status retained during fallback."}
+        else:
+            source_health[name] = {"name": name, "ok": optional_ok, "url": url, "note": note}
     return list(source_health.values())
+
+
+def short_error(exc: Any) -> str:
+    message = str(exc)
+    message = re.sub(r"\s+", " ", message).strip()
+    message = message.encode("ascii", "ignore").decode("ascii") or exc.__class__.__name__
+    return message[:180]
 
 
 if __name__ == "__main__":
