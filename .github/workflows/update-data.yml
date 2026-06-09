@@ -3,11 +3,9 @@ name: Update A-share recommendations
 on:
   workflow_dispatch:
   schedule:
-    - cron: "26 1 * * 1-5"
-    - cron: "36 1 * * 1-5"
+    - cron: "31 1 * * 1-5"
     - cron: "46 1 * * 1-5"
-    - cron: "56 1 * * 1-5"
-    - cron: "6 2 * * 1-5"
+    - cron: "1 2 * * 1-5"
     - cron: "20 7 * * 1-5"
 
 permissions:
