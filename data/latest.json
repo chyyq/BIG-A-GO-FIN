@@ -1,46 +1,30 @@
 {
   "meta": {
-    "schemaVersion": 3,
-    "generatedAt": "2026-06-09T18:43:29.891287+08:00",
-    "tradingDate": "2026-06-09",
-    "mode": "行情源暂时不可用，已生成空推荐数据",
+    "schemaVersion": 4,
+    "generatedAt": null,
+    "tradingDate": null,
+    "mode": "等待 GitHub Action 首次自动更新",
     "sourceHealth": [
       {
-        "name": "行业板块",
-        "ok": false,
-        "url": "https://82.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=300&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "请求失败：Remote end closed connection without response"
-      },
-      {
-        "name": "概念板块",
-        "ok": false,
-        "url": "https://82.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=300&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "请求失败：Remote end closed connection without response"
-      },
-      {
         "name": "东方财富",
-        "ok": true,
-        "url": "https://finance.eastmoney.com/a/cjjsp.html",
-        "note": "新闻线索已更新"
+        "ok": false,
+        "url": "https://quote.eastmoney.com/",
+        "note": "首次运行 scripts/update_data.py 后写入实时行情"
       },
       {
         "name": "同花顺",
-        "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "新闻线索已更新"
+        "ok": false,
+        "url": "https://www.10jqka.com.cn/",
+        "note": "首次运行 scripts/update_data.py 后写入新闻线索"
       },
       {
         "name": "第一财经",
-        "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "新闻线索已更新"
+        "ok": false,
+        "url": "https://www.yicai.com/",
+        "note": "首次运行 scripts/update_data.py 后写入新闻线索"
       }
     ],
-    "errors": [
-      "行业板块列表失败：行业板块 多节点请求失败：行业板块 请求失败：Remote end closed connection without response",
-      "概念板块列表失败：概念板块 多节点请求失败：概念板块 请求失败：Remote end closed connection without response",
-      "东方财富板块接口本次未返回可用数据，Action 已不中断；稍后自动或手动重跑即可。"
-    ]
+    "errors": []
   },
   "market": {
     "recommendationCount": 0,
@@ -48,66 +32,5 @@
   },
   "boards": [],
   "recommendations": [],
-  "news": [
-    {
-      "source": "东方财富",
-      "title": "光纤巨头再签亿级大单 行业高景气持续 多只潜力股获资金押注(名单)",
-      "url": "https://finance.eastmoney.com/a/202606093764408643.html",
-      "time": ""
-    },
-    {
-      "source": "东方财富",
-      "title": "22家A股公司发布股价异动公告 回应多项热点并提示交易风险",
-      "url": "https://finance.eastmoney.com/a/202606083763952725.html",
-      "time": ""
-    },
-    {
-      "source": "东方财富",
-      "title": "沪指收复4000点 创业板指大涨近4% 逾140只股涨停",
-      "url": "https://finance.eastmoney.com/a/202606093765072027.html",
-      "time": ""
-    },
-    {
-      "source": "东方财富",
-      "title": "中国银河证券：预计年内房地产市场有望止跌企稳",
-      "url": "https://finance.eastmoney.com/a/202606093764262396.html",
-      "time": ""
-    },
-    {
-      "source": "东方财富",
-      "title": "中信证券：锂价在2026年下半年仍有望走强",
-      "url": "https://finance.eastmoney.com/a/202606093764199091.html",
-      "time": ""
-    },
-    {
-      "source": "同花顺",
-      "title": "600487，又一百元股，月线七连阳！洁净室有望量价齐升，A股概念股稀缺（附名单）",
-      "url": "http://field.10jqka.com.cn/20260609/c677328803.shtml",
-      "time": ""
-    },
-    {
-      "source": "同花顺",
-      "title": "3大主力资金重仓9家PCB产业链公司！21只概念股今年来涨幅翻倍",
-      "url": "http://field.10jqka.com.cn/20260609/c677322536.shtml",
-      "time": ""
-    },
-    {
-      "source": "同花顺",
-      "title": "全球股市行情>>",
-      "url": "http://q.10jqka.com.cn/qqsc/",
-      "time": ""
-    },
-    {
-      "source": "同花顺",
-      "title": "安集科技：富国基金、天风证券等多家机构于6月5日调研我司",
-      "url": "http://fund.10jqka.com.cn/20260609/c677329099.shtml",
-      "time": ""
-    },
-    {
-      "source": "同花顺",
-      "title": "机构评级|中信证券给予健帆生物“买入”评级",
-      "url": "http://stock.10jqka.com.cn/20260609/c677328811.shtml",
-      "time": ""
-    }
-  ]
+  "news": []
 }
