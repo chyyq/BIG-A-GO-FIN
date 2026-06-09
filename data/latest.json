@@ -1,27 +1,27 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-09T21:46:58.928628+08:00",
+    "generatedAt": "2026-06-09T21:50:05.596766+08:00",
     "tradingDate": "2026-06-09",
-    "mode": "行情源暂不可用，已快速结束",
+    "mode": "快速快照更新",
     "sourceHealth": [
       {
         "name": "行业板块",
-        "ok": false,
-        "url": "https://61.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Remote end closed connection without response"
+        "ok": true,
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "note": "接口正常"
       },
       {
         "name": "概念板块",
-        "ok": false,
-        "url": "https://61.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Remote end closed connection without response"
+        "ok": true,
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "note": "接口正常"
       },
       {
         "name": "东方财富",
-        "ok": false,
-        "url": "https://quote.eastmoney.com/",
-        "note": "行情、板块、个股快照"
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "网页可访问"
       },
       {
         "name": "同花顺",
@@ -37,16 +37,333 @@
       }
     ],
     "errors": [
-      "行业板块 clist失败：Remote end closed connection without response",
-      "概念板块 clist失败：Remote end closed connection without response"
+      "东方财富 clist失败：Remote end closed connection without response",
+      "东方财富 clist失败：Remote end closed connection without response",
+      "东方财富 clist失败：Remote end closed connection without response",
+      "东方财富 clist失败：Remote end closed connection without response",
+      "东方财富 clist失败：Remote end closed connection without response",
+      "东方财富 clist失败：Remote end closed connection without response"
     ],
-    "runtimeSeconds": 4.65
+    "runtimeSeconds": 18.2
   },
   "market": {
     "recommendationCount": 0,
     "qualifiedBoardCount": 0
   },
-  "boards": [],
+  "boards": [
+    {
+      "code": "BK1462",
+      "name": "玻纤制造",
+      "kind": "行业板块",
+      "price": 17771.43,
+      "pct": 9.69,
+      "amount": 21069347350.0,
+      "turnover": 6.44,
+      "open": 16881.6,
+      "preClose": 16201.88,
+      "mainNet": 2438348304.0,
+      "rank": 2,
+      "passed": 3,
+      "qualified": false,
+      "score": 66.5,
+      "criteria": [
+        "板块排名靠前/连续强势",
+        "板块成交额活跃",
+        "板块位置强势"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1325",
+      "name": "半导体材料",
+      "kind": "行业板块",
+      "price": 13067.32,
+      "pct": 9.06,
+      "amount": 42605930941.0,
+      "turnover": 7.55,
+      "open": 12229.42,
+      "preClose": 11982.15,
+      "mainNet": 3397945600.0,
+      "rank": 3,
+      "passed": 3,
+      "qualified": false,
+      "score": 66.15,
+      "criteria": [
+        "板块排名靠前/连续强势",
+        "板块成交额活跃",
+        "板块位置强势"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK0890",
+      "name": "MLCC",
+      "kind": "概念板块",
+      "price": 6089.82,
+      "pct": 8.28,
+      "amount": 91039593478.0,
+      "turnover": 10.68,
+      "open": 5774.58,
+      "preClose": 5623.97,
+      "mainNet": 3291727104.0,
+      "rank": 4,
+      "passed": 3,
+      "qualified": false,
+      "score": 65.8,
+      "criteria": [
+        "板块排名靠前/连续强势",
+        "板块成交额活跃",
+        "板块位置强势"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1326",
+      "name": "半导体设备",
+      "kind": "行业板块",
+      "price": 45063.66,
+      "pct": 8.18,
+      "amount": 39754249239.0,
+      "turnover": 3.47,
+      "open": 42615.8,
+      "preClose": 41654.86,
+      "mainNet": 2051445760.0,
+      "rank": 5,
+      "passed": 3,
+      "qualified": false,
+      "score": 65.45,
+      "criteria": [
+        "板块排名靠前/连续强势",
+        "板块成交额活跃",
+        "板块位置强势"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK0674",
+      "name": "蓝宝石",
+      "kind": "概念板块",
+      "price": 4786.35,
+      "pct": 7.79,
+      "amount": 55299197324.0,
+      "turnover": 6.58,
+      "open": 4530.29,
+      "preClose": 4440.25,
+      "mainNet": 2837775360.0,
+      "rank": 6,
+      "passed": 3,
+      "qualified": false,
+      "score": 65.1,
+      "criteria": [
+        "板块排名靠前/连续强势",
+        "板块成交额活跃",
+        "板块位置强势"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1297",
+      "name": "图片媒体",
+      "kind": "行业板块",
+      "price": 4179.45,
+      "pct": 10.0,
+      "amount": 1773209535.0,
+      "turnover": 10.9,
+      "open": 3904.19,
+      "preClose": 3799.5,
+      "mainNet": 496150940.0,
+      "rank": 1,
+      "passed": 2,
+      "qualified": false,
+      "score": 50.45,
+      "criteria": [
+        "板块排名靠前/连续强势",
+        "板块位置强势"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1332",
+      "name": "电子化学品Ⅲ",
+      "kind": "行业板块",
+      "price": 3664.7,
+      "pct": 7.15,
+      "amount": 56583737848.0,
+      "turnover": 9.54,
+      "open": 3514.3,
+      "preClose": 3420.14,
+      "mainNet": 2661447680.0,
+      "rank": 7,
+      "passed": 2,
+      "qualified": false,
+      "score": 41,
+      "criteria": [
+        "板块涨幅靠前"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1039",
+      "name": "电子化学品Ⅱ",
+      "kind": "行业板块",
+      "price": 3664.7,
+      "pct": 7.15,
+      "amount": 56583737848.0,
+      "turnover": 9.54,
+      "open": 3514.3,
+      "preClose": 3420.14,
+      "mainNet": 2661447680.0,
+      "rank": 8,
+      "passed": 2,
+      "qualified": false,
+      "score": 40,
+      "criteria": [
+        "板块涨幅靠前"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1121",
+      "name": "第四代半导体",
+      "kind": "概念板块",
+      "price": 2151.27,
+      "pct": 7.13,
+      "amount": 8256887531.0,
+      "turnover": 2.48,
+      "open": 2051.86,
+      "preClose": 2008.03,
+      "mainNet": 310892720.0,
+      "rank": 9,
+      "passed": 2,
+      "qualified": false,
+      "score": 39,
+      "criteria": [
+        "板块涨幅靠前"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1621",
+      "name": "锂",
+      "kind": "行业板块",
+      "price": 18631.52,
+      "pct": 7.06,
+      "amount": 19121190960.0,
+      "turnover": 6.72,
+      "open": 17655.49,
+      "preClose": 17402.88,
+      "mainNet": 1707638512.0,
+      "rank": 10,
+      "passed": 2,
+      "qualified": false,
+      "score": 38,
+      "criteria": [
+        "板块涨幅靠前"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1152",
+      "name": "高带宽内存",
+      "kind": "概念板块",
+      "price": 2614.18,
+      "pct": 7.03,
+      "amount": 65947191323.0,
+      "turnover": 7.18,
+      "open": 2513.4,
+      "preClose": 2442.43,
+      "mainNet": 2904340736.0,
+      "rank": 11,
+      "passed": 2,
+      "qualified": false,
+      "score": 37,
+      "criteria": [
+        "板块涨幅靠前"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK0935",
+      "name": "中芯概念",
+      "kind": "概念板块",
+      "price": 2613.57,
+      "pct": 6.68,
+      "amount": 153575443833.0,
+      "turnover": 5.39,
+      "open": 2499.9,
+      "preClose": 2449.81,
+      "mainNet": 7719610880.0,
+      "rank": 12,
+      "passed": 2,
+      "qualified": false,
+      "score": 36,
+      "criteria": [
+        "板块涨幅靠前"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    }
+  ],
   "recommendations": [],
-  "news": []
+  "news": [
+    {
+      "source": "东方财富",
+      "title": "光纤巨头再签亿级大单 行业高景气持续 多只潜力股获资金押注(名单)",
+      "url": "https://finance.eastmoney.com/a/202606093764408643.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "22家A股公司发布股价异动公告 回应多项热点并提示交易风险",
+      "url": "https://finance.eastmoney.com/a/202606083763952725.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "沪指收复4000点 创业板指大涨近4% 逾140只股涨停",
+      "url": "https://finance.eastmoney.com/a/202606093765072027.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "中国银河证券：预计年内房地产市场有望止跌企稳",
+      "url": "https://finance.eastmoney.com/a/202606093764262396.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "中信证券：锂价在2026年下半年仍有望走强",
+      "url": "https://finance.eastmoney.com/a/202606093764199091.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "中信建投：市场成交处于高位 盈利韧性与估值低位支撑非银投资价值",
+      "url": "https://finance.eastmoney.com/a/202606093764054648.html",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "东方财富",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    }
+  ]
 }
