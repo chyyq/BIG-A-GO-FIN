@@ -2,13 +2,11 @@ from __future__ import annotations
 
 import json
 import math
-import random
 import re
 import time
 from datetime import datetime, timedelta, timezone
-from html import unescape
 from pathlib import Path
-from typing import Any, Callable, TypeVar
+from typing import Any
 from urllib import error, parse, request
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,69 +20,101 @@ UA = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
 )
 EASTMONEY_UT = "bd1d9ddb04089700cf9c27f6f7426281"
-T = TypeVar("T")
 
-source_health: dict[str, dict[str, Any]] = {}
+STARTED = time.monotonic()
+MAX_RUNTIME_SECONDS = 210
+HTTP_TIMEOUT_SECONDS = 5
+MAX_BOARDS_FOR_MEMBERS = 6
+MAX_MEMBERS_PER_BOARD = 50
+MAX_STOCK_CANDIDATES = 45
+
 errors: list[str] = []
+source_health: dict[str, dict[str, Any]] = {}
 
 
 def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     now = datetime.now(CN_TZ)
     today = now.strftime("%Y-%m-%d")
-    previous_latest = load_json(LATEST_PATH, {})
     history = load_json(BOARD_HISTORY_PATH, {"items": []})
+    previous = load_json(LATEST_PATH, {})
 
     boards = fetch_all_boards()
-    board_rank_map = {board["code"]: index + 1 for index, board in enumerate(boards)}
-    evaluated_boards = evaluate_boards(boards, history, board_rank_map)
+    if not boards:
+        write_fallback(now, today, previous)
+        update_board_history(history, today, [])
+        return
+
+    rank_map = {board["code"]: index + 1 for index, board in enumerate(boards)}
+    evaluated_boards = evaluate_boards(boards, rank_map, history)
     qualified_boards = [board for board in evaluated_boards if board["qualified"]]
     recommendations = build_recommendations(qualified_boards)
-    news = fetch_news() or previous_latest.get("news", [])[:10]
+    news = fetch_news() if remaining_seconds() > 25 else []
 
     latest = {
         "meta": {
-            "schemaVersion": 3,
+            "schemaVersion": 4,
             "generatedAt": now.isoformat(),
             "tradingDate": today,
-            "mode": "GitHub Actions 早盘主升量化更新",
+            "mode": "快速快照更新",
             "sourceHealth": source_list(),
-            "errors": errors,
+            "errors": errors[:30],
+            "runtimeSeconds": round(time.monotonic() - STARTED, 2),
         },
         "market": {
             "recommendationCount": len(recommendations),
             "qualifiedBoardCount": len(qualified_boards),
         },
-        "boards": evaluated_boards[:12],
+        "boards": strip_members(evaluated_boards[:12]),
         "recommendations": recommendations,
-        "news": news,
+        "news": news or previous.get("news", [])[:8],
     }
-
-    if not boards:
-        latest["meta"]["mode"] = "行情源暂时不可用，已生成空推荐数据"
-        errors.append("东方财富板块接口本次未返回可用数据，Action 已不中断；稍后自动或手动重跑即可。")
 
     write_json(LATEST_PATH, latest)
     update_board_history(history, today, evaluated_boards)
 
 
+def write_fallback(now: datetime, today: str, previous: dict[str, Any]) -> None:
+    previous_boards = previous.get("boards", [])
+    previous_recs = previous.get("recommendations", [])
+    latest = {
+        "meta": {
+            "schemaVersion": 4,
+            "generatedAt": now.isoformat(),
+            "tradingDate": today,
+            "mode": "行情源暂不可用，已快速结束",
+            "sourceHealth": source_list(),
+            "errors": (errors or ["东方财富板块接口本次未返回可用数据。"])[:30],
+            "runtimeSeconds": round(time.monotonic() - STARTED, 2),
+        },
+        "market": {
+            "recommendationCount": len(previous_recs),
+            "qualifiedBoardCount": len(previous_boards),
+        },
+        "boards": previous_boards[:12],
+        "recommendations": previous_recs[:5],
+        "news": previous.get("news", [])[:8],
+    }
+    write_json(LATEST_PATH, latest)
+
+
 def fetch_all_boards() -> list[dict[str, Any]]:
     boards: list[dict[str, Any]] = []
-    boards.extend(safe_call("行业板块列表", lambda: fetch_board_list("行业板块", "m:90+t:2"), []))
-    time.sleep(0.2)
-    boards.extend(safe_call("概念板块列表", lambda: fetch_board_list("概念板块", "m:90+t:3"), []))
+    boards.extend(fetch_board_list("行业板块", "m:90+t:2"))
+    boards.extend(fetch_board_list("概念板块", "m:90+t:3"))
 
     deduped = {}
     for board in boards:
-        deduped[board["code"]] = board
+        if board.get("code"):
+            deduped[board["code"]] = board
     result = list(deduped.values())
     result.sort(key=lambda item: (item.get("pct") or -999), reverse=True)
-    return result[:80]
+    return result[:60]
 
 
 def fetch_board_list(kind: str, fs: str) -> list[dict[str, Any]]:
     fields = "f12,f14,f2,f3,f4,f5,f6,f7,f8,f15,f16,f17,f18,f20,f62"
-    rows = eastmoney_clist(kind, fs, fields, page_size=300)
+    rows = safe_clist(kind, fs, fields, page_size=240)
     result = []
     for row in rows:
         code = str(row.get("f12") or "")
@@ -99,8 +129,6 @@ def fetch_board_list(kind: str, fs: str) -> list[dict[str, Any]]:
                 "pct": number(row.get("f3")),
                 "amount": number(row.get("f6")),
                 "turnover": number(row.get("f8")),
-                "high": number(row.get("f15")),
-                "low": number(row.get("f16")),
                 "open": number(row.get("f17")),
                 "preClose": number(row.get("f18")),
                 "mainNet": number(row.get("f62")),
@@ -111,33 +139,34 @@ def fetch_board_list(kind: str, fs: str) -> list[dict[str, Any]]:
 
 def evaluate_boards(
     boards: list[dict[str, Any]],
+    rank_map: dict[str, int],
     history: dict[str, Any],
-    board_rank_map: dict[str, int],
 ) -> list[dict[str, Any]]:
     evaluated = []
-    for board in boards[:36]:
-        members = safe_call(f"{board['name']} 成分股", lambda board=board: fetch_board_members(board["code"]), [])
-        time.sleep(0.08)
-        kline = safe_call(f"{board['name']} K线", lambda board=board: fetch_kline(f"90.{board['code']}", limit=40), [])
-
+    for board in boards[:MAX_BOARDS_FOR_MEMBERS]:
+        if deadline_hit():
+            errors.append("达到运行时间上限，提前结束板块评估。")
+            break
+        members = fetch_board_members(board["code"])
         limit_up_count = sum(1 for item in members if is_limit_up(item))
         big_up_count = sum(1 for item in members if (item.get("pct") or 0) >= 5)
-        amount_ratio = ratio_to_previous_avg(board.get("amount"), [row["amount"] for row in kline])
-        position_ok = board_position_ok(kline)
-        continuous_ok = board_continuous_ok(board["code"], board_rank_map, history)
-        leader_ok = limit_up_count >= 1 or has_trend_leader(members)
+        leader_ok = limit_up_count >= 1 or any((item.get("pct") or 0) >= 7 for item in members[:8])
+        continuous_ok = board_continuous_ok(board["code"], rank_map, history)
+        rank = rank_map.get(board["code"], 99)
+        amount_ok = (board.get("amount") or 0) >= 8_000_000_000
+        position_proxy_ok = rank <= 20 and (board.get("pct") or 0) >= 1
 
         criteria = [
-            ("板块连续强势", continuous_ok),
-            ("涨停≥2且大涨≥5", limit_up_count >= 2 and big_up_count >= 5),
-            ("成交额较5日均值放大≥30%", amount_ratio is not None and amount_ratio >= 1.3),
-            ("出现2板核心或趋势龙头", leader_ok),
-            ("指数平台突破或新高附近", position_ok),
+            ("板块排名靠前/连续强势", rank <= 10 or continuous_ok),
+            ("涨停或大涨家数活跃", limit_up_count >= 1 or big_up_count >= 4),
+            ("板块成交额活跃", amount_ok),
+            ("出现核心领涨股", leader_ok),
+            ("板块位置强势", position_proxy_ok),
         ]
         passed_labels = [label for label, ok in criteria if ok]
         passed = len(passed_labels)
-        rank = board_rank_map.get(board["code"], 80)
-        score = round((passed / 5) * 100 + max(0, 18 - rank * 0.25), 2)
+        score = round((passed / 5) * 82 + max(0, 18 - rank * 0.35), 2)
+
         evaluated.append(
             {
                 **board,
@@ -148,10 +177,26 @@ def evaluate_boards(
                 "criteria": passed_labels,
                 "limitUpCount": limit_up_count,
                 "bigUpCount": big_up_count,
-                "amountRatio": amount_ratio,
                 "members": members[:30],
             }
         )
+
+    for board in boards[MAX_BOARDS_FOR_MEMBERS:12]:
+        rank = rank_map.get(board["code"], 99)
+        evaluated.append(
+            {
+                **board,
+                "rank": rank,
+                "passed": 2 if rank <= 12 else 1,
+                "qualified": False,
+                "score": max(0, 48 - rank),
+                "criteria": ["板块涨幅靠前"],
+                "limitUpCount": 0,
+                "bigUpCount": 0,
+                "members": [],
+            }
+        )
+
     evaluated.sort(key=lambda item: (item["qualified"], item["score"], item.get("pct") or 0), reverse=True)
     return evaluated
 
@@ -159,7 +204,7 @@ def evaluate_boards(
 def build_recommendations(qualified_boards: list[dict[str, Any]]) -> list[dict[str, Any]]:
     seen: set[str] = set()
     candidates: list[tuple[dict[str, Any], dict[str, Any]]] = []
-    for board in qualified_boards[:10]:
+    for board in qualified_boards[:MAX_BOARDS_FOR_MEMBERS]:
         for member in board.get("members", []):
             code = member.get("code")
             if not code or code in seen:
@@ -180,76 +225,54 @@ def build_recommendations(qualified_boards: list[dict[str, Any]]) -> list[dict[s
     )
 
     recommendations = []
-    for quote, board in candidates[:120]:
-        evaluated = safe_call(
-            f"{quote.get('name', quote.get('code'))} 个股评估",
-            lambda quote=quote, board=board: evaluate_stock(quote, board),
-            None,
-        )
-        if evaluated:
-            recommendations.append(evaluated)
-        if len(recommendations) >= 8:
+    for quote, board in candidates[:MAX_STOCK_CANDIDATES]:
+        item = evaluate_stock_snapshot(quote, board)
+        if item:
+            recommendations.append(item)
+        if len(recommendations) >= 5:
             break
 
-    recommendations.sort(key=lambda item: (item["buyPlan"].get("priority", 0), item["winRate"]), reverse=True)
-    for index, item in enumerate(recommendations[:5], start=1):
+    for index, item in enumerate(recommendations, start=1):
         item["rank"] = index
-    return recommendations[:5]
+    return recommendations
 
 
-def evaluate_stock(quote: dict[str, Any], board: dict[str, Any]) -> dict[str, Any] | None:
+def evaluate_stock_snapshot(quote: dict[str, Any], board: dict[str, Any]) -> dict[str, Any] | None:
+    price = quote.get("price")
+    pre_close = quote.get("preClose")
+    open_price = quote.get("open")
+    if not price or not pre_close or not open_price:
+        return None
+
+    pct = quote.get("pct") or 0
     if is_late_chase(quote):
         return None
 
-    secid = stock_secid(quote["code"])
-    kline = fetch_kline(secid, limit=80)
-    if len(kline) < 25:
-        return None
-    flow = safe_call(f"{quote['name']} 资金流", lambda: fetch_flow(secid), [])
-    trends = safe_call(f"{quote['name']} 分时", lambda: fetch_trends(secid), [])
-
-    price = quote.get("price") or kline[-1]["close"]
-    pre_close = quote.get("preClose") or kline[-2]["close"]
-    today_amount = quote.get("amount") or kline[-1]["amount"]
-    amount_ratio = ratio_to_average(today_amount, [row["amount"] for row in kline[-6:-1]])
-
-    previous_high = max(row["high"] for row in kline[-26:-1])
-    breakout_edge_ok = previous_high * 0.985 <= price <= previous_high * 1.035
-    breakout_ok = price >= previous_high * 1.01 or (quote.get("high") or 0) >= previous_high * 1.02
-    flow_ok = flow_continuous_ok(flow, quote)
-    ma5 = average([row["close"] for row in kline[-5:]])
-    ma10 = average([row["close"] for row in kline[-10:]])
-    prev_ma5 = average([row["close"] for row in kline[-6:-1]])
-    ma_ok = (ma5 is not None and ma10 is not None and ma5 > ma10) or (
-        ma5 is not None and prev_ma5 is not None and ma5 > prev_ma5
-    )
-    turnover = quote.get("turnover")
-    turnover_ok = turnover is not None and 6 <= turnover <= 32
-    intraday_ok = intraday_strength_ok(trends, quote)
+    volume_ratio = quote.get("volumeRatio") or 0
+    turnover = quote.get("turnover") or 0
+    main_net = quote.get("mainNet") or 0
+    super_net = quote.get("superNet") or 0
 
     criteria = [
-        ("成交额放大>1.5倍", amount_ratio is not None and amount_ratio > 1.5),
-        ("平台/前高/箱体突破沿", breakout_edge_ok or breakout_ok),
-        ("主力资金连续流入且超大单为正", flow_ok),
-        ("5日线上穿10日线或持续向上", ma_ok),
-        ("换手率6%-32%", turnover_ok),
-        ("分时站稳均价线", intraday_ok),
+        ("板块主升达标", (board.get("passed") or 0) >= 4),
+        ("个股温和放量", volume_ratio >= 1.2),
+        ("资金净流入", main_net > 0 or super_net > 0),
+        ("换手处于活跃区", 4 <= turnover <= 32),
+        ("涨幅未到追高区", 1.2 <= pct <= 8.2),
+        ("开盘后保持强势", price >= open_price * 0.995),
     ]
     passed_labels = [label for label, ok in criteria if ok]
     if len(passed_labels) < 5:
         return None
 
-    buy_plan_data = choose_buy_plan(quote, trends, kline, pre_close)
-    if not buy_plan_data:
+    buy_plan = choose_buy_plan_snapshot(quote)
+    if not buy_plan:
         return None
 
-    entry = buy_plan_data["priceRange"][0]
-    stop_loss = estimate_stop_loss(entry, kline)
-    target = estimate_sell_target(entry, price, pre_close, kline, quote, board, buy_plan_data)
-    win_rate = round(
-        min(96, (len(passed_labels) / 6) * 52 + (board.get("passed", 0) / 5) * 28 + buy_plan_data["quality"]),
-        1,
-    )
+    entry = buy_plan["priceRange"][0]
+    stop_loss = round2(max(entry * 0.95, min(entry * 0.985, open_price * 0.985)))
+    target = estimate_target_snapshot(entry, price, pre_close, quote, board, buy_plan)
+    win_rate = round(min(94, 48 + len(passed_labels) * 5 + (board.get("passed") or 0) * 3 + buy_plan["quality"]), 1)
 
     return {
         "rank": None,
@@ -257,7 +280,7 @@ def evaluate_stock(quote: dict[str, Any], board: dict[str, Any]) -> dict[str, An
         "name": quote["name"],
         "market": quote.get("market"),
         "price": round2(price),
-        "pct": quote.get("pct"),
+        "pct": pct,
         "amount": quote.get("amount"),
         "turnover": turnover,
         "confidence": win_rate,
@@ -272,7 +295,7 @@ def evaluate_stock(quote: dict[str, Any], board: dict[str, Any]) -> dict[str, An
             "board": board.get("criteria", []),
             "stock": passed_labels,
         },
-        "buyPlan": buy_plan_data,
+        "buyPlan": buy_plan,
         "sellPlan": {
             "targetPrice": target["targetPrice"],
             "targetTime": target["targetTime"],
@@ -289,52 +312,28 @@ def evaluate_stock(quote: dict[str, Any], board: dict[str, Any]) -> dict[str, An
             ],
         },
         "sourceLinks": stock_source_links(quote["code"]),
-        "sparkline": [round2(row["close"]) for row in kline[-30:]],
+        "sparkline": [],
     }
 
 
-def choose_buy_plan(
-    quote: dict[str, Any],
-    trends: list[dict[str, Any]],
-    kline: list[dict[str, Any]],
-    pre_close: float,
-) -> dict[str, Any] | None:
-    price = quote.get("price")
-    open_price = quote.get("open")
-    low = quote.get("low")
-    if not price or not open_price or not pre_close:
-        return None
-
+def choose_buy_plan_snapshot(quote: dict[str, Any]) -> dict[str, Any] | None:
+    price = quote["price"]
+    pre_close = quote["preClose"]
+    open_price = quote["open"]
+    low = quote.get("low") or price
     pct = quote.get("pct") or 0
-    previous_high = max(row["high"] for row in kline[-26:-1])
-    ma5 = average([row["close"] for row in kline[-5:]]) or price
-    avg_price = latest_avg_price(trends) or open_price
     gap = (open_price / pre_close - 1) * 100
-    low_drawdown = (low / pre_close - 1) * 100 if low else -99
+    low_drawdown = (low / pre_close - 1) * 100
 
-    if is_late_chase(quote):
-        return None
-
-    if 1 <= gap <= 4 and low_drawdown >= -2 and price > max(open_price, avg_price) and pct <= 6.8:
-        trigger = "高开不追板，站稳均价线后在开盘价附近确认"
-        entry = max(open_price, avg_price, price * 0.992)
-        return make_buy_plan("弱转强早盘确认", entry, "09:25-09:40", trigger, 16, priority=5)
-
-    if previous_high * 0.985 <= price <= previous_high * 1.025 and pct <= 6.5:
-        trigger = "接近平台/前高突破沿，放量站稳后买，不等涨停"
-        entry = max(previous_high * 0.995, ma5, price * 0.988)
-        return make_buy_plan("平台突破前沿", entry, "09:30-09:50", trigger, 15, priority=4)
-
-    if 2 <= pct <= 5.8 and price >= avg_price and price >= ma5 * 0.995:
-        trigger = "主升板块内温和放量，贴近5日线/均价线低吸"
-        entry = max(ma5, avg_price, price * 0.985)
-        return make_buy_plan("主升确认低吸", entry, "09:30-10:00", trigger, 13, priority=3)
-
-    if 3 <= pct <= 7.2 and intraday_pullback_ok(trends):
-        trigger = "拉升后第一次缩量回踩均价线，重新放量拐头"
-        entry = max(avg_price, price * 0.985)
-        return make_buy_plan("第一次分时回踩", entry, "09:40-10:00", trigger, 12, priority=2)
-
+    if 1 <= gap <= 4 and low_drawdown >= -2 and price >= open_price and pct <= 6.8:
+        anchor = max(open_price, price * 0.992)
+        return make_buy_plan("弱转强早盘确认", anchor, "09:25-09:40", "高开后不追板，站稳开盘价附近确认", 16, 5)
+    if 2 <= pct <= 5.8 and price >= open_price * 0.995:
+        anchor = max(open_price, price * 0.985)
+        return make_buy_plan("主升确认低吸", anchor, "09:30-10:00", "板块强势且个股温和放量，贴近开盘价/均价低吸", 13, 3)
+    if 3 <= pct <= 7.2 and price > open_price:
+        anchor = max(open_price, price * 0.985)
+        return make_buy_plan("第一次回踩预案", anchor, "09:40-10:10", "拉升后等第一次缩量回踩，不追涨停", 12, 2)
     return None
 
 
@@ -356,47 +355,34 @@ def make_buy_plan(
     }
 
 
-def estimate_stop_loss(entry: float, kline: list[dict[str, Any]]) -> float:
-    platform = recent_platform_stop(kline)
-    return round2(max(entry * 0.95, min(entry * 0.985, platform)))
-
-
-def estimate_sell_target(
+def estimate_target_snapshot(
     entry: float,
     price: float,
     pre_close: float,
-    kline: list[dict[str, Any]],
     quote: dict[str, Any],
     board: dict[str, Any],
     buy_plan: dict[str, Any],
 ) -> dict[str, Any]:
-    recent_high = max(row["high"] for row in kline[-20:])
-    board_boost = 0.01 if (board.get("passed") or 0) >= 5 else 0
-    liquidity_boost = 0.01 if (quote.get("volumeRatio") or 0) >= 2 else 0
-    base_gain = 0.055 + board_boost + liquidity_boost
-    if buy_plan["type"] in {"弱转强早盘确认", "平台突破前沿"}:
-        base_gain += 0.015
-    target_price = max(entry * (1 + base_gain), recent_high * 1.01, price * 1.025)
+    base_gain = 0.055
+    if (board.get("passed") or 0) >= 5:
+        base_gain += 0.012
+    if (quote.get("volumeRatio") or 0) >= 2:
+        base_gain += 0.01
+    if buy_plan["priority"] >= 5:
+        base_gain += 0.012
     limit_price = pre_close * (1.2 if quote["code"].startswith(("30", "68")) else 1.1)
-    target_price = round2(min(target_price, limit_price * 0.985))
-
-    if buy_plan["type"] in {"弱转强早盘确认", "平台突破前沿"}:
-        target_time = "当日 10:00-14:30；若承接强可延至次日早盘"
-    elif buy_plan["type"] == "主升确认低吸":
-        target_time = "当日午后至次日早盘"
-    else:
-        target_time = "当日 10:30-14:30"
-
+    target_price = round2(min(max(entry * (1 + base_gain), price * 1.025), limit_price * 0.985))
+    target_time = "当日 10:00-14:30；若承接强可延至次日早盘"
     return {
         "targetPrice": target_price,
         "targetTime": target_time,
-        "strategy": "到达预估峰值、分时跌破均价线或板块退潮时分批卖出",
+        "strategy": "到达预估峰值、分时走弱或板块退潮时分批卖出",
     }
 
 
 def fetch_board_members(board_code: str) -> list[dict[str, Any]]:
     fields = "f12,f13,f14,f2,f3,f4,f5,f6,f7,f8,f10,f15,f16,f17,f18,f20,f21,f62,f66,f100"
-    rows = eastmoney_clist("东方财富", f"b:{board_code}+f:!50", fields, page_size=120)
+    rows = safe_clist("东方财富", f"b:{board_code}+f:!50", fields, page_size=MAX_MEMBERS_PER_BOARD)
     members = [normalize_stock_quote(row) for row in rows]
     members = [item for item in members if item.get("code") and item.get("price")]
     members.sort(key=lambda item: (item.get("pct") or -999, item.get("amount") or 0), reverse=True)
@@ -442,7 +428,132 @@ def stock_prefilter(item: dict[str, Any]) -> bool:
         return False
     if is_late_chase(item):
         return False
-    return 1.2 <= pct <= 8.2 and amount >= 150_000_000
+    return 1.2 <= pct <= 8.2 and amount >= 120_000_000
+
+
+def fetch_news() -> list[dict[str, Any]]:
+    news = []
+    for source, url in [
+        ("东方财富", "https://finance.eastmoney.com/a/cjjsp.html"),
+        ("同花顺", "https://stock.10jqka.com.cn/"),
+        ("第一财经", "https://www.yicai.com/news/"),
+    ]:
+        if deadline_hit():
+            break
+        html = fetch_text(source, url)
+        if not html:
+            continue
+        for href, label in re.findall(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', html, re.I):
+            title = clean_html(label)
+            if useful_news_title(title):
+                news.append({"source": source, "title": title, "url": parse.urljoin(url, href), "time": ""})
+            if len(news) >= 8:
+                return dedupe_news(news)
+    return dedupe_news(news)
+
+
+def safe_clist(source: str, fs: str, fields: str, page_size: int) -> list[dict[str, Any]]:
+    params = {
+        "pn": "1",
+        "pz": str(page_size),
+        "po": "1",
+        "np": "1",
+        "ut": EASTMONEY_UT,
+        "fltt": "2",
+        "invt": "2",
+        "fid": "f3",
+        "fs": fs,
+        "fields": fields,
+    }
+    try:
+        data = eastmoney_json(source, "https://push2.eastmoney.com/api/qt/clist/get", params)
+        return data.get("data", {}).get("diff", []) if data else []
+    except Exception as exc:
+        message = f"{source} clist失败：{exc}"
+        print(message)
+        errors.append(message)
+        return []
+
+
+def eastmoney_json(source: str, url: str, params: dict[str, Any]) -> dict[str, Any]:
+    query = parse.urlencode(params)
+    urls = [f"{url}?{query}"]
+    if "push2.eastmoney.com" in url:
+        urls.append(f"{url.replace('push2.eastmoney.com', '61.push2.eastmoney.com')}?{query}")
+
+    last_exc: Exception | None = None
+    for full_url in urls:
+        if deadline_hit():
+            break
+        try:
+            payload = fetch_bytes(source, full_url, referer="https://quote.eastmoney.com/").decode("utf-8", "ignore")
+            mark_source(source, True, full_url, "接口正常")
+            return json.loads(strip_jsonp(payload))
+        except Exception as exc:
+            last_exc = exc
+    raise RuntimeError(last_exc or "请求超时")
+
+
+def fetch_text(source: str, url: str) -> str:
+    try:
+        raw = fetch_bytes(source, url, accept="text/html,application/xhtml+xml")
+        mark_source(source, True, url, "网页可访问")
+        return raw.decode("utf-8", "ignore")
+    except Exception as exc:
+        errors.append(f"{source} 新闻失败：{exc}")
+        mark_source(source, False, url, f"新闻失败：{exc}")
+        return ""
+
+
+def fetch_bytes(
+    source: str,
+    url: str,
+    referer: str = "",
+    accept: str = "application/json,text/plain,*/*",
+) -> bytes:
+    req = request.Request(
+        url,
+        headers={
+            "User-Agent": UA,
+            "Accept": accept,
+            "Referer": referer or url,
+            "Cache-Control": "no-cache",
+        },
+    )
+    try:
+        with request.urlopen(req, timeout=HTTP_TIMEOUT_SECONDS) as response:
+            return response.read()
+    except error.HTTPError as exc:
+        mark_source(source, False, url, f"HTTP {exc.code}")
+        raise
+    except (error.URLError, TimeoutError, OSError) as exc:
+        mark_source(source, False, url, str(exc))
+        raise
+
+
+def strip_jsonp(payload: str) -> str:
+    payload = payload.strip()
+    if payload.startswith("{"):
+        return payload
+    match = re.search(r"\((\{.*\})\)\s*;?$", payload, re.S)
+    return match.group(1) if match else payload
+
+
+def strip_members(boards: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [{key: value for key, value in board.items() if key != "members"} for board in boards]
+
+
+def board_continuous_ok(code: str, current_ranks: dict[str, int], history: dict[str, Any]) -> bool:
+    current = current_ranks.get(code, 999)
+    previous = [item.get("ranks", {}).get(code, 999) for item in history.get("items", [])[-2:]]
+    return bool(current <= 10 and previous and previous[-1] <= 20)
+
+
+def update_board_history(history: dict[str, Any], today: str, boards: list[dict[str, Any]]) -> None:
+    ranks = {board["code"]: board["rank"] for board in boards if board.get("rank")}
+    items = [entry for entry in history.get("items", []) if entry.get("date") != today]
+    items.append({"date": today, "ranks": ranks})
+    write_json(BOARD_HISTORY_PATH, {"items": items[-30:]})
 
 
 def is_late_chase(item: dict[str, Any]) -> bool:
@@ -458,307 +569,6 @@ def is_late_chase(item: dict[str, Any]) -> bool:
     return pct >= 8.4
 
 
-def fetch_kline(secid: str, limit: int = 60) -> list[dict[str, Any]]:
-    params = {
-        "secid": secid,
-        "klt": "101",
-        "fqt": "1",
-        "beg": "20200101",
-        "end": "20500101",
-        "fields1": "f1,f2,f3,f4,f5,f6",
-        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61",
-    }
-    data = eastmoney_json("东方财富", "https://push2his.eastmoney.com/api/qt/stock/kline/get", params)
-    rows = data.get("data", {}).get("klines", []) if data else []
-    result = []
-    for raw in rows[-limit:]:
-        parts = raw.split(",")
-        if len(parts) < 11:
-            continue
-        result.append(
-            {
-                "date": parts[0],
-                "open": number(parts[1]) or 0,
-                "close": number(parts[2]) or 0,
-                "high": number(parts[3]) or 0,
-                "low": number(parts[4]) or 0,
-                "volume": number(parts[5]) or 0,
-                "amount": number(parts[6]) or 0,
-                "amplitude": number(parts[7]) or 0,
-                "pct": number(parts[8]) or 0,
-                "change": number(parts[9]) or 0,
-                "turnover": number(parts[10]) or 0,
-            }
-        )
-    return result
-
-
-def fetch_trends(secid: str) -> list[dict[str, Any]]:
-    params = {
-        "secid": secid,
-        "ndays": "1",
-        "iscr": "0",
-        "fields1": "f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12,f13",
-        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58",
-    }
-    data = eastmoney_json("东方财富", "https://push2his.eastmoney.com/api/qt/stock/trends2/get", params)
-    rows = data.get("data", {}).get("trends", []) if data else []
-    result = []
-    for raw in rows:
-        parts = raw.split(",")
-        if len(parts) < 4:
-            continue
-        result.append({"time": parts[0], "price": number(parts[1]), "avg": number(parts[2]), "volume": number(parts[3])})
-    return [row for row in result if row["price"] is not None]
-
-
-def fetch_flow(secid: str) -> list[dict[str, Any]]:
-    params = {
-        "secid": secid,
-        "klt": "101",
-        "lmt": "5",
-        "fields1": "f1,f2,f3,f7",
-        "fields2": "f51,f52,f53,f54,f55,f56,f57,f58,f59,f60,f61,f62,f63",
-    }
-    data = eastmoney_json("东方财富", "https://push2.eastmoney.com/api/qt/stock/fflow/daykline/get", params)
-    rows = data.get("data", {}).get("klines", []) if data else []
-    result = []
-    for raw in rows:
-        parts = raw.split(",")
-        if len(parts) < 6:
-            continue
-        result.append({"date": parts[0], "mainNet": number(parts[1]), "superNet": number(parts[5])})
-    return result
-
-
-def fetch_news() -> list[dict[str, Any]]:
-    sources = [
-        ("东方财富", "https://finance.eastmoney.com/a/cjjsp.html"),
-        ("同花顺", "https://stock.10jqka.com.cn/"),
-        ("第一财经", "https://www.yicai.com/news/"),
-    ]
-    news: list[dict[str, Any]] = []
-    for name, url in sources:
-        html = safe_call(f"{name} 新闻", lambda name=name, url=url: fetch_text(name, url), "")
-        if html:
-            news.extend(extract_news(name, url, html)[:5])
-    seen = set()
-    unique_news = []
-    for item in news:
-        key = item["title"]
-        if key not in seen:
-            seen.add(key)
-            unique_news.append(item)
-    return unique_news[:10]
-
-
-def extract_news(source: str, base_url: str, html: str) -> list[dict[str, Any]]:
-    html = re.sub(r"\s+", " ", html)
-    items = []
-    pattern = re.compile(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.I)
-    for href, label in pattern.findall(html):
-        title = clean_html(label)
-        if useful_news_title(title):
-            items.append({"source": source, "title": title, "url": parse.urljoin(base_url, href), "time": ""})
-    if items:
-        mark_source(source, True, base_url, "新闻线索已更新")
-    return items
-
-
-def eastmoney_clist(source: str, fs: str, fields: str, page_size: int = 500) -> list[dict[str, Any]]:
-    params = {
-        "pn": "1",
-        "pz": str(page_size),
-        "po": "1",
-        "np": "1",
-        "ut": EASTMONEY_UT,
-        "fltt": "2",
-        "invt": "2",
-        "fid": "f3",
-        "fs": fs,
-        "fields": fields,
-    }
-    data = eastmoney_json(source, "https://push2.eastmoney.com/api/qt/clist/get", params)
-    return data.get("data", {}).get("diff", []) if data else []
-
-
-def eastmoney_json(source: str, url: str, params: dict[str, Any]) -> dict[str, Any]:
-    query = parse.urlencode(params)
-    urls = [f"{url}?{query}"]
-    if "push2.eastmoney.com" in url:
-        urls.extend(
-            [
-                f"{url.replace('push2.eastmoney.com', '61.push2.eastmoney.com')}?{query}",
-                f"{url.replace('push2.eastmoney.com', '82.push2.eastmoney.com')}?{query}",
-            ]
-        )
-    if "push2his.eastmoney.com" in url:
-        urls.extend(
-            [
-                f"{url.replace('push2his.eastmoney.com', '53.push2his.eastmoney.com')}?{query}",
-                f"{url.replace('push2his.eastmoney.com', '78.push2his.eastmoney.com')}?{query}",
-            ]
-        )
-
-    last_exc: Exception | None = None
-    for full_url in urls:
-        try:
-            payload = fetch_bytes(source, full_url, referer="https://quote.eastmoney.com/").decode("utf-8", "ignore")
-            mark_source(source, True, full_url, "行情接口正常")
-            return json.loads(strip_jsonp(payload))
-        except Exception as exc:
-            last_exc = exc
-    raise RuntimeError(f"{source} 多节点请求失败：{last_exc}")
-
-
-def fetch_text(source: str, url: str) -> str:
-    raw, charset = fetch_response(source, url, accept="text/html,application/xhtml+xml", retries=3)
-    mark_source(source, True, url, "网页可访问")
-    return raw.decode(charset or "utf-8", "ignore")
-
-
-def fetch_bytes(source: str, url: str, referer: str = "") -> bytes:
-    raw, _charset = fetch_response(source, url, referer=referer, retries=5)
-    return raw
-
-
-def fetch_response(
-    source: str,
-    url: str,
-    referer: str = "",
-    accept: str = "application/json,text/plain,*/*",
-    retries: int = 5,
-) -> tuple[bytes, str | None]:
-    last_exc: Exception | None = None
-    for attempt in range(retries):
-        req = request.Request(
-            url,
-            headers={
-                "User-Agent": UA,
-                "Accept": accept,
-                "Referer": referer or url,
-                "Cache-Control": "no-cache",
-            },
-        )
-        try:
-            with request.urlopen(req, timeout=20) as response:
-                return response.read(), response.headers.get_content_charset()
-        except error.HTTPError as exc:
-            last_exc = exc
-            if exc.code not in {429, 500, 502, 503, 504}:
-                break
-        except (error.URLError, TimeoutError, OSError) as exc:
-            last_exc = exc
-        time.sleep((0.7 * (attempt + 1)) + random.random() * 0.5)
-
-    mark_source(source, False, url, f"请求失败：{last_exc}")
-    raise RuntimeError(f"{source} 请求失败：{last_exc}")
-
-
-def strip_jsonp(payload: str) -> str:
-    payload = payload.strip()
-    if payload.startswith("{"):
-        return payload
-    match = re.search(r"\((\{.*\})\)\s*;?$", payload, re.S)
-    return match.group(1) if match else payload
-
-
-def safe_call(label: str, func: Callable[[], T], default: T) -> T:
-    try:
-        return func()
-    except Exception as exc:
-        message = f"{label}失败：{exc}"
-        print(message)
-        errors.append(message)
-        return default
-
-
-def board_continuous_ok(code: str, current_ranks: dict[str, int], history: dict[str, Any]) -> bool:
-    current = current_ranks.get(code, 999)
-    previous = [item.get("ranks", {}).get(code, 999) for item in history.get("items", [])[-2:]]
-    if current <= 10 and previous and previous[-1] <= 10:
-        return True
-    if current <= 20 and len(previous) >= 2 and previous[-1] <= 20 and previous[-2] <= 20:
-        return True
-    return False
-
-
-def update_board_history(history: dict[str, Any], today: str, boards: list[dict[str, Any]]) -> None:
-    ranks = {board["code"]: board["rank"] for board in boards if board.get("rank")}
-    items = [entry for entry in history.get("items", []) if entry.get("date") != today]
-    items.append({"date": today, "ranks": ranks})
-    write_json(BOARD_HISTORY_PATH, {"items": items[-30:]})
-
-
-def board_position_ok(kline: list[dict[str, Any]]) -> bool:
-    if len(kline) < 20:
-        return False
-    close = kline[-1]["close"]
-    previous_high = max(row["high"] for row in kline[-21:-1])
-    ma5 = average([row["close"] for row in kline[-5:]])
-    ma20 = average([row["close"] for row in kline[-20:]])
-    return close >= previous_high * 0.97 and ma5 is not None and ma20 is not None and ma5 >= ma20
-
-
-def has_trend_leader(members: list[dict[str, Any]]) -> bool:
-    return any((item.get("pct") or 0) >= 7 and (item.get("amount") or 0) >= 500_000_000 for item in members[:8])
-
-
-def flow_continuous_ok(flow: list[dict[str, Any]], quote: dict[str, Any]) -> bool:
-    if len(flow) >= 2:
-        last_two = flow[-2:]
-        return all((row.get("mainNet") or 0) > 0 for row in last_two) and (last_two[-1].get("superNet") or 0) > 0
-    return (quote.get("mainNet") or 0) > 0 and (quote.get("superNet") or 0) > 0
-
-
-def intraday_strength_ok(trends: list[dict[str, Any]], quote: dict[str, Any]) -> bool:
-    usable = [row for row in trends if row.get("avg") and row.get("price")]
-    if usable:
-        above = sum(1 for row in usable if row["price"] >= row["avg"])
-        return above / len(usable) >= 0.58
-    price = quote.get("price")
-    open_price = quote.get("open")
-    return bool(price and open_price and price >= open_price and (quote.get("pct") or 0) > 2)
-
-
-def intraday_pullback_ok(trends: list[dict[str, Any]]) -> bool:
-    usable = [row for row in trends if row.get("avg") and row.get("price")]
-    if len(usable) < 20:
-        return True
-    first_half = usable[: max(10, len(usable) // 2)]
-    later = usable[len(first_half) :]
-    first_high = max(row["price"] for row in first_half)
-    pullback = any(abs(row["price"] / row["avg"] - 1) <= 0.008 for row in later if row.get("avg"))
-    reclaim = usable[-1]["price"] > usable[-1]["avg"]
-    return first_high > usable[0]["price"] * 1.03 and pullback and reclaim
-
-
-def latest_avg_price(trends: list[dict[str, Any]]) -> float | None:
-    for row in reversed(trends):
-        if row.get("avg"):
-            return row["avg"]
-    return None
-
-
-def recent_platform_stop(kline: list[dict[str, Any]]) -> float:
-    recent_lows = [row["low"] for row in kline[-8:] if row["low"]]
-    return min(recent_lows) if recent_lows else kline[-1]["close"] * 0.95
-
-
-def ratio_to_previous_avg(today_value: float | None, series: list[float]) -> float | None:
-    if today_value is None or len(series) < 6:
-        return None
-    return ratio_to_average(today_value, series[-6:-1])
-
-
-def ratio_to_average(value: float | None, previous: list[float]) -> float | None:
-    clean = [item for item in previous if item and item > 0]
-    if value is None or not clean:
-        return None
-    avg = sum(clean) / len(clean)
-    return round(value / avg, 3) if avg > 0 else None
-
-
 def is_limit_up(item: dict[str, Any]) -> bool:
     pct = item.get("pct")
     code = item.get("code") or ""
@@ -770,6 +580,31 @@ def is_limit_up(item: dict[str, Any]) -> bool:
     if code.startswith(("30", "68")):
         return pct >= 19.5
     return pct >= 9.8
+
+
+def dedupe_news(news: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    seen = set()
+    result = []
+    for item in news:
+        if item["title"] in seen:
+            continue
+        seen.add(item["title"])
+        result.append(item)
+    return result[:8]
+
+
+def useful_news_title(title: str) -> bool:
+    if len(title) < 8 or len(title) > 80:
+        return False
+    keywords = ("A股", "股市", "市场", "板块", "资金", "沪指", "深成指", "创业板", "证券", "行情")
+    return any(keyword in title for keyword in keywords)
+
+
+def clean_html(raw: str) -> str:
+    raw = re.sub(r"<script.*?</script>", "", raw, flags=re.S | re.I)
+    raw = re.sub(r"<style.*?</style>", "", raw, flags=re.S | re.I)
+    raw = re.sub(r"<[^>]+>", "", raw)
+    return raw.replace("&nbsp;", " ").strip()
 
 
 def stock_secid(code: str) -> str:
@@ -793,23 +628,12 @@ def stock_source_links(code: str) -> list[dict[str, str]]:
     ]
 
 
-def useful_news_title(title: str) -> bool:
-    if len(title) < 8 or len(title) > 80:
-        return False
-    keywords = ("A股", "股市", "市场", "板块", "资金", "沪指", "深成指", "创业板", "证券", "行情")
-    return any(keyword in title for keyword in keywords)
+def deadline_hit() -> bool:
+    return time.monotonic() - STARTED >= MAX_RUNTIME_SECONDS
 
 
-def clean_html(raw: str) -> str:
-    raw = re.sub(r"<script.*?</script>", "", raw, flags=re.S | re.I)
-    raw = re.sub(r"<style.*?</style>", "", raw, flags=re.S | re.I)
-    raw = re.sub(r"<[^>]+>", "", raw)
-    return unescape(raw).strip()
-
-
-def average(values: list[float]) -> float | None:
-    clean = [item for item in values if item is not None and not math.isnan(item)]
-    return sum(clean) / len(clean) if clean else None
+def remaining_seconds() -> float:
+    return MAX_RUNTIME_SECONDS - (time.monotonic() - STARTED)
 
 
 def round2(value: float | None) -> float | None:
@@ -857,7 +681,7 @@ def mark_source(name: str, ok: bool, url: str, note: str) -> None:
 
 def source_list() -> list[dict[str, Any]]:
     defaults = [
-        ("东方财富", "https://quote.eastmoney.com/", "行情、板块、K线、资金"),
+        ("东方财富", "https://quote.eastmoney.com/", "行情、板块、个股快照"),
         ("同花顺", "https://www.10jqka.com.cn/", "新闻线索"),
         ("第一财经", "https://www.yicai.com/", "新闻线索"),
     ]
