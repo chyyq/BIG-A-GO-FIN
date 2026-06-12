@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-11T19:51:00.967110+08:00",
-    "tradingDate": "2026-06-11",
+    "generatedAt": "2026-06-12T11:32:07.132410+08:00",
+    "tradingDate": "2026-06-12",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1625%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1617%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -20,44 +20,39 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 40.53
+    "errors": [],
+    "runtimeSeconds": 23.27
   },
   "market": {
-    "recommendationCount": 2,
-    "qualifiedBoardCount": 2
+    "recommendationCount": 3,
+    "qualifiedBoardCount": 4
   },
   "boards": [
     {
-      "code": "BK1625",
-      "name": "钨",
+      "code": "BK1614",
+      "name": "铅锌",
       "kind": "Industry board",
-      "price": 10370.81,
-      "pct": 8.35,
-      "amount": 23924018746.0,
-      "turnover": 9.36,
-      "open": 9699.41,
-      "preClose": 9571.49,
-      "mainNet": 2218443008.0,
-      "rank": 2,
+      "price": 2743.11,
+      "pct": 10.18,
+      "amount": 9537603056.0,
+      "turnover": 4.01,
+      "open": 2552.31,
+      "preClose": 2489.68,
+      "mainNet": 1189102816.0,
+      "rank": 1,
       "passed": 5,
       "qualified": true,
-      "score": 99.3,
+      "score": 99.65,
       "criteria": [
         "Board rank is strong or improving",
         "Limit-up or large-gain members are active",
@@ -65,24 +60,74 @@
         "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 2,
-      "bigUpCount": 4
+      "limitUpCount": 6,
+      "bigUpCount": 12
+    },
+    {
+      "code": "BK1615",
+      "name": "铜",
+      "kind": "Industry board",
+      "price": 3983.91,
+      "pct": 8.39,
+      "amount": 34941371290.0,
+      "turnover": 2.77,
+      "open": 3778.6,
+      "preClose": 3675.38,
+      "mainNet": 5097853952.0,
+      "rank": 4,
+      "passed": 5,
+      "qualified": true,
+      "score": 98.6,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Board turnover amount is active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 8,
+      "bigUpCount": 15
+    },
+    {
+      "code": "BK1617",
+      "name": "黄金",
+      "kind": "Industry board",
+      "price": 5735.49,
+      "pct": 7.36,
+      "amount": 9183707129.0,
+      "turnover": 2.05,
+      "open": 5496.68,
+      "preClose": 5342.5,
+      "mainNet": 577506800.0,
+      "rank": 6,
+      "passed": 5,
+      "qualified": true,
+      "score": 97.9,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Board turnover amount is active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 1,
+      "bigUpCount": 10
     },
     {
       "code": "BK1623",
       "name": "钼",
       "kind": "Industry board",
-      "price": 1526.83,
+      "price": 1679.45,
       "pct": 10.0,
-      "amount": 1900810933.0,
-      "turnover": 2.4,
-      "open": 1397.67,
-      "preClose": 1388.07,
-      "mainNet": 484381216.0,
-      "rank": 1,
+      "amount": 625072389.0,
+      "turnover": 0.69,
+      "open": 1679.45,
+      "preClose": 1526.82,
+      "mainNet": 223183700.0,
+      "rank": 2,
       "passed": 4,
       "qualified": true,
-      "score": 83.25,
+      "score": 82.9,
       "criteria": [
         "Board rank is strong or improving",
         "Limit-up or large-gain members are active",
@@ -93,107 +138,62 @@
       "bigUpCount": 2
     },
     {
-      "code": "BK1325",
-      "name": "半导体材料",
+      "code": "BK1622",
+      "name": "镍",
       "kind": "Industry board",
-      "price": 14547.25,
-      "pct": 6.67,
-      "amount": 70656500483.0,
-      "turnover": 11.07,
-      "open": 13580.35,
-      "preClose": 13637.53,
-      "mainNet": 1831702016.0,
+      "price": 6179.78,
+      "pct": 8.77,
+      "amount": 3601213463.0,
+      "turnover": 3.84,
+      "open": 5794.89,
+      "preClose": 5681.34,
+      "mainNet": 302981472.0,
       "rank": 3,
       "passed": 3,
       "qualified": false,
       "score": 66.15,
       "criteria": [
         "Board rank is strong or improving",
-        "Board turnover amount is active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
       "limitUpCount": 0,
-      "bigUpCount": 0
+      "bigUpCount": 1
     },
     {
-      "code": "BK0949",
-      "name": "氦气概念",
-      "kind": "Concept board",
-      "price": 3158.82,
-      "pct": 5.95,
-      "amount": 18525686029.0,
-      "turnover": 6.82,
-      "open": 3008.34,
-      "preClose": 2981.48,
-      "mainNet": 1330959728.0,
+      "code": "BK1620",
+      "name": "钴",
+      "kind": "Industry board",
+      "price": 1248.18,
+      "pct": 7.56,
+      "amount": 964598266.0,
+      "turnover": 3.81,
+      "open": 1179.6,
+      "preClose": 1160.49,
+      "mainNet": 119847867.0,
       "rank": 5,
       "passed": 3,
       "qualified": false,
       "score": 65.45,
       "criteria": [
         "Board rank is strong or improving",
-        "Board turnover amount is active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
       "limitUpCount": 0,
-      "bigUpCount": 0
+      "bigUpCount": 2
     },
     {
-      "code": "BK1621",
-      "name": "锂",
+      "code": "BK1295",
+      "name": "其他数字媒体",
       "kind": "Industry board",
-      "price": 19498.97,
-      "pct": 5.12,
-      "amount": 27621831267.0,
-      "turnover": 8.92,
-      "open": 18538.3,
-      "preClose": 18548.51,
-      "mainNet": 3099815824.0,
-      "rank": 6,
-      "passed": 3,
-      "qualified": false,
-      "score": 65.1,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board turnover amount is active",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1435",
-      "name": "磷肥及磷化工",
-      "kind": "Industry board",
-      "price": 3130.97,
-      "pct": 6.42,
-      "amount": 6119708235.0,
-      "turnover": 2.71,
-      "open": 3042.27,
-      "preClose": 2942.06,
-      "mainNet": 740893840.0,
-      "rank": 4,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.4,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK0981",
-      "name": "工业气体",
-      "kind": "Concept board",
-      "price": 3011.1,
-      "pct": 4.87,
-      "amount": 55307033301.0,
-      "turnover": 4.45,
-      "open": 2901.95,
-      "preClose": 2871.26,
-      "mainNet": 1025740288.0,
+      "price": 1203.3,
+      "pct": 7.31,
+      "amount": 2712910599.0,
+      "turnover": 18.24,
+      "open": 1067.05,
+      "preClose": 1121.34,
+      "mainNet": 224167072.0,
       "rank": 7,
       "passed": 2,
       "qualified": false,
@@ -205,16 +205,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1027",
-      "name": "小金属",
+      "code": "BK0732",
+      "name": "贵金属",
       "kind": "Industry board",
-      "price": 4183.43,
-      "pct": 4.81,
-      "amount": 60725581257.0,
-      "turnover": 5.58,
-      "open": 3992.95,
-      "preClose": 3991.45,
-      "mainNet": 6411385088.0,
+      "price": 2245.2,
+      "pct": 7.3,
+      "amount": 12773713703.0,
+      "turnover": 2.46,
+      "open": 2154.18,
+      "preClose": 2092.44,
+      "mainNet": 865543504.0,
       "rank": 8,
       "passed": 2,
       "qualified": false,
@@ -226,16 +226,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1319",
-      "name": "硅料硅片",
+      "code": "BK1616",
+      "name": "白银",
       "kind": "Industry board",
-      "price": 2119.11,
-      "pct": 4.58,
-      "amount": 4781309812.0,
-      "turnover": 5.7,
-      "open": 2031.15,
-      "preClose": 2026.4,
-      "mainNet": -95575952.0,
+      "price": 4893.13,
+      "pct": 7.12,
+      "amount": 3590006574.0,
+      "turnover": 3.98,
+      "open": 4712.63,
+      "preClose": 4568.04,
+      "mainNet": 288036720.0,
       "rank": 9,
       "passed": 2,
       "qualified": false,
@@ -247,16 +247,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1443",
-      "name": "橡胶助剂",
-      "kind": "Industry board",
-      "price": 4955.97,
-      "pct": 4.5,
-      "amount": 3824744832.0,
-      "turnover": 7.72,
-      "open": 4725.31,
-      "preClose": 4742.55,
-      "mainNet": 457592384.0,
+      "code": "BK1645",
+      "name": "昨日打二板以上表现",
+      "kind": "Concept board",
+      "price": 4275.65,
+      "pct": 7.05,
+      "amount": 11223492072.0,
+      "turnover": 14.5,
+      "open": 4202.08,
+      "preClose": 3993.89,
+      "mainNet": 38800432.0,
       "rank": 10,
       "passed": 2,
       "qualified": false,
@@ -268,16 +268,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1152",
-      "name": "高带宽内存",
-      "kind": "Concept board",
-      "price": 2779.27,
-      "pct": 4.23,
-      "amount": 88837573058.0,
-      "turnover": 8.83,
-      "open": 2666.52,
-      "preClose": 2666.52,
-      "mainNet": 2242489600.0,
+      "code": "BK1602",
+      "name": "诊断服务",
+      "kind": "Industry board",
+      "price": 5044.87,
+      "pct": 6.52,
+      "amount": 1346226278.0,
+      "turnover": 3.49,
+      "open": 4773.61,
+      "preClose": 4736.15,
+      "mainNet": 84384422.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -289,16 +289,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1378",
-      "name": "其他能源发电",
+      "code": "BK1434",
+      "name": "钾肥",
       "kind": "Industry board",
-      "price": 1555.44,
-      "pct": 4.22,
-      "amount": 112281966.0,
-      "turnover": 0.98,
-      "open": 1556.96,
-      "preClose": 1492.44,
-      "mainNet": 16583896.0,
+      "price": 2558.56,
+      "pct": 6.45,
+      "amount": 5185441375.0,
+      "turnover": 1.71,
+      "open": 2424.88,
+      "preClose": 2403.47,
+      "mainNet": 314787184.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -313,95 +313,20 @@
   "recommendations": [
     {
       "rank": 1,
-      "code": "600549",
-      "name": "XD厦门钨",
+      "code": "600338",
+      "name": "西藏珠峰",
       "market": "SH",
-      "price": 67.44,
-      "pct": 6.46,
-      "amount": 7965367128.0,
-      "turnover": 7.66,
+      "price": 18.22,
+      "pct": 5.93,
+      "amount": 1389173315.0,
+      "turnover": 8.58,
       "confidence": 94,
       "winRate": 94,
       "board": {
-        "code": "BK1625",
-        "name": "钨",
+        "code": "BK1614",
+        "name": "铅锌",
         "passed": 5,
-        "score": 99.3
-      },
-      "criteria": {
-        "board": [
-          "Board rank is strong or improving",
-          "Limit-up or large-gain members are active",
-          "Board turnover amount is active",
-          "Leader stocks are visible",
-          "Board momentum is positive"
-        ],
-        "stock": [
-          "Board is in main-rising condition",
-          "Main capital flow is positive",
-          "Turnover is active",
-          "Gain is below chase-risk zone",
-          "Price holds above opening area"
-        ]
-      },
-      "buyPlan": {
-        "type": "Early strength confirmation",
-        "timeWindow": "09:25-09:40",
-        "trigger": "Confirm near open/VWAP after a controlled gap-up.",
-        "priceRange": [
-          66.37,
-          67.3
-        ],
-        "quality": 16,
-        "priority": 5
-      },
-      "sellPlan": {
-        "targetPrice": 68.64,
-        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
-        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 68.64,
-        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
-      },
-      "stopPlan": {
-        "stopLoss": 63.54,
-        "rules": [
-          "Lose VWAP and fail to recover within 10 minutes",
-          "Break the entry trigger or intraday platform low",
-          "Single-stock loss should stay within 5%"
-        ]
-      },
-      "sourceLinks": [
-        {
-          "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sh600549.html"
-        },
-        {
-          "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/600549/"
-        },
-        {
-          "name": "Yicai news",
-          "url": "https://www.yicai.com/news/"
-        }
-      ],
-      "sparkline": []
-    },
-    {
-      "rank": 2,
-      "code": "000657",
-      "name": "中钨高新",
-      "market": "SZ",
-      "price": 77.95,
-      "pct": 6.93,
-      "amount": 10257812573.65,
-      "turnover": 9.16,
-      "confidence": 94,
-      "winRate": 94,
-      "board": {
-        "code": "BK1625",
-        "name": "钨",
-        "passed": 5,
-        "score": 99.3
+        "score": 99.65
       },
       "criteria": {
         "board": [
@@ -425,21 +350,21 @@
         "timeWindow": "09:40-10:10",
         "trigger": "Wait for the first lower-volume pullback after the initial push.",
         "priceRange": [
-          76.17,
-          77.24
+          17.8,
+          18.05
         ],
         "quality": 12,
         "priority": 2
       },
       "sellPlan": {
-        "targetPrice": 78.99,
+        "targetPrice": 18.64,
         "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
         "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 78.99,
+        "takeProfit": 18.64,
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
-        "stopLoss": 72.36,
+        "stopLoss": 17.0,
         "rules": [
           "Lose VWAP and fail to recover within 10 minutes",
           "Break the entry trigger or intraday platform low",
@@ -449,11 +374,162 @@
       "sourceLinks": [
         {
           "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sz000657.html"
+          "url": "https://quote.eastmoney.com/sh600338.html"
         },
         {
           "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/000657/"
+          "url": "https://stockpage.10jqka.com.cn/600338/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    },
+    {
+      "rank": 2,
+      "code": "002171",
+      "name": "楚江新材",
+      "market": "SZ",
+      "price": 13.55,
+      "pct": 5.2,
+      "amount": 1446859271.83,
+      "turnover": 6.73,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK1615",
+        "name": "铜",
+        "passed": 5,
+        "score": 98.6
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Board turnover amount is active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Main capital flow is positive",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "Early strength confirmation",
+        "timeWindow": "09:25-09:40",
+        "trigger": "Confirm near open/VWAP after a controlled gap-up.",
+        "priceRange": [
+          13.33,
+          13.52
+        ],
+        "quality": 16,
+        "priority": 5
+      },
+      "sellPlan": {
+        "targetPrice": 13.96,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 13.96,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 12.9,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sz002171.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/002171/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    },
+    {
+      "rank": 3,
+      "code": "603527",
+      "name": "众源新材",
+      "market": "SH",
+      "price": 13.8,
+      "pct": 2.99,
+      "amount": 249691746.0,
+      "turnover": 5.77,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK1615",
+        "name": "铜",
+        "passed": 5,
+        "score": 98.6
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Board turnover amount is active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "Main-rise pullback entry",
+        "timeWindow": "09:30-10:00",
+        "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
+        "priceRange": [
+          13.48,
+          13.67
+        ],
+        "quality": 13,
+        "priority": 3
+      },
+      "sellPlan": {
+        "targetPrice": 14.38,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 14.38,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 13.28,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sh603527.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/603527/"
         },
         {
           "name": "Yicai news",
@@ -465,51 +541,21 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "AI算力催生散热材料新机遇 多家A股公司布局",
-      "url": "https://finance.eastmoney.com/a/202606113767122365.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "钨价大幅反弹！小金属板块多股涨停 7股2026业绩预测翻倍",
-      "url": "https://finance.eastmoney.com/a/202606113768083371.html",
+      "source": "Yicai",
+      "title": "从石油阀门到机器人，阿布扎比成中企出海“跳板”中东市场已进入洗牌阶段，这种情况对中国企业来说反而可能是机会。  昨天 22:20",
+      "url": "https://www.yicai.com/news/103226438.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收跌 创业板指跌逾1% 工业气体概念股逆市大涨",
-      "url": "https://finance.eastmoney.com/a/202606113768231729.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中信证券：下半年AI新材料、军工新材料、固态电池、核聚变、氢能等主题有望表现活跃",
-      "url": "https://finance.eastmoney.com/a/202606113767350242.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中信证券：预计美联储今年全年维持目标利率不变",
-      "url": "https://finance.eastmoney.com/a/202606113767349044.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "华泰证券：AI服务器测试电源或迎国产替代机遇",
-      "url": "https://finance.eastmoney.com/a/202606113767340430.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "“下半年还有新一轮行情！”头部券商最新观点 6-7月可能是快速调整窗口",
-      "url": "https://finance.eastmoney.com/a/202606113767254593.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股又遇 “世界杯魔咒”？多家券商亮观点：短期情绪镜子",
-      "url": "https://finance.eastmoney.com/a/202606113768091066.html",
+      "source": "Yicai",
+      "title": "借力美加墨世界杯“向上走”：中国品牌站在全球焦点赛事中央这是中国家电龙头从国内增量市场、代工出口，转向国内存量升级、全球自主创牌的战略缩影。  昨天 21:28",
+      "url": "https://www.yicai.com/news/103226381.html",
       "time": ""
     }
   ]
