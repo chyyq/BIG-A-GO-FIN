@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-12T14:20:56.453481+08:00",
+    "generatedAt": "2026-06-12T14:28:20.731488+08:00",
     "tradingDate": "2026-06-12",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1645%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1622%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -31,24 +31,24 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 20.48
+    "runtimeSeconds": 37.49
   },
   "market": {
-    "recommendationCount": 5,
-    "qualifiedBoardCount": 5
+    "recommendationCount": 4,
+    "qualifiedBoardCount": 4
   },
   "boards": [
     {
       "code": "BK1614",
       "name": "铅锌",
       "kind": "Industry board",
-      "price": 2713.25,
-      "pct": 8.98,
-      "amount": 11463069435.0,
-      "turnover": 4.77,
+      "price": 2713.47,
+      "pct": 8.99,
+      "amount": 11608959797.0,
+      "turnover": 4.83,
       "open": 2552.31,
       "preClose": 2489.68,
-      "mainNet": 1310434272.0,
+      "mainNet": 1304277968.0,
       "rank": 2,
       "passed": 5,
       "qualified": true,
@@ -61,19 +61,19 @@
         "Board momentum is positive"
       ],
       "limitUpCount": 6,
-      "bigUpCount": 9
+      "bigUpCount": 10
     },
     {
       "code": "BK1615",
       "name": "铜",
       "kind": "Industry board",
-      "price": 3942.08,
-      "pct": 7.26,
-      "amount": 45638474634.0,
-      "turnover": 3.56,
+      "price": 3935.0,
+      "pct": 7.06,
+      "amount": 46218364875.0,
+      "turnover": 3.6,
       "open": 3778.6,
       "preClose": 3675.38,
-      "mainNet": 6036701952.0,
+      "mainNet": 6063552768.0,
       "rank": 4,
       "passed": 5,
       "qualified": true,
@@ -89,41 +89,16 @@
       "bigUpCount": 12
     },
     {
-      "code": "BK1645",
-      "name": "昨日打二板以上表现",
-      "kind": "Concept board",
-      "price": 4247.08,
-      "pct": 6.34,
-      "amount": 16468438283.0,
-      "turnover": 13.53,
-      "open": 4202.08,
-      "preClose": 3993.89,
-      "mainNet": -527399296.0,
-      "rank": 6,
-      "passed": 5,
-      "qualified": true,
-      "score": 97.9,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Limit-up or large-gain members are active",
-        "Board turnover amount is active",
-        "Leader stocks are visible",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 3,
-      "bigUpCount": 3
-    },
-    {
       "code": "BK1623",
       "name": "钼",
       "kind": "Industry board",
       "price": 1679.45,
       "pct": 10.0,
-      "amount": 753736169.0,
-      "turnover": 0.84,
+      "amount": 757245885.0,
+      "turnover": 0.85,
       "open": 1679.45,
       "preClose": 1526.82,
-      "mainNet": 270934900.0,
+      "mainNet": 272939012.0,
       "rank": 1,
       "passed": 4,
       "qualified": true,
@@ -141,13 +116,13 @@
       "code": "BK1602",
       "name": "诊断服务",
       "kind": "Industry board",
-      "price": 5071.54,
-      "pct": 7.08,
-      "amount": 2175840583.0,
-      "turnover": 5.48,
+      "price": 5063.91,
+      "pct": 6.92,
+      "amount": 2194404325.0,
+      "turnover": 5.52,
       "open": 4773.61,
       "preClose": 4736.15,
-      "mainNet": 205822986.0,
+      "mainNet": 211138990.0,
       "rank": 5,
       "passed": 4,
       "qualified": true,
@@ -165,13 +140,13 @@
       "code": "BK1295",
       "name": "其他数字媒体",
       "kind": "Industry board",
-      "price": 1219.02,
-      "pct": 8.71,
-      "amount": 2944953885.0,
-      "turnover": 19.67,
+      "price": 1203.88,
+      "pct": 7.36,
+      "amount": 2969129976.0,
+      "turnover": 19.81,
       "open": 1067.05,
       "preClose": 1121.34,
-      "mainNet": 205639808.0,
+      "mainNet": 205428016.0,
       "rank": 3,
       "passed": 3,
       "qualified": false,
@@ -185,16 +160,38 @@
       "bigUpCount": 2
     },
     {
-      "code": "BK1620",
-      "name": "钴",
+      "code": "BK1622",
+      "name": "镍",
       "kind": "Industry board",
-      "price": 1229.75,
-      "pct": 5.97,
-      "amount": 1256146330.0,
-      "turnover": 4.92,
-      "open": 1179.6,
-      "preClose": 1160.49,
-      "mainNet": 139506370.0,
+      "price": 6020.81,
+      "pct": 5.98,
+      "amount": 4977804254.0,
+      "turnover": 5.28,
+      "open": 5794.89,
+      "preClose": 5681.34,
+      "mainNet": 479170464.0,
+      "rank": 6,
+      "passed": 2,
+      "qualified": false,
+      "score": 48.7,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 1
+    },
+    {
+      "code": "BK1645",
+      "name": "昨日打二板以上表现",
+      "kind": "Concept board",
+      "price": 4231.57,
+      "pct": 5.95,
+      "amount": 16682490565.0,
+      "turnover": 30.67,
+      "open": 4202.08,
+      "preClose": 3993.89,
+      "mainNet": -567968800.0,
       "rank": 7,
       "passed": 2,
       "qualified": false,
@@ -206,16 +203,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1622",
-      "name": "镍",
+      "code": "BK1620",
+      "name": "钴",
       "kind": "Industry board",
-      "price": 6014.83,
-      "pct": 5.87,
-      "amount": 4905270208.0,
-      "turnover": 5.2,
-      "open": 5794.89,
-      "preClose": 5681.34,
-      "mainNet": 468100976.0,
+      "price": 1228.33,
+      "pct": 5.85,
+      "amount": 1276652331.0,
+      "turnover": 4.99,
+      "open": 1179.6,
+      "preClose": 1160.49,
+      "mainNet": 140597734.0,
       "rank": 8,
       "passed": 2,
       "qualified": false,
@@ -227,16 +224,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1617",
-      "name": "黄金",
+      "code": "BK1384",
+      "name": "航空装备Ⅲ",
       "kind": "Industry board",
-      "price": 5631.28,
-      "pct": 5.41,
-      "amount": 12412460309.0,
+      "price": 4495.58,
+      "pct": 5.31,
+      "amount": 28282055963.0,
       "turnover": 2.74,
-      "open": 5496.68,
-      "preClose": 5342.5,
-      "mainNet": 754350784.0,
+      "open": 4334.82,
+      "preClose": 4268.81,
+      "mainNet": 1932616256.0,
       "rank": 9,
       "passed": 2,
       "qualified": false,
@@ -248,16 +245,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1384",
-      "name": "航空装备Ⅲ",
+      "code": "BK1231",
+      "name": "航空装备Ⅱ",
       "kind": "Industry board",
-      "price": 4499.5,
-      "pct": 5.4,
-      "amount": 27868957701.0,
-      "turnover": 2.7,
+      "price": 4495.58,
+      "pct": 5.31,
+      "amount": 28282055963.0,
+      "turnover": 2.74,
       "open": 4334.82,
       "preClose": 4268.81,
-      "mainNet": 1873897328.0,
+      "mainNet": 1932616256.0,
       "rank": 10,
       "passed": 2,
       "qualified": false,
@@ -269,16 +266,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1231",
-      "name": "航空装备Ⅱ",
+      "code": "BK1617",
+      "name": "黄金",
       "kind": "Industry board",
-      "price": 4499.5,
-      "pct": 5.4,
-      "amount": 27868957701.0,
-      "turnover": 2.7,
-      "open": 4334.82,
-      "preClose": 4268.81,
-      "mainNet": 1873897328.0,
+      "price": 5626.45,
+      "pct": 5.31,
+      "amount": 12615705330.0,
+      "turnover": 2.79,
+      "open": 5496.68,
+      "preClose": 5342.5,
+      "mainNet": 772772816.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -290,16 +287,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK0732",
-      "name": "贵金属",
+      "code": "BK1479",
+      "name": "航空运输",
       "kind": "Industry board",
-      "price": 2202.39,
-      "pct": 5.25,
-      "amount": 17399898659.0,
-      "turnover": 3.31,
-      "open": 2154.18,
-      "preClose": 2092.44,
-      "mainNet": 1069738112.0,
+      "price": 1440.13,
+      "pct": 5.29,
+      "amount": 6488029075.0,
+      "turnover": 2.1,
+      "open": 1400.42,
+      "preClose": 1367.82,
+      "mainNet": 460494400.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -317,10 +314,10 @@
       "code": "600338",
       "name": "西藏珠峰",
       "market": "SH",
-      "price": 17.89,
-      "pct": 4.01,
-      "amount": 1809782953.0,
-      "turnover": 11.15,
+      "price": 17.84,
+      "pct": 3.72,
+      "amount": 1846030014.0,
+      "turnover": 11.37,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -351,17 +348,17 @@
         "timeWindow": "09:30-10:00",
         "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
         "priceRange": [
-          17.48,
-          17.73
+          17.43,
+          17.68
         ],
         "quality": 13,
         "priority": 3
       },
       "sellPlan": {
-        "targetPrice": 18.64,
+        "targetPrice": 18.6,
         "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
         "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 18.64,
+        "takeProfit": 18.6,
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
@@ -393,10 +390,10 @@
       "code": "601020",
       "name": "华钰矿业",
       "market": "SH",
-      "price": 21.6,
-      "pct": 5.16,
-      "amount": 788240096.0,
-      "turnover": 4.48,
+      "price": 21.62,
+      "pct": 5.26,
+      "amount": 802766092.0,
+      "turnover": 4.57,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -427,8 +424,8 @@
         "timeWindow": "09:25-09:40",
         "trigger": "Confirm near open/VWAP after a controlled gap-up.",
         "priceRange": [
-          21.26,
-          21.56
+          21.28,
+          21.58
         ],
         "quality": 16,
         "priority": 5
@@ -469,10 +466,10 @@
       "code": "000060",
       "name": "中金岭南",
       "market": "SZ",
-      "price": 7.59,
-      "pct": 5.86,
-      "amount": 2250949410.61,
-      "turnover": 6.71,
+      "price": 7.58,
+      "pct": 5.72,
+      "amount": 2291840435.61,
+      "turnover": 6.84,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -503,8 +500,8 @@
         "timeWindow": "09:25-09:40",
         "trigger": "Confirm near open/VWAP after a controlled gap-up.",
         "priceRange": [
-          7.47,
-          7.57
+          7.46,
+          7.56
         ],
         "quality": 16,
         "priority": 5
@@ -545,10 +542,10 @@
       "code": "002171",
       "name": "楚江新材",
       "market": "SZ",
-      "price": 13.4,
-      "pct": 4.04,
-      "amount": 1822062732.82,
-      "turnover": 8.46,
+      "price": 13.39,
+      "pct": 3.96,
+      "amount": 1849770569.67,
+      "turnover": 8.59,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -579,8 +576,8 @@
         "timeWindow": "09:25-09:40",
         "trigger": "Confirm near open/VWAP after a controlled gap-up.",
         "priceRange": [
-          13.19,
-          13.37
+          13.18,
+          13.36
         ],
         "quality": 16,
         "priority": 5
@@ -608,81 +605,6 @@
         {
           "name": "10jqka stock page",
           "url": "https://stockpage.10jqka.com.cn/002171/"
-        },
-        {
-          "name": "Yicai news",
-          "url": "https://www.yicai.com/news/"
-        }
-      ],
-      "sparkline": []
-    },
-    {
-      "rank": 5,
-      "code": "605318",
-      "name": "法狮龙",
-      "market": "SH",
-      "price": 132.29,
-      "pct": 4.17,
-      "amount": 940678200.0,
-      "turnover": 5.69,
-      "confidence": 94,
-      "winRate": 94,
-      "board": {
-        "code": "BK1645",
-        "name": "昨日打二板以上表现",
-        "passed": 5,
-        "score": 97.9
-      },
-      "criteria": {
-        "board": [
-          "Board rank is strong or improving",
-          "Limit-up or large-gain members are active",
-          "Board turnover amount is active",
-          "Leader stocks are visible",
-          "Board momentum is positive"
-        ],
-        "stock": [
-          "Board is in main-rising condition",
-          "Stock volume is rising but not exhausted",
-          "Turnover is active",
-          "Gain is below chase-risk zone",
-          "Price holds above opening area"
-        ]
-      },
-      "buyPlan": {
-        "type": "Early strength confirmation",
-        "timeWindow": "09:25-09:40",
-        "trigger": "Confirm near open/VWAP after a controlled gap-up.",
-        "priceRange": [
-          130.18,
-          132.02
-        ],
-        "quality": 16,
-        "priority": 5
-      },
-      "sellPlan": {
-        "targetPrice": 137.59,
-        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
-        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 137.59,
-        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
-      },
-      "stopPlan": {
-        "stopLoss": 128.1,
-        "rules": [
-          "Lose VWAP and fail to recover within 10 minutes",
-          "Break the entry trigger or intraday platform low",
-          "Single-stock loss should stay within 5%"
-        ]
-      },
-      "sourceLinks": [
-        {
-          "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sh605318.html"
-        },
-        {
-          "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/605318/"
         },
         {
           "name": "Yicai news",
@@ -733,12 +655,6 @@
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "滚动更新丨沪指高开高走放量涨1.56%，有色金属板块集体爆发沪深两市半日成交额2.06万亿，较上个交易日放量4656亿。  5小时前",
-      "url": "https://www.yicai.com/news/103226580.html",
       "time": ""
     }
   ]
