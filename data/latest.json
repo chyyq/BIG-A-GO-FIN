@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-12T11:39:28.543763+08:00",
+    "generatedAt": "2026-06-12T11:42:21.251723+08:00",
     "tradingDate": "2026-06-12",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 44.31
+    "runtimeSeconds": 14.75
   },
   "market": {
     "recommendationCount": 3,
@@ -562,6 +562,12 @@
       "source": "Eastmoney News",
       "title": "华泰证券：算力与模型需求有望由训练侧进一步扩散至高强度推理侧",
       "url": "https://finance.eastmoney.com/a/202606123768894516.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "沪指上涨1.56% 全市场超4500股飘红 有色金属板块掀涨停潮",
+      "url": "https://finance.eastmoney.com/a/202606123769716346.html",
       "time": ""
     },
     {
