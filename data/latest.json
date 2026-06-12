@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-12T11:32:07.132410+08:00",
+    "generatedAt": "2026-06-12T11:34:46.629306+08:00",
     "tradingDate": "2026-06-12",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 23.27
+    "runtimeSeconds": 29.65
   },
   "market": {
     "recommendationCount": 3,
@@ -253,7 +253,7 @@
       "price": 4275.65,
       "pct": 7.05,
       "amount": 11223492072.0,
-      "turnover": 14.5,
+      "turnover": 10.45,
       "open": 4202.08,
       "preClose": 3993.89,
       "mainNet": 38800432.0,
@@ -541,21 +541,45 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "A股三大指数收跌 创业板指跌逾1% 工业气体概念股逆市大涨",
+      "url": "https://finance.eastmoney.com/a/202606113768231729.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "从石油阀门到机器人，阿布扎比成中企出海“跳板”中东市场已进入洗牌阶段，这种情况对中国企业来说反而可能是机会。  昨天 22:20",
-      "url": "https://www.yicai.com/news/103226438.html",
+      "source": "Eastmoney News",
+      "title": "钨价大幅反弹！小金属板块多股涨停 7股2026业绩预测翻倍",
+      "url": "https://finance.eastmoney.com/a/202606113768083371.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "借力美加墨世界杯“向上走”：中国品牌站在全球焦点赛事中央这是中国家电龙头从国内增量市场、代工出口，转向国内存量升级、全球自主创牌的战略缩影。  昨天 21:28",
-      "url": "https://www.yicai.com/news/103226381.html",
+      "source": "Eastmoney News",
+      "title": "最后时刻反转！日韩股市已大涨",
+      "url": "https://finance.eastmoney.com/a/202606123768984788.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "华泰证券：算力与模型需求有望由训练侧进一步扩散至高强度推理侧",
+      "url": "https://finance.eastmoney.com/a/202606123768894516.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "SpaceX史诗级IPO倒计时！预测市场押注：上市首日市值将站上2万亿美元",
+      "url": "https://finance.eastmoney.com/a/202606123769186461.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
       "time": ""
     }
   ]
