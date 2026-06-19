@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-19T14:59:33.608538+08:00",
+    "generatedAt": "2026-06-19T19:41:54.815444+08:00",
     "tradingDate": "2026-06-19",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 14.46
+    "runtimeSeconds": 28.65
   },
   "market": {
     "recommendationCount": 5,
@@ -694,51 +694,33 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "资金逃离“老登”股！保险、银行、券商等金融板块集体下挫 股民：我心态崩了",
-      "url": "https://finance.eastmoney.com/a/202606183776134336.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "创业板指涨逾2% 科创50指数涨近4% 齐创历史新高",
-      "url": "https://finance.eastmoney.com/a/202606183776089796.html",
+      "source": "Yicai",
+      "title": "新能源车渗透率超70%，零跑徐军称要先跑通香港市场香港市场的电动化转型已进入成熟期。  昨天 22:37",
+      "url": "https://www.yicai.com/news/103237579.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "见证历史！A股市值前十 5只科技股",
-      "url": "https://finance.eastmoney.com/a/202606183776113271.html",
+      "source": "Yicai",
+      "title": "国内首笔输电权交易落地，企业抢着要绿电全国统一电力市场建设迈出实质性一步  昨天 22:21",
+      "url": "https://www.yicai.com/news/103237527.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "华泰证券：9月前美联储将维持利率不变 年底12月加息概率接近50%",
-      "url": "https://finance.eastmoney.com/a/202606183775303075.html",
+      "source": "Yicai",
+      "title": "上海楼市出现新信号：有新房楼盘“逆势提价”市场预期正在发生微妙变化。  昨天 20:46",
+      "url": "https://www.yicai.com/news/103237424.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "中信证券：全国大部地区气温偏高概率提升 高温天气有望对饮料需求形成催化",
-      "url": "https://finance.eastmoney.com/a/202606183775302260.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中信证券：维持美联储年内维持政策利率不变的判断",
-      "url": "https://finance.eastmoney.com/a/202606183775298538.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中国银河证券：煤价有望继续抬升",
-      "url": "https://finance.eastmoney.com/a/202606183775371763.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "全球市场：美股三大指数收涨 纳指涨近2% 英特尔等多只芯片股创新高",
-      "url": "https://finance.eastmoney.com/a/202606193776598856.html",
+      "source": "Yicai",
+      "title": "追觅宣布业务收缩聚焦，四大板块之外已有项目暂停或延迟追觅汽车、手机业务将以产业研究院形式推进，聚焦技术研发储备，这意味着量产节奏放慢。  昨天 20:32",
+      "url": "https://www.yicai.com/news/103237452.html",
       "time": ""
     }
   ]
