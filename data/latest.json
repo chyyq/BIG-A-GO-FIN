@@ -1,45 +1,45 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-06-22T15:06:04.493596+08:00",
+    "generatedAt": "2026-06-22T15:14:47.211173+08:00",
     "tradingDate": "2026-06-22",
-    "mode": "fast-snapshot",
+    "mode": "cached-fallback",
     "sourceHealth": [
+      {
+        "name": "Historical cache",
+        "ok": true,
+        "url": "data/latest.json",
+        "note": "External sources failed; kept the last successful snapshot."
+      },
       {
         "name": "Eastmoney",
         "ok": true,
         "url": "https://quote.eastmoney.com/",
-        "note": "Board endpoint unavailable; used A-share quote snapshot grouped by industry."
-      },
-      {
-        "name": "Eastmoney News",
-        "ok": true,
-        "url": "https://finance.eastmoney.com/a/cjjsp.html",
-        "note": "Optional news source OK"
+        "note": "Previous successful source status retained during fallback."
       },
       {
         "name": "10jqka",
         "ok": true,
         "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "note": "Previous successful source status retained during fallback."
       },
       {
         "name": "Yicai",
         "ok": true,
         "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "note": "Previous successful source status retained during fallback."
       }
     ],
     "errors": [
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
-      "Board endpoints returned no rows; used all-A-share industry fallback."
+      "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 21.39
+    "runtimeSeconds": 17.75
   },
   "market": {
     "recommendationCount": 0,
-    "qualifiedBoardCount": 5
+    "qualifiedBoardCount": 12
   },
   "boards": [
     {
