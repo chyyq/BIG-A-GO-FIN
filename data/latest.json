@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-07-23T12:44:21.622942+08:00",
+    "generatedAt": "2026-07-23T12:57:59.345488+08:00",
     "tradingDate": "2026-07-23",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 15.96
+    "runtimeSeconds": 15.34
   },
   "market": {
     "recommendationCount": 5,
@@ -120,7 +120,7 @@
       "price": 9257.01,
       "pct": 8.84,
       "amount": 5424333155.0,
-      "turnover": 45.6,
+      "turnover": 13.26,
       "open": 8765.41,
       "preClose": 8505.11,
       "mainNet": 179776080.0,
@@ -233,7 +233,7 @@
       "price": 22018.71,
       "pct": 5.44,
       "amount": 20066382355.0,
-      "turnover": 7.28,
+      "turnover": 14.72,
       "open": 21368.09,
       "preClose": 20882.94,
       "mainNet": -400951136.0,
@@ -254,7 +254,7 @@
       "price": 32555.04,
       "pct": 5.41,
       "amount": 20642971662.0,
-      "turnover": 7.35,
+      "turnover": 14.24,
       "open": 31806.01,
       "preClose": 30883.67,
       "mainNet": -457395760.0,
@@ -695,15 +695,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "吴清：坚决维护资本市场平稳健康运行 持续提升外资参与资本市场的便利度",
+      "url": "https://finance.eastmoney.com/a/202607223817259915.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "六周新高！布油逼近100美元，全球资产是否面临新动荡市场定价美联储下周三加息的概率升至近25%。  3小时前",
-      "url": "https://www.yicai.com/news/103288577.html",
+      "source": "Eastmoney News",
+      "title": "北京国管：坚定看好中国资本市场发展前景 已统筹自有资金累计投入近百亿布局股市",
+      "url": "https://finance.eastmoney.com/a/202607223817266413.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "沪指震荡整理 贵金属与医疗美容板块走强",
+      "url": "https://finance.eastmoney.com/a/202607223817205421.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "AI热潮下，夏季行情是震荡蓄力还是新周期？｜对话陈果、章椹元",
+      "url": "https://finance.eastmoney.com/a/202605283752993232.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中信证券：看好超跌后的电子板块投资机会",
+      "url": "https://finance.eastmoney.com/a/202607233818043737.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东吴证券：国产液冷已由送样验证进入批量交付阶段 2026—2028年份额提升有望快于行业增长",
+      "url": "https://finance.eastmoney.com/a/202607233818038930.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "华泰证券：AI眼镜有望成为AI Agent进入物理世界的高频入口",
+      "url": "https://finance.eastmoney.com/a/202607233818016250.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中信证券： 预计国产CPU在国内商业市场渗透率将迅速从个位数提升到两位数",
+      "url": "https://finance.eastmoney.com/a/202607233818033076.html",
       "time": ""
     }
   ]
