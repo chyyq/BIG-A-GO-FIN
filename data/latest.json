@@ -1,191 +1,198 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-07-28T17:58:06.214050+08:00",
-    "tradingDate": "2026-07-28",
-    "mode": "cached-fallback",
+    "generatedAt": "2026-07-29T12:40:10.797346+08:00",
+    "tradingDate": "2026-07-29",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK0892%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 32.49
+    "errors": [],
+    "runtimeSeconds": 17.87
   },
   "market": {
-    "recommendationCount": 0,
-    "qualifiedBoardCount": 12
+    "recommendationCount": 3,
+    "qualifiedBoardCount": 6
   },
   "boards": [
     {
-      "code": "BK1051",
-      "name": "昨日连板_含一字",
-      "kind": "Concept board",
-      "price": 36286.43,
-      "pct": 6.22,
-      "amount": 8904755402.0,
-      "turnover": 14.22,
-      "open": 36680.41,
-      "preClose": 34162.59,
-      "mainNet": -324051440.0,
-      "rank": 2,
-      "passed": 3,
-      "qualified": false,
-      "score": 66.5,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board turnover amount is active",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1298",
-      "name": "文字媒体",
+      "code": "BK1556",
+      "name": "教育运营及其他",
       "kind": "Industry board",
-      "price": 2333.55,
-      "pct": 6.58,
-      "amount": 1588143161.0,
-      "turnover": 6.97,
-      "open": 2163.12,
-      "preClose": 2189.51,
-      "mainNet": 113771492.0,
+      "price": 731.47,
+      "pct": 6.78,
+      "amount": 285834919.0,
+      "turnover": 4.2,
+      "open": 712.97,
+      "preClose": 685.01,
+      "mainNet": -11411546.0,
       "rank": 1,
-      "passed": 2,
-      "qualified": false,
-      "score": 50.45,
+      "passed": 4,
+      "qualified": true,
+      "score": 83.25,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1565",
-      "name": "会展服务",
-      "kind": "Industry board",
-      "price": 1162.58,
-      "pct": 5.5,
-      "amount": 615260055.0,
-      "turnover": 4.59,
-      "open": 1093.82,
-      "preClose": 1101.96,
-      "mainNet": 7751832.0,
-      "rank": 3,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.75,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1297",
-      "name": "图片媒体",
-      "kind": "Industry board",
-      "price": 2835.27,
-      "pct": 4.61,
-      "amount": 518960270.0,
-      "turnover": 4.6,
-      "open": 2698.49,
-      "preClose": 2710.31,
-      "mainNet": 71644227.0,
-      "rank": 4,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.4,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1583",
-      "name": "零食",
-      "kind": "Industry board",
-      "price": 1808.87,
-      "pct": 4.44,
-      "amount": 1264077627.0,
-      "turnover": 1.86,
-      "open": 1725.24,
-      "preClose": 1731.99,
-      "mainNet": 50303361.0,
-      "rank": 5,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.05,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1469",
-      "name": "涂料",
-      "kind": "Industry board",
-      "price": 908.2,
-      "pct": 3.92,
-      "amount": 203817262.0,
-      "turnover": 1.12,
-      "open": 873.97,
-      "preClose": 873.97,
-      "mainNet": 3643538.0,
-      "rank": 6,
-      "passed": 2,
-      "qualified": false,
-      "score": 48.7,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 1,
+      "bigUpCount": 1
     },
     {
       "code": "BK1585",
       "name": "乳品",
       "kind": "Industry board",
-      "price": 1965.11,
-      "pct": 3.83,
-      "amount": 1975284486.0,
-      "turnover": 1.03,
-      "open": 1883.73,
-      "preClose": 1892.55,
-      "mainNet": 24369208.0,
+      "price": 2090.09,
+      "pct": 6.76,
+      "amount": 4136048450.0,
+      "turnover": 2.14,
+      "open": 1976.17,
+      "preClose": 1957.73,
+      "mainNet": 284480843.0,
+      "rank": 2,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.9,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 5,
+      "bigUpCount": 9
+    },
+    {
+      "code": "BK1282",
+      "name": "饮料乳品",
+      "kind": "Industry board",
+      "price": 2153.5,
+      "pct": 6.52,
+      "amount": 6794018730.0,
+      "turnover": 2.03,
+      "open": 2041.07,
+      "preClose": 2021.62,
+      "mainNet": 652322848.0,
+      "rank": 3,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.55,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 7,
+      "bigUpCount": 12
+    },
+    {
+      "code": "BK1586",
+      "name": "软饮料",
+      "kind": "Industry board",
+      "price": 1842.64,
+      "pct": 5.96,
+      "amount": 2657970279.0,
+      "turnover": 1.78,
+      "open": 1756.56,
+      "preClose": 1738.99,
+      "mainNet": 367841992.0,
+      "rank": 4,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.2,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 2,
+      "bigUpCount": 3
+    },
+    {
+      "code": "BK1519",
+      "name": "电动乘用车",
+      "kind": "Industry board",
+      "price": 4893.73,
+      "pct": 5.46,
+      "amount": 5805412441.0,
+      "turnover": 1.82,
+      "open": 4669.28,
+      "preClose": 4640.52,
+      "mainNet": 895474208.0,
+      "rank": 5,
+      "passed": 4,
+      "qualified": true,
+      "score": 81.85,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 1,
+      "bigUpCount": 1
+    },
+    {
+      "code": "BK0892",
+      "name": "乳业",
+      "kind": "Concept board",
+      "price": 950.53,
+      "pct": 5.13,
+      "amount": 5678032290.0,
+      "turnover": 1.68,
+      "open": 906.73,
+      "preClose": 904.19,
+      "mainNet": 414529248.0,
+      "rank": 6,
+      "passed": 4,
+      "qualified": true,
+      "score": 81.5,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 7,
+      "bigUpCount": 12
+    },
+    {
+      "code": "BK1557",
+      "name": "培训教育",
+      "kind": "Industry board",
+      "price": 4397.07,
+      "pct": 4.73,
+      "amount": 1846442753.0,
+      "turnover": 4.19,
+      "open": 4297.25,
+      "preClose": 4198.3,
+      "mainNet": 303991658.0,
       "rank": 7,
       "passed": 2,
       "qualified": false,
@@ -197,16 +204,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1282",
-      "name": "饮料乳品",
+      "code": "BK1584",
+      "name": "熟食",
       "kind": "Industry board",
-      "price": 2026.16,
-      "pct": 3.44,
-      "amount": 3205664917.0,
-      "turnover": 0.96,
-      "open": 1949.03,
-      "preClose": 1958.74,
-      "mainNet": 147805626.0,
+      "price": 1956.25,
+      "pct": 4.7,
+      "amount": 165594717.0,
+      "turnover": 0.88,
+      "open": 1867.85,
+      "preClose": 1868.46,
+      "mainNet": 10875421.0,
       "rank": 8,
       "passed": 2,
       "qualified": false,
@@ -218,16 +225,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1054",
-      "name": "DRG/DIP",
-      "kind": "Concept board",
-      "price": 856.59,
-      "pct": 3.42,
-      "amount": 2132871285.0,
-      "turnover": 1.89,
-      "open": 824.56,
-      "preClose": 828.25,
-      "mainNet": 141454265.0,
+      "code": "BK0740",
+      "name": "教育",
+      "kind": "Industry board",
+      "price": 535.13,
+      "pct": 4.59,
+      "amount": 2284319234.0,
+      "turnover": 3.92,
+      "open": 524.02,
+      "preClose": 511.64,
+      "mainNet": 290701777.0,
       "rank": 9,
       "passed": 2,
       "qualified": false,
@@ -239,16 +246,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1531",
-      "name": "商用载客车",
+      "code": "BK1583",
+      "name": "零食",
       "kind": "Industry board",
-      "price": 3252.96,
-      "pct": 3.42,
-      "amount": 551209783.0,
-      "turnover": 1.1,
-      "open": 3125.49,
-      "preClose": 3145.34,
-      "mainNet": 54781928.0,
+      "price": 1888.41,
+      "pct": 4.55,
+      "amount": 2150894424.0,
+      "turnover": 3.32,
+      "open": 1809.36,
+      "preClose": 1806.3,
+      "mainNet": 133809392.0,
       "rank": 10,
       "passed": 2,
       "qualified": false,
@@ -260,16 +267,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1507",
-      "name": "宠物食品",
+      "code": "BK1281",
+      "name": "休闲食品",
       "kind": "Industry board",
-      "price": 1444.44,
-      "pct": 3.37,
-      "amount": 512069794.0,
-      "turnover": 2.18,
-      "open": 1390.82,
-      "preClose": 1397.31,
-      "mainNet": 36170792.0,
+      "price": 2029.41,
+      "pct": 4.36,
+      "amount": 2781251351.0,
+      "turnover": 1.99,
+      "open": 1945.84,
+      "preClose": 1944.71,
+      "mainNet": 160560036.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -281,16 +288,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1524",
-      "name": "汽车综合服务",
+      "code": "BK1419",
+      "name": "煤化工",
       "kind": "Industry board",
-      "price": 1054.64,
-      "pct": 3.35,
-      "amount": 523562932.0,
-      "turnover": 2.2,
-      "open": 1024.3,
-      "preClose": 1020.47,
-      "mainNet": 48438716.0,
+      "price": 1821.09,
+      "pct": 4.07,
+      "amount": 2502656224.0,
+      "turnover": 1.72,
+      "open": 1753.54,
+      "preClose": 1749.88,
+      "mainNet": 237710069.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -302,54 +309,280 @@
       "bigUpCount": 0
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    {
+      "rank": 1,
+      "code": "300106",
+      "name": "西部牧业",
+      "market": "SZ",
+      "price": 9.15,
+      "pct": 6.27,
+      "amount": 236738359.5,
+      "turnover": 12.17,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK1585",
+        "name": "乳品",
+        "passed": 4,
+        "score": 82.9
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Main capital flow is positive",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "First pullback plan",
+        "timeWindow": "09:40-10:10",
+        "trigger": "Wait for the first lower-volume pullback after the initial push.",
+        "priceRange": [
+          8.94,
+          9.07
+        ],
+        "quality": 12,
+        "priority": 2
+      },
+      "sellPlan": {
+        "targetPrice": 9.52,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 9.52,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 8.56,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sz300106.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/300106/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    },
+    {
+      "rank": 2,
+      "code": "002910",
+      "name": "庄园牧场",
+      "market": "SZ",
+      "price": 8.5,
+      "pct": 4.29,
+      "amount": 121094079.0,
+      "turnover": 8.38,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK1585",
+        "name": "乳品",
+        "passed": 4,
+        "score": 82.9
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Main capital flow is positive",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "Main-rise pullback entry",
+        "timeWindow": "09:30-10:00",
+        "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
+        "priceRange": [
+          8.31,
+          8.42
+        ],
+        "quality": 13,
+        "priority": 3
+      },
+      "sellPlan": {
+        "targetPrice": 8.83,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 8.83,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 8.09,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sz002910.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/002910/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    },
+    {
+      "rank": 3,
+      "code": "002458",
+      "name": "益生股份",
+      "market": "SZ",
+      "price": 8.41,
+      "pct": 4.34,
+      "amount": 341830560.37,
+      "turnover": 4.26,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK0892",
+        "name": "乳业",
+        "passed": 4,
+        "score": 81.5
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Main capital flow is positive",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "Main-rise pullback entry",
+        "timeWindow": "09:30-10:00",
+        "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
+        "priceRange": [
+          8.22,
+          8.33
+        ],
+        "quality": 13,
+        "priority": 3
+      },
+      "sellPlan": {
+        "targetPrice": 8.67,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 8.67,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 7.98,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sz002458.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/002458/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    }
+  ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "A股三大指数集体收跌 白酒与食品饮料板块逆市走强",
+      "url": "https://finance.eastmoney.com/a/202607283823462913.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "“稻米造血”第一股暴跌近20%，1736名投资者今日起迎来解禁重组人白蛋白如何拓展市场，仍有难度。  7分钟前",
-      "url": "https://www.yicai.com/news/103294887.html",
+      "source": "Eastmoney News",
+      "title": "午后多只宽基ETF持续放量 创业板ETF易方达成交超100亿",
+      "url": "https://finance.eastmoney.com/a/202607283823404027.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "申万宏源证券刘健：让创新被看见、被定价、被成就  54分钟前",
-      "url": "https://www.yicai.com/news/103294852.html",
+      "source": "Eastmoney News",
+      "title": "AI热潮下，夏季行情是震荡蓄力还是新周期？｜对话陈果、章椹元",
+      "url": "https://finance.eastmoney.com/a/202605283752993232.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股四大指数集体低开，长鑫科技低开超7%算力硬件产业链下挫，存储器、CPO、PCB方向领跌。  3小时前",
-      "url": "https://www.yicai.com/news/103294448.html",
+      "source": "Eastmoney News",
+      "title": "长鑫科技上市，市值登顶A股，中一签赚超两万",
+      "url": "https://topic.eastmoney.com/detail/xcksjdfq.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "盘前必读丨东方证券与上海证券重组草案出炉；又一波增持回购潮来了机构认为，市场底区间有望确立，景气度验证仍是主线。  4小时前",
-      "url": "https://www.yicai.com/news/103294290.html",
+      "source": "Eastmoney News",
+      "title": "中信证券：看好特斯拉机器人的量产和应用前景",
+      "url": "https://finance.eastmoney.com/a/202607293824189922.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "壹快评｜尹同跃“不再内卷”宣言，喊出汽车行业回归长期主义心声国内汽车市场竞争焦点已从“拼价格、拼销量”，逐步转向“拼技术、拼服务、拼价值”。  昨天 21:24",
-      "url": "https://www.yicai.com/news/103294052.html",
+      "source": "Eastmoney News",
+      "title": "中信证券：建议关注国内风电招标放量和建设提速带来的产业链盈利改善和估值修复机会",
+      "url": "https://finance.eastmoney.com/a/202607293824155829.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "长鑫科技首日创下多项纪录，加速重构全球存储竞争版图长鑫科技将进一步撼动全球DRAM市场维持了近三十年的寡头竞争格局。  昨天 21:12",
-      "url": "https://www.yicai.com/news/103294056.html",
+      "source": "Eastmoney News",
+      "title": "华泰证券：中长期继续看好玻纤、洁净室等高景气板块",
+      "url": "https://finance.eastmoney.com/a/202607293824154247.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "阿斯利康中国区收入下降5%，这些因素在拖累王牌产品在中国面临集采、市场竞争加剧影响  昨天 20:41",
-      "url": "https://www.yicai.com/news/103293847.html",
+      "source": "Eastmoney News",
+      "title": "资金避险+板块多重利好！食品饮料密集涨停 2026业绩高增股来了",
+      "url": "https://finance.eastmoney.com/a/202607293824906946.html",
       "time": ""
     }
   ]
