@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-08-05T12:36:44.725058+08:00",
+    "generatedAt": "2026-08-05T12:48:42.740141+08:00",
     "tradingDate": "2026-08-05",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 21.74
+    "runtimeSeconds": 18.69
   },
   "market": {
     "recommendationCount": 5,
@@ -697,39 +697,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "签下重大合同！A股算力牛股突然爆单！多股斩获数十亿订单",
+      "url": "https://finance.eastmoney.com/a/202608053831840969.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "重建信用：当前最紧迫的“软基建”让市场真正感受到一个可预期、可信赖的未来，信心自会逐步回归，内需自会渐次回暖。  24分钟前",
-      "url": "https://www.yicai.com/news/103306058.html",
+      "source": "Eastmoney News",
+      "title": "A股三大指数收涨 创业板指飙升5.64% 140只股涨停",
+      "url": "https://finance.eastmoney.com/a/202608043831134153.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股四大指数集体低开，CPO概念股大幅回调稀土永磁、智能驾驶、黄金逆势走强。市场逾2400股下跌。  3小时前",
-      "url": "https://www.yicai.com/news/103305607.html",
+      "source": "Eastmoney News",
+      "title": "中信证券：未来1-2个季度美股重点应用软件公司营收增速有望迎来拐点",
+      "url": "https://finance.eastmoney.com/a/202608053831837764.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "盘前必读丨日韩股市高开SK海力士涨超6%；联创光电及实控人被证监会立案机构认为，市场震荡为主，趋势行情还需确认。  4小时前",
-      "url": "https://www.yicai.com/news/103305479.html",
+      "source": "Eastmoney News",
+      "title": "中信证券：黄金4000美元/盎司附近大概率是本轮底部区域",
+      "url": "https://finance.eastmoney.com/a/202608053831835142.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "AMD收入展望不及最高预期，盘后跌超9%第二季度营收、净利润超市场预期，但第三季度营收展望不及最高的市场预期。  5小时前",
-      "url": "https://www.yicai.com/news/103305422.html",
+      "source": "Eastmoney News",
+      "title": "华泰证券：电网设备板块估值修复与催化空间并存",
+      "url": "https://finance.eastmoney.com/a/202608053831749452.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "多地出台入境游奖励政策，来自新兴市场游客数量上升入境游呈现一些新特点，小团化、定制化的需求在增加，游客的年纪也比较年轻化。  昨天 20:25",
-      "url": "https://www.yicai.com/news/103305129.html",
+      "source": "Eastmoney News",
+      "title": "科创50指数上涨5.18% 全市场超3900股飘红 半导体产业链爆发",
+      "url": "https://finance.eastmoney.com/a/202608053832378528.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股“易中天”集体回应“美国光模块禁令”",
+      "url": "https://finance.eastmoney.com/a/202608053832283067.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "暴涨6%！多重利好共振 贵金属板块领涨",
+      "url": "https://finance.eastmoney.com/a/202608053832384095.html",
       "time": ""
     }
   ]
