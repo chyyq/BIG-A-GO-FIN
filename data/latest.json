@@ -1,45 +1,48 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-08-07T12:14:34.644299+08:00",
+    "generatedAt": "2026-08-07T12:21:05.462777+08:00",
     "tradingDate": "2026-08-07",
-    "mode": "cached-fallback",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
         "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Previous successful source status retained during fallback."
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 32.04
+    "runtimeSeconds": 55.92
   },
   "market": {
     "recommendationCount": 0,
-    "qualifiedBoardCount": 12
+    "qualifiedBoardCount": 0
   },
   "boards": [
     {
@@ -309,27 +312,51 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "A股三大指数涨跌不一 煤炭与电子化学品板块大涨",
+      "url": "https://finance.eastmoney.com/a/202608063833821989.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "品牌足金报价单日涨近60元/克，短期波动下黄金企业怎么看市场？金价又涨了，买还是不买？  57分钟前",
-      "url": "https://www.yicai.com/news/103308339.html",
+      "source": "Eastmoney News",
+      "title": "中信建投：交运板块标的配置价值凸显",
+      "url": "https://finance.eastmoney.com/a/202608073834491687.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股四大股指开盘涨跌不一，能源金属板块活跃盘面上，能源金属、民爆概念、油气板块开盘活跃。  2小时前",
-      "url": "https://www.yicai.com/news/103308897.html",
+      "source": "Eastmoney News",
+      "title": "中信证券：港险短期存在负面影响 但不改长期需求增长趋势",
+      "url": "https://finance.eastmoney.com/a/202608073834462821.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "宇树科技估值610亿，王兴兴身家超180亿，美团红杉腾讯阿里共同分羹宇树科技发行价确定为150.80元/股，股东持股市值初现轮廓。  昨天 23:57",
-      "url": "https://www.yicai.com/news/103308623.html",
+      "source": "Eastmoney News",
+      "title": "中信证券：刚果金出口禁令或推升铜价创出新高",
+      "url": "https://finance.eastmoney.com/a/202608073834462512.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "华泰证券：下半年政策部署落地 聚焦“六张网”投资推进",
+      "url": "https://finance.eastmoney.com/a/202608073834455552.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "高盛“唱多”+Rubin规模出货 PCB概念掀涨停潮！多只中报预增股获资金青睐(名单)",
+      "url": "https://finance.eastmoney.com/a/202608073835005718.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
       "time": ""
     }
   ]
