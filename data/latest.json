@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-04T14:06:49.817206+08:00",
+    "generatedAt": "2026-09-04T14:32:47.609477+08:00",
     "tradingDate": "2026-09-04",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1341%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1259%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -30,27 +30,25 @@
         "note": "Optional news/reference source"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 17.83
+    "errors": [],
+    "runtimeSeconds": 17.54
   },
   "market": {
     "recommendationCount": 5,
-    "qualifiedBoardCount": 5
+    "qualifiedBoardCount": 6
   },
   "boards": [
     {
       "code": "BK1512",
       "name": "生猪养殖",
       "kind": "Industry board",
-      "price": 4333.04,
-      "pct": 6.37,
-      "amount": 8632516638.0,
-      "turnover": 4.52,
+      "price": 4322.38,
+      "pct": 6.11,
+      "amount": 9169323727.0,
+      "turnover": 4.69,
       "open": 4089.11,
       "preClose": 4073.48,
-      "mainNet": 759622336.0,
+      "mainNet": 752594928.0,
       "rank": 3,
       "passed": 5,
       "qualified": true,
@@ -63,23 +61,23 @@
         "Board momentum is positive"
       ],
       "limitUpCount": 3,
-      "bigUpCount": 9
+      "bigUpCount": 8
     },
     {
       "code": "BK0882",
       "name": "猪肉概念",
       "kind": "Concept board",
-      "price": 1278.57,
-      "pct": 5.89,
-      "amount": 15814567531.0,
-      "turnover": 4.02,
+      "price": 1273.96,
+      "pct": 5.51,
+      "amount": 16902662872.0,
+      "turnover": 4.23,
       "open": 1210.19,
       "preClose": 1207.48,
-      "mainNet": 1532559376.0,
-      "rank": 4,
+      "mainNet": 1538778528.0,
+      "rank": 5,
       "passed": 5,
       "qualified": true,
-      "score": 98.6,
+      "score": 98.25,
       "criteria": [
         "Board rank is strong or improving",
         "Limit-up or large-gain members are active",
@@ -88,19 +86,44 @@
         "Board momentum is positive"
       ],
       "limitUpCount": 11,
-      "bigUpCount": 23
+      "bigUpCount": 18
+    },
+    {
+      "code": "BK1259",
+      "name": "养殖业",
+      "kind": "Industry board",
+      "price": 4148.09,
+      "pct": 5.19,
+      "amount": 11363701143.0,
+      "turnover": 4.24,
+      "open": 3956.32,
+      "preClose": 3943.55,
+      "mainNet": 748782720.0,
+      "rank": 6,
+      "passed": 5,
+      "qualified": true,
+      "score": 97.9,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Board turnover amount is active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 3,
+      "bigUpCount": 10
     },
     {
       "code": "BK1508",
       "name": "畜禽饲料",
       "kind": "Industry board",
-      "price": 2089.49,
-      "pct": 9.08,
-      "amount": 3171489740.0,
-      "turnover": 4.61,
+      "price": 2087.19,
+      "pct": 8.96,
+      "amount": 3355605013.0,
+      "turnover": 4.9,
       "open": 1919.66,
       "preClose": 1915.58,
-      "mainNet": 689456091.0,
+      "mainNet": 745065168.0,
       "rank": 1,
       "passed": 4,
       "qualified": true,
@@ -112,19 +135,19 @@
         "Board momentum is positive"
       ],
       "limitUpCount": 7,
-      "bigUpCount": 9
+      "bigUpCount": 8
     },
     {
       "code": "BK1258",
       "name": "饲料",
       "kind": "Industry board",
-      "price": 3592.92,
-      "pct": 6.69,
-      "amount": 4728416437.0,
-      "turnover": 4.15,
+      "price": 3582.36,
+      "pct": 6.37,
+      "amount": 5062448748.0,
+      "turnover": 4.42,
       "open": 3376.34,
       "preClose": 3367.72,
-      "mainNet": 718043088.0,
+      "mainNet": 752875584.0,
       "rank": 2,
       "passed": 4,
       "qualified": true,
@@ -136,23 +159,23 @@
         "Board momentum is positive"
       ],
       "limitUpCount": 7,
-      "bigUpCount": 12
+      "bigUpCount": 10
     },
     {
-      "code": "BK1341",
-      "name": "房产租赁经纪",
+      "code": "BK1556",
+      "name": "教育运营及其他",
       "kind": "Industry board",
-      "price": 1483.08,
-      "pct": 5.87,
-      "amount": 2680030789.0,
-      "turnover": 15.44,
-      "open": 1406.02,
-      "preClose": 1400.91,
-      "mainNet": 769707424.0,
-      "rank": 5,
+      "price": 1067.27,
+      "pct": 5.69,
+      "amount": 685730284.0,
+      "turnover": 6.14,
+      "open": 1025.52,
+      "preClose": 1009.8,
+      "mainNet": 4589260.0,
+      "rank": 4,
       "passed": 4,
       "qualified": true,
-      "score": 81.85,
+      "score": 82.2,
       "criteria": [
         "Board rank is strong or improving",
         "Limit-up or large-gain members are active",
@@ -163,38 +186,16 @@
       "bigUpCount": 1
     },
     {
-      "code": "BK1296",
-      "name": "视频媒体",
+      "code": "BK1341",
+      "name": "房产租赁经纪",
       "kind": "Industry board",
-      "price": 1028.73,
-      "pct": 5.61,
-      "amount": 4583839512.0,
-      "turnover": 20.65,
-      "open": 982.8,
-      "preClose": 974.1,
-      "mainNet": 221066480.0,
-      "rank": 6,
-      "passed": 2,
-      "qualified": false,
-      "score": 48.7,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1259",
-      "name": "养殖业",
-      "kind": "Industry board",
-      "price": 4161.5,
-      "pct": 5.53,
-      "amount": 10637534909.0,
-      "turnover": 4.06,
-      "open": 3956.32,
-      "preClose": 3943.55,
-      "mainNet": 788151024.0,
+      "price": 1473.22,
+      "pct": 5.16,
+      "amount": 2793377932.0,
+      "turnover": 16.08,
+      "open": 1406.02,
+      "preClose": 1400.91,
+      "mainNet": 757299536.0,
       "rank": 7,
       "passed": 2,
       "qualified": false,
@@ -209,13 +210,13 @@
       "code": "BK0887",
       "name": "鸡肉概念",
       "kind": "Concept board",
-      "price": 779.03,
-      "pct": 5.34,
-      "amount": 6502910873.0,
-      "turnover": 2.48,
+      "price": 776.66,
+      "pct": 5.02,
+      "amount": 6999232647.0,
+      "turnover": 2.64,
       "open": 740.62,
       "preClose": 739.56,
-      "mainNet": 428705920.0,
+      "mainNet": 423618304.0,
       "rank": 8,
       "passed": 2,
       "qualified": false,
@@ -227,16 +228,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1360",
-      "name": "金融信息服务",
+      "code": "BK1548",
+      "name": "综合电商",
       "kind": "Industry board",
-      "price": 5456.0,
-      "pct": 5.2,
-      "amount": 2685556625.0,
-      "turnover": 6.35,
-      "open": 5443.48,
-      "preClose": 5186.13,
-      "mainNet": 232063456.0,
+      "price": 1027.41,
+      "pct": 5.0,
+      "amount": 690375717.0,
+      "turnover": 0.45,
+      "open": 982.13,
+      "preClose": 978.51,
+      "mainNet": 146583069.0,
       "rank": 9,
       "passed": 2,
       "qualified": false,
@@ -248,16 +249,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1556",
-      "name": "教育运营及其他",
+      "code": "BK1360",
+      "name": "金融信息服务",
       "kind": "Industry board",
-      "price": 1061.94,
-      "pct": 5.16,
-      "amount": 648064157.0,
-      "turnover": 5.81,
-      "open": 1025.52,
-      "preClose": 1009.8,
-      "mainNet": -496167.0,
+      "price": 5442.75,
+      "pct": 4.95,
+      "amount": 2781723947.0,
+      "turnover": 6.58,
+      "open": 5443.48,
+      "preClose": 5186.13,
+      "mainNet": 223642608.0,
       "rank": 10,
       "passed": 2,
       "qualified": false,
@@ -272,13 +273,13 @@
       "code": "BK1509",
       "name": "水产饲料",
       "kind": "Industry board",
-      "price": 6253.69,
-      "pct": 5.11,
-      "amount": 1104010016.0,
-      "turnover": 2.63,
+      "price": 6219.92,
+      "pct": 4.54,
+      "amount": 1222966718.0,
+      "turnover": 2.82,
       "open": 5978.08,
       "preClose": 5949.72,
-      "mainNet": 21356362.0,
+      "mainNet": -496268.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -290,16 +291,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1548",
-      "name": "综合电商",
+      "code": "BK1511",
+      "name": "肉鸡养殖",
       "kind": "Industry board",
-      "price": 1027.41,
-      "pct": 5.0,
-      "amount": 592160824.0,
-      "turnover": 0.39,
-      "open": 982.13,
-      "preClose": 978.51,
-      "mainNet": 142510262.0,
+      "price": 3470.11,
+      "pct": 4.47,
+      "amount": 1729080459.0,
+      "turnover": 3.21,
+      "open": 3328.23,
+      "preClose": 3321.73,
+      "mainNet": -1704593.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -319,8 +320,8 @@
       "market": "SZ",
       "price": 8.4,
       "pct": 6.46,
-      "amount": 491944288.88,
-      "turnover": 4.36,
+      "amount": 526043733.88,
+      "turnover": 4.66,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -393,10 +394,10 @@
       "code": "603477",
       "name": "巨星农牧",
       "market": "SH",
-      "price": 16.22,
-      "pct": 6.92,
-      "amount": 360939894.0,
-      "turnover": 4.44,
+      "price": 16.09,
+      "pct": 6.06,
+      "amount": 387787031.0,
+      "turnover": 4.76,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -427,8 +428,8 @@
         "timeWindow": "09:40-10:10",
         "trigger": "Wait for the first lower-volume pullback after the initial push.",
         "priceRange": [
-          15.85,
-          16.07
+          15.72,
+          15.94
         ],
         "quality": 12,
         "priority": 2
@@ -441,7 +442,7 @@
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
-        "stopLoss": 15.06,
+        "stopLoss": 14.93,
         "rules": [
           "Lose VWAP and fail to recover within 10 minutes",
           "Break the entry trigger or intraday platform low",
@@ -469,10 +470,10 @@
       "code": "002157",
       "name": "正邦科技",
       "market": "SZ",
-      "price": 3.22,
-      "pct": 6.27,
-      "amount": 1343721021.22,
-      "turnover": 5.42,
+      "price": 3.21,
+      "pct": 5.94,
+      "amount": 1396512399.22,
+      "turnover": 5.63,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -502,8 +503,8 @@
         "timeWindow": "09:40-10:10",
         "trigger": "Wait for the first lower-volume pullback after the initial push.",
         "priceRange": [
-          3.15,
-          3.19
+          3.14,
+          3.18
         ],
         "quality": 12,
         "priority": 2
@@ -544,17 +545,17 @@
       "code": "002385",
       "name": "大北农",
       "market": "SZ",
-      "price": 3.47,
-      "pct": 6.12,
-      "amount": 721414144.5,
-      "turnover": 6.11,
+      "price": 3.46,
+      "pct": 5.81,
+      "amount": 776138018.5,
+      "turnover": 6.57,
       "confidence": 94,
       "winRate": 94,
       "board": {
         "code": "BK0882",
         "name": "猪肉概念",
         "passed": 5,
-        "score": 98.6
+        "score": 98.25
       },
       "criteria": {
         "board": [
@@ -578,8 +579,8 @@
         "timeWindow": "09:40-10:10",
         "trigger": "Wait for the first lower-volume pullback after the initial push.",
         "priceRange": [
-          3.39,
-          3.44
+          3.38,
+          3.43
         ],
         "quality": 12,
         "priority": 2
@@ -620,17 +621,17 @@
       "code": "002840",
       "name": "华统股份",
       "market": "SZ",
-      "price": 9.32,
-      "pct": 5.43,
-      "amount": 340398979.23,
-      "turnover": 4.64,
+      "price": 9.24,
+      "pct": 4.52,
+      "amount": 359886262.05,
+      "turnover": 4.9,
       "confidence": 94,
       "winRate": 94,
       "board": {
         "code": "BK0882",
         "name": "猪肉概念",
         "passed": 5,
-        "score": 98.6
+        "score": 98.25
       },
       "criteria": {
         "board": [
@@ -654,8 +655,8 @@
         "timeWindow": "09:30-10:00",
         "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
         "priceRange": [
-          9.11,
-          9.24
+          9.03,
+          9.16
         ],
         "quality": 13,
         "priority": 3
