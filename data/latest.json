@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-16T15:02:51.664449+08:00",
+    "generatedAt": "2026-09-16T20:38:23.200577+08:00",
     "tradingDate": "2026-09-16",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1442%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -34,17 +34,63 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 41.1
+    "runtimeSeconds": 26.11
   },
   "market": {
     "recommendationCount": 0,
-    "qualifiedBoardCount": 0
+    "qualifiedBoardCount": 2
   },
   "boards": [
+    {
+      "code": "BK1355",
+      "name": "运动服装",
+      "kind": "Industry board",
+      "price": 2974.16,
+      "pct": 7.34,
+      "amount": 1170431983.0,
+      "turnover": 6.68,
+      "open": 2778.24,
+      "preClose": 2770.78,
+      "mainNet": 57450173.0,
+      "rank": 1,
+      "passed": 4,
+      "qualified": true,
+      "score": 83.25,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 1,
+      "bigUpCount": 2
+    },
+    {
+      "code": "BK1442",
+      "name": "炭黑",
+      "kind": "Industry board",
+      "price": 1938.54,
+      "pct": 6.75,
+      "amount": 966384553.0,
+      "turnover": 4.32,
+      "open": 1899.59,
+      "preClose": 1815.93,
+      "mainNet": 203451093.0,
+      "rank": 2,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.9,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 2,
+      "bigUpCount": 3
+    },
     {
       "code": "BK1325",
       "name": "半导体材料",
@@ -86,50 +132,6 @@
       "criteria": [
         "Board rank is strong or improving",
         "Board turnover amount is active",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1355",
-      "name": "运动服装",
-      "kind": "Industry board",
-      "price": 2974.16,
-      "pct": 7.34,
-      "amount": 1170431983.0,
-      "turnover": 6.68,
-      "open": 2778.24,
-      "preClose": 2770.78,
-      "mainNet": 57450173.0,
-      "rank": 1,
-      "passed": 2,
-      "qualified": false,
-      "score": 50.45,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1442",
-      "name": "炭黑",
-      "kind": "Industry board",
-      "price": 1938.54,
-      "pct": 6.75,
-      "amount": 966384553.0,
-      "turnover": 4.32,
-      "open": 1899.59,
-      "preClose": 1815.93,
-      "mainNet": 203451093.0,
-      "rank": 2,
-      "passed": 2,
-      "qualified": false,
-      "score": 50.1,
-      "criteria": [
-        "Board rank is strong or improving",
         "Board momentum is positive"
       ],
       "limitUpCount": 0,
@@ -316,14 +318,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "沪指跌0.54% 科创50指数涨1.55% 成交额仅1.62万亿",
-      "url": "https://finance.eastmoney.com/a/202609153874652822.html",
+      "title": "央行行长潘功胜：维护股市、债市、汇市等金融市场平稳运行",
+      "url": "https://finance.eastmoney.com/a/202609163875690495.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "央行行长潘功胜：维护股市、债市、汇市等金融市场平稳运行",
-      "url": "https://finance.eastmoney.com/a/202609163875690495.html",
+      "title": "创业板指涨近2% 科创50指数涨超4% 半导体板块爆发",
+      "url": "https://finance.eastmoney.com/a/202609163876004139.html",
       "time": ""
     },
     {
