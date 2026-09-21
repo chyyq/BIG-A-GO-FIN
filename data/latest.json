@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-21T15:29:04.053557+08:00",
+    "generatedAt": "2026-09-21T22:17:17.556638+08:00",
     "tradingDate": "2026-09-21",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
         "note": "OK"
       },
       {
@@ -20,25 +20,26 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: <urlopen error _ssl.c:999: The handshake operation timed out>",
+      "Eastmoney clist failed: <urlopen error _ssl.c:999: The handshake operation timed out>",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 37.99
+    "runtimeSeconds": 102.53
   },
   "market": {
     "recommendationCount": 0,
@@ -134,28 +135,6 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK0816",
-      "name": "昨日连板",
-      "kind": "Concept board",
-      "price": 53221.12,
-      "pct": 6.54,
-      "amount": 7395847228.0,
-      "turnover": 13.94,
-      "open": 52814.76,
-      "preClose": 49953.93,
-      "mainNet": 28225072.0,
-      "rank": 5,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.05,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
       "code": "BK1465",
       "name": "防水材料",
       "kind": "Industry board",
@@ -166,55 +145,13 @@
       "open": 6623.36,
       "preClose": 6563.13,
       "mainNet": 180337966.0,
-      "rank": 6,
+      "rank": 5,
       "passed": 2,
       "qualified": false,
-      "score": 48.7,
+      "score": 49.05,
       "criteria": [
         "Board rank is strong or improving",
         "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1645",
-      "name": "昨日打二板以上表现",
-      "kind": "Concept board",
-      "price": 27067.47,
-      "pct": 6.12,
-      "amount": 4191228407.0,
-      "turnover": 14.96,
-      "open": 26723.93,
-      "preClose": 25505.73,
-      "mainNet": -74582464.0,
-      "rank": 7,
-      "passed": 2,
-      "qualified": false,
-      "score": 41,
-      "criteria": [
-        "Board is near the top of today's movers"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK1051",
-      "name": "昨日连板_含一字",
-      "kind": "Concept board",
-      "price": 122047.09,
-      "pct": 6.01,
-      "amount": 9514565088.0,
-      "turnover": 16.44,
-      "open": 121267.75,
-      "preClose": 115131.5,
-      "mainNet": -150776624.0,
-      "rank": 8,
-      "passed": 2,
-      "qualified": false,
-      "score": 40,
-      "criteria": [
-        "Board is near the top of today's movers"
       ],
       "limitUpCount": 0,
       "bigUpCount": 0
@@ -230,12 +167,13 @@
       "open": 906.59,
       "preClose": 894.75,
       "mainNet": -19047179.0,
-      "rank": 9,
+      "rank": 6,
       "passed": 2,
       "qualified": false,
-      "score": 39,
+      "score": 48.7,
       "criteria": [
-        "Board is near the top of today's movers"
+        "Board rank is strong or improving",
+        "Board momentum is positive"
       ],
       "limitUpCount": 0,
       "bigUpCount": 0
@@ -251,10 +189,10 @@
       "open": 1164.14,
       "preClose": 1126.61,
       "mainNet": 34229766.0,
-      "rank": 10,
+      "rank": 7,
       "passed": 2,
       "qualified": false,
-      "score": 38,
+      "score": 41,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -272,10 +210,10 @@
       "open": 1164.14,
       "preClose": 1126.61,
       "mainNet": 34229766.0,
-      "rank": 11,
+      "rank": 8,
       "passed": 2,
       "qualified": false,
-      "score": 37,
+      "score": 40,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -293,6 +231,69 @@
       "open": 5847.9,
       "preClose": 5787.45,
       "mainNet": -70576939.0,
+      "rank": 9,
+      "passed": 2,
+      "qualified": false,
+      "score": 39,
+      "criteria": [
+        "Board is near the top of today's movers"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1600",
+      "name": "医疗研发外包",
+      "kind": "Industry board",
+      "price": 9421.27,
+      "pct": 5.27,
+      "amount": 31857656255.0,
+      "turnover": 6.46,
+      "open": 9087.59,
+      "preClose": 8949.86,
+      "mainNet": 982768624.0,
+      "rank": 10,
+      "passed": 2,
+      "qualified": false,
+      "score": 38,
+      "criteria": [
+        "Board is near the top of today's movers"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK0727",
+      "name": "医疗服务",
+      "kind": "Industry board",
+      "price": 1547.75,
+      "pct": 5.21,
+      "amount": 40316248512.0,
+      "turnover": 4.07,
+      "open": 1494.91,
+      "preClose": 1471.04,
+      "mainNet": 1261448192.0,
+      "rank": 11,
+      "passed": 2,
+      "qualified": false,
+      "score": 37,
+      "criteria": [
+        "Board is near the top of today's movers"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1296",
+      "name": "视频媒体",
+      "kind": "Industry board",
+      "price": 919.48,
+      "pct": 5.2,
+      "amount": 2280075996.0,
+      "turnover": 11.88,
+      "open": 865.33,
+      "preClose": 874.03,
+      "mainNet": 205155726.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -307,45 +308,27 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "十大券商策略：把握年内最后的进攻窗口！四季度有望迎来反弹行情",
-      "url": "https://finance.eastmoney.com/a/202609203879467014.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "标普上调中国证券业锚定评级至“bb+”",
-      "url": "https://topic.eastmoney.com/detail/bpstzqypj.html",
+      "source": "Yicai",
+      "title": "AI深度嵌入世界技能大赛，劳动力市场需求正在改变AI淘汰的是技能中可被计算的部分，放大的是不可被计算的部分。  22分钟前",
+      "url": "https://www.yicai.com/news/103372960.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "中信证券：华为官宣昇腾960超节点 持续看好国产NPO投资机遇",
-      "url": "https://finance.eastmoney.com/a/202609213879528797.html",
+      "source": "Yicai",
+      "title": "飞行汽车盼商业化落地，监管沙盒机制引关注全球出行eVTOL预计2040年市场规模将达1320亿美元。  22分钟前",
+      "url": "https://www.yicai.com/news/103372934.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "国金证券：机构看好三条PCB设备行业核心受益环节",
-      "url": "https://finance.eastmoney.com/a/202609213879527015.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "华泰证券A股策略：反弹延续但需防节前扰动",
-      "url": "https://finance.eastmoney.com/a/202609213879518034.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收涨 超4500只股飘红 创新药概念股爆发",
-      "url": "https://finance.eastmoney.com/a/202609213879979426.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "source": "Yicai",
+      "title": "产业催化密集落地，AI算力链行情聚焦“订单验证”产业催化密集落地与宏观压力边际缓和共同推动 AI 算力链行情聚焦于订单验证与业绩兑现。  2小时前",
+      "url": "https://www.yicai.com/news/103372726.html",
       "time": ""
     }
   ]
