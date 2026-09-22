@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-22T14:25:25.662185+08:00",
+    "generatedAt": "2026-09-22T14:48:49.109720+08:00",
     "tradingDate": "2026-09-22",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1289%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1218%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -20,21 +20,21 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 66.31
+    "runtimeSeconds": 32.26
   },
   "market": {
-    "recommendationCount": 5,
+    "recommendationCount": 4,
     "qualifiedBoardCount": 5
   },
   "boards": [
@@ -42,13 +42,13 @@
       "code": "BK1456",
       "name": "其他家电Ⅲ",
       "kind": "Industry board",
-      "price": 1248.92,
-      "pct": 4.86,
-      "amount": 217497750.0,
-      "turnover": 2.1,
+      "price": 1249.53,
+      "pct": 4.91,
+      "amount": 230397439.0,
+      "turnover": 2.23,
       "open": 1230.49,
       "preClose": 1191.08,
-      "mainNet": 17595749.0,
+      "mainNet": 17642184.0,
       "rank": 2,
       "passed": 4,
       "qualified": true,
@@ -66,13 +66,13 @@
       "code": "BK1243",
       "name": "其他家电Ⅱ",
       "kind": "Industry board",
-      "price": 1248.92,
-      "pct": 4.86,
-      "amount": 217497750.0,
-      "turnover": 2.1,
+      "price": 1249.53,
+      "pct": 4.91,
+      "amount": 230397439.0,
+      "turnover": 2.23,
       "open": 1230.49,
       "preClose": 1191.08,
-      "mainNet": 17595749.0,
+      "mainNet": 17642184.0,
       "rank": 3,
       "passed": 4,
       "qualified": true,
@@ -90,13 +90,13 @@
       "code": "BK1292",
       "name": "广告媒体",
       "kind": "Industry board",
-      "price": 2470.76,
-      "pct": 4.03,
-      "amount": 556991592.0,
-      "turnover": 0.71,
+      "price": 2474.99,
+      "pct": 4.2,
+      "amount": 624499440.0,
+      "turnover": 0.8,
       "open": 2457.97,
       "preClose": 2375.12,
-      "mainNet": -16363952.0,
+      "mainNet": -29223794.0,
       "rank": 4,
       "passed": 4,
       "qualified": true,
@@ -111,16 +111,16 @@
       "bigUpCount": 1
     },
     {
-      "code": "BK1341",
-      "name": "房产租赁经纪",
+      "code": "BK1290",
+      "name": "教育出版",
       "kind": "Industry board",
-      "price": 1694.06,
-      "pct": 3.75,
-      "amount": 2396298353.0,
-      "turnover": 12.3,
-      "open": 1646.49,
-      "preClose": 1632.85,
-      "mainNet": 325926160.0,
+      "price": 2297.19,
+      "pct": 3.8,
+      "amount": 1936087681.0,
+      "turnover": 1.48,
+      "open": 2238.8,
+      "preClose": 2213.1,
+      "mainNet": 103091588.0,
       "rank": 5,
       "passed": 4,
       "qualified": true,
@@ -132,19 +132,19 @@
         "Board momentum is positive"
       ],
       "limitUpCount": 1,
-      "bigUpCount": 1
+      "bigUpCount": 2
     },
     {
-      "code": "BK1289",
-      "name": "大众出版",
+      "code": "BK1218",
+      "name": "出版",
       "kind": "Industry board",
-      "price": 1884.8,
-      "pct": 3.74,
-      "amount": 4556012038.0,
-      "turnover": 3.03,
-      "open": 1836.44,
-      "preClose": 1816.86,
-      "mainNet": 112615791.0,
+      "price": 2099.33,
+      "pct": 3.64,
+      "amount": 6786041743.0,
+      "turnover": 2.42,
+      "open": 2047.99,
+      "preClose": 2025.56,
+      "mainNet": 210786208.0,
       "rank": 6,
       "passed": 4,
       "qualified": true,
@@ -155,20 +155,20 @@
         "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 3,
-      "bigUpCount": 4
+      "limitUpCount": 4,
+      "bigUpCount": 6
     },
     {
       "code": "BK1305",
       "name": "燃料电池",
       "kind": "Industry board",
-      "price": 278.45,
-      "pct": 11.25,
-      "amount": 173629208.0,
-      "turnover": 4.73,
+      "price": 277.57,
+      "pct": 10.89,
+      "amount": 188261647.0,
+      "turnover": 5.12,
       "open": 251.33,
       "preClose": 250.3,
-      "mainNet": 25564333.0,
+      "mainNet": 28840931.0,
       "rank": 1,
       "passed": 3,
       "qualified": false,
@@ -182,16 +182,16 @@
       "bigUpCount": 1
     },
     {
-      "code": "BK1218",
-      "name": "出版",
+      "code": "BK1289",
+      "name": "大众出版",
       "kind": "Industry board",
-      "price": 2098.77,
-      "pct": 3.61,
-      "amount": 6344766171.0,
-      "turnover": 2.26,
-      "open": 2047.99,
-      "preClose": 2025.56,
-      "mainNet": 209638320.0,
+      "price": 1881.45,
+      "pct": 3.56,
+      "amount": 4849954062.0,
+      "turnover": 3.23,
+      "open": 1836.44,
+      "preClose": 1816.86,
+      "mainNet": 107694635.0,
       "rank": 7,
       "passed": 2,
       "qualified": false,
@@ -206,13 +206,13 @@
       "code": "BK1169",
       "name": "Kimi概念",
       "kind": "Concept board",
-      "price": 1097.89,
-      "pct": 3.41,
-      "amount": 16322398593.0,
-      "turnover": 4.29,
+      "price": 1097.31,
+      "pct": 3.36,
+      "amount": 17357572687.0,
+      "turnover": 4.55,
       "open": 1081.14,
       "preClose": 1061.69,
-      "mainNet": 1274460224.0,
+      "mainNet": 1280691264.0,
       "rank": 8,
       "passed": 2,
       "qualified": false,
@@ -224,16 +224,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1290",
-      "name": "教育出版",
+      "code": "BK1542",
+      "name": "文化用品",
       "kind": "Industry board",
-      "price": 2288.1,
-      "pct": 3.39,
-      "amount": 1788754133.0,
-      "turnover": 1.37,
-      "open": 2238.8,
-      "preClose": 2213.1,
-      "mainNet": 97022532.0,
+      "price": 2892.05,
+      "pct": 3.26,
+      "amount": 627647120.0,
+      "turnover": 2.55,
+      "open": 2806.18,
+      "preClose": 2800.69,
+      "mainNet": 76695708.0,
       "rank": 9,
       "passed": 2,
       "qualified": false,
@@ -245,16 +245,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1542",
-      "name": "文化用品",
+      "code": "BK1341",
+      "name": "房产租赁经纪",
       "kind": "Industry board",
-      "price": 2894.91,
-      "pct": 3.36,
-      "amount": 592280383.0,
-      "turnover": 2.42,
-      "open": 2806.18,
-      "preClose": 2800.69,
-      "mainNet": 71919782.0,
+      "price": 1685.5,
+      "pct": 3.22,
+      "amount": 2469865632.0,
+      "turnover": 12.69,
+      "open": 1646.49,
+      "preClose": 1632.85,
+      "mainNet": 325536608.0,
       "rank": 10,
       "passed": 2,
       "qualified": false,
@@ -269,13 +269,13 @@
       "code": "BK1220",
       "name": "广告营销",
       "kind": "Industry board",
-      "price": 4915.6,
-      "pct": 3.15,
-      "amount": 19842821828.0,
-      "turnover": 5.05,
+      "price": 4916.65,
+      "pct": 3.17,
+      "amount": 21004795364.0,
+      "turnover": 5.36,
       "open": 4845.43,
       "preClose": 4765.62,
-      "mainNet": 1693096784.0,
+      "mainNet": 1779620512.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -290,13 +290,13 @@
       "code": "BK0957",
       "name": "拼多多概念",
       "kind": "Concept board",
-      "price": 1643.07,
-      "pct": 3.15,
-      "amount": 9004662635.0,
-      "turnover": 4.72,
+      "price": 1642.62,
+      "pct": 3.12,
+      "amount": 9455213154.0,
+      "turnover": 4.97,
       "open": 1620.17,
       "preClose": 1592.88,
-      "mainNet": 821554256.0,
+      "mainNet": 818899952.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -311,18 +311,18 @@
   "recommendations": [
     {
       "rank": 1,
-      "code": "002285",
-      "name": "世联行",
+      "code": "300148",
+      "name": "天舟文化",
       "market": "SZ",
-      "price": 3.25,
-      "pct": 2.2,
-      "amount": 965883625.98,
-      "turnover": 15.12,
+      "price": 3.66,
+      "pct": 3.1,
+      "amount": 151303477.51,
+      "turnover": 4.91,
       "confidence": 94,
       "winRate": 94,
       "board": {
-        "code": "BK1341",
-        "name": "房产租赁经纪",
+        "code": "BK1290",
+        "name": "教育出版",
         "passed": 4,
         "score": 81.85
       },
@@ -347,21 +347,21 @@
         "timeWindow": "09:30-10:00",
         "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
         "priceRange": [
-          3.18,
-          3.22
+          3.58,
+          3.63
         ],
         "quality": 13,
         "priority": 3
       },
       "sellPlan": {
-        "targetPrice": 3.39,
+        "targetPrice": 3.78,
         "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
         "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 3.39,
+        "takeProfit": 3.78,
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
-        "stopLoss": 3.1,
+        "stopLoss": 3.52,
         "rules": [
           "Lose VWAP and fail to recover within 10 minutes",
           "Break the entry trigger or intraday platform low",
@@ -371,11 +371,11 @@
       "sourceLinks": [
         {
           "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sz002285.html"
+          "url": "https://quote.eastmoney.com/sz300148.html"
         },
         {
           "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/002285/"
+          "url": "https://stockpage.10jqka.com.cn/300148/"
         },
         {
           "name": "Yicai news",
@@ -386,92 +386,18 @@
     },
     {
       "rank": 2,
-      "code": "300788",
-      "name": "中信出版",
-      "market": "SZ",
-      "price": 35.41,
-      "pct": 2.05,
-      "amount": 571844388.8,
-      "turnover": 8.41,
-      "confidence": 94,
-      "winRate": 94,
-      "board": {
-        "code": "BK1289",
-        "name": "大众出版",
-        "passed": 4,
-        "score": 81.5
-      },
-      "criteria": {
-        "board": [
-          "Board rank is strong or improving",
-          "Limit-up or large-gain members are active",
-          "Leader stocks are visible",
-          "Board momentum is positive"
-        ],
-        "stock": [
-          "Board is in main-rising condition",
-          "Main capital flow is positive",
-          "Turnover is active",
-          "Gain is below chase-risk zone",
-          "Price holds above opening area"
-        ]
-      },
-      "buyPlan": {
-        "type": "Main-rise pullback entry",
-        "timeWindow": "09:30-10:00",
-        "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
-        "priceRange": [
-          34.6,
-          35.09
-        ],
-        "quality": 13,
-        "priority": 3
-      },
-      "sellPlan": {
-        "targetPrice": 36.5,
-        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
-        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 36.5,
-        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
-      },
-      "stopPlan": {
-        "stopLoss": 33.77,
-        "rules": [
-          "Lose VWAP and fail to recover within 10 minutes",
-          "Break the entry trigger or intraday platform low",
-          "Single-stock loss should stay within 5%"
-        ]
-      },
-      "sourceLinks": [
-        {
-          "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sz300788.html"
-        },
-        {
-          "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/300788/"
-        },
-        {
-          "name": "Yicai news",
-          "url": "https://www.yicai.com/news/"
-        }
-      ],
-      "sparkline": []
-    },
-    {
-      "rank": 3,
       "code": "603999",
       "name": "读者传媒",
       "market": "SH",
-      "price": 6.81,
-      "pct": 2.87,
-      "amount": 176189809.0,
-      "turnover": 4.51,
+      "price": 6.79,
+      "pct": 2.57,
+      "amount": 198046241.0,
+      "turnover": 5.07,
       "confidence": 94,
       "winRate": 94,
       "board": {
-        "code": "BK1289",
-        "name": "大众出版",
+        "code": "BK1218",
+        "name": "出版",
         "passed": 4,
         "score": 81.5
       },
@@ -496,21 +422,21 @@
         "timeWindow": "09:30-10:00",
         "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
         "priceRange": [
-          6.65,
-          6.75
+          6.63,
+          6.73
         ],
         "quality": 13,
         "priority": 3
       },
       "sellPlan": {
-        "targetPrice": 7.02,
+        "targetPrice": 6.99,
         "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
         "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 7.02,
+        "takeProfit": 6.99,
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
-        "stopLoss": 6.55,
+        "stopLoss": 6.53,
         "rules": [
           "Lose VWAP and fail to recover within 10 minutes",
           "Break the entry trigger or intraday platform low",
@@ -534,19 +460,19 @@
       "sparkline": []
     },
     {
-      "rank": 4,
+      "rank": 3,
       "code": "301231",
       "name": "荣信文化",
       "market": "SZ",
       "price": 30.55,
       "pct": 4.16,
-      "amount": 250333471.41,
-      "turnover": 12.69,
+      "amount": 265392810.31,
+      "turnover": 13.44,
       "confidence": 94,
       "winRate": 94,
       "board": {
-        "code": "BK1289",
-        "name": "大众出版",
+        "code": "BK1218",
+        "name": "出版",
         "passed": 4,
         "score": 81.5
       },
@@ -578,10 +504,10 @@
         "priority": 5
       },
       "sellPlan": {
-        "targetPrice": 32.37,
+        "targetPrice": 32.07,
         "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
         "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 32.37,
+        "takeProfit": 32.07,
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
@@ -609,19 +535,19 @@
       "sparkline": []
     },
     {
-      "rank": 5,
-      "code": "601999",
-      "name": "出版传媒",
+      "rank": 4,
+      "code": "600551",
+      "name": "时代出版",
       "market": "SH",
-      "price": 7.14,
-      "pct": 2.44,
-      "amount": 280855146.0,
-      "turnover": 7.07,
+      "price": 7.83,
+      "pct": 2.22,
+      "amount": 230377754.0,
+      "turnover": 4.33,
       "confidence": 94,
       "winRate": 94,
       "board": {
-        "code": "BK1289",
-        "name": "大众出版",
+        "code": "BK1218",
+        "name": "出版",
         "passed": 4,
         "score": 81.5
       },
@@ -634,6 +560,7 @@
         ],
         "stock": [
           "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
           "Main capital flow is positive",
           "Turnover is active",
           "Gain is below chase-risk zone",
@@ -645,21 +572,21 @@
         "timeWindow": "09:30-10:00",
         "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
         "priceRange": [
-          6.98,
-          7.08
+          7.65,
+          7.76
         ],
         "quality": 13,
         "priority": 3
       },
       "sellPlan": {
-        "targetPrice": 7.36,
+        "targetPrice": 8.07,
         "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
         "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 7.36,
+        "takeProfit": 8.07,
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
-        "stopLoss": 6.88,
+        "stopLoss": 7.53,
         "rules": [
           "Lose VWAP and fail to recover within 10 minutes",
           "Break the entry trigger or intraday platform low",
@@ -669,11 +596,11 @@
       "sourceLinks": [
         {
           "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sh601999.html"
+          "url": "https://quote.eastmoney.com/sh600551.html"
         },
         {
           "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/601999/"
+          "url": "https://stockpage.10jqka.com.cn/600551/"
         },
         {
           "name": "Yicai news",
@@ -685,51 +612,45 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收涨 超4500只股飘红 创新药概念股爆发",
-      "url": "https://finance.eastmoney.com/a/202609213879979426.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "央行：实施好适度宽松的货币政策 稳步扩大金融市场双向开放",
-      "url": "https://finance.eastmoney.com/a/202609223880396389.html",
+      "source": "Yicai",
+      "title": "美联储加息冲击全球债市，富达国际朱蕾：中国债券配置价值不降反升低息窗口期是壮大人民币债券市场的重要战略机遇  28分钟前",
+      "url": "https://www.yicai.com/news/103373834.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "突然下调！韩国股市利空突袭！发生了什么？",
-      "url": "https://finance.eastmoney.com/a/202609213880107860.html",
+      "source": "Yicai",
+      "title": "AMD市值首破万亿美元，A股芯片概念集体走强全球算力基础设施重心正向CPU倾斜。  1小时前",
+      "url": "https://www.yicai.com/news/103373720.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "Meta智能体热潮点燃CPU行情",
-      "url": "https://topic.eastmoney.com/detail/mtzntdrcpu.html",
+      "source": "Yicai",
+      "title": "万亿资金涌向芯片产业，深耕十载者率先听见回声  2小时前",
+      "url": "https://www.yicai.com/news/103373708.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "标普上调中国证券业锚定评级至“bb+”",
-      "url": "https://topic.eastmoney.com/detail/bpstzqypj.html",
+      "source": "Yicai",
+      "title": "地方审计披露：一些信息化项目重复建设、使用效率低地方正通过完善制度和强化监管提高信息化项目资金使用效益  2小时前",
+      "url": "https://www.yicai.com/news/103373654.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "中泰证券：科技行情已经进入右侧启动阶段",
-      "url": "https://finance.eastmoney.com/a/202609223880832277.html",
+      "source": "Yicai",
+      "title": "两高联合发布依法惩治网络食品安全犯罪典型案例通过以案释法，净化网络食品市场环境，切实保障人民群众合法权益。  3小时前",
+      "url": "https://www.yicai.com/news/103373569.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "国盛证券：四季度政策密集期叠加厄尔尼诺 关注种业板块",
-      "url": "https://finance.eastmoney.com/a/202609223880647573.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "国金证券：欧洲海风管桩机制修复及拍卖高景气并行 订单有望迎来放量拐点",
-      "url": "https://finance.eastmoney.com/a/202609223880641610.html",
+      "source": "Yicai",
+      "title": "A股四大指数集体高开，市场逾3100股上涨盘面上，存储、GPU、HBM板块领涨。  5小时前",
+      "url": "https://www.yicai.com/news/103373263.html",
       "time": ""
     }
   ]
