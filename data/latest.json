@@ -1,45 +1,41 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-25T14:56:16.061741+08:00",
+    "generatedAt": "2026-09-25T20:48:46.672035+08:00",
     "tradingDate": "2026-09-25",
-    "mode": "cached-fallback",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1347%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 15.78
+    "errors": [],
+    "runtimeSeconds": 31.93
   },
   "market": {
-    "recommendationCount": 0,
-    "qualifiedBoardCount": 12
+    "recommendationCount": 1,
+    "qualifiedBoardCount": 5
   },
   "boards": [
     {
@@ -54,15 +50,17 @@
       "preClose": 4897.34,
       "mainNet": 638858531.0,
       "rank": 1,
-      "passed": 2,
-      "qualified": false,
-      "score": 50.45,
+      "passed": 4,
+      "qualified": true,
+      "score": 83.25,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 2,
+      "bigUpCount": 2
     },
     {
       "code": "BK1255",
@@ -76,15 +74,17 @@
       "preClose": 4897.34,
       "mainNet": 638858531.0,
       "rank": 2,
-      "passed": 2,
-      "qualified": false,
-      "score": 50.1,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.9,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 2,
+      "bigUpCount": 2
     },
     {
       "code": "BK1599",
@@ -98,15 +98,17 @@
       "preClose": 4973.8,
       "mainNet": 201021872.0,
       "rank": 3,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.75,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.55,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 1,
+      "bigUpCount": 3
     },
     {
       "code": "BK1456",
@@ -120,15 +122,17 @@
       "preClose": 1281.14,
       "mainNet": 74100545.0,
       "rank": 4,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.4,
+      "passed": 4,
+      "qualified": true,
+      "score": 82.2,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 1,
+      "bigUpCount": 1
     },
     {
       "code": "BK1243",
@@ -142,15 +146,17 @@
       "preClose": 1281.14,
       "mainNet": 74100545.0,
       "rank": 5,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.05,
+      "passed": 4,
+      "qualified": true,
+      "score": 81.85,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 1,
+      "bigUpCount": 1
     },
     {
       "code": "BK1347",
@@ -301,54 +307,106 @@
       "bigUpCount": 0
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    {
+      "rank": 1,
+      "code": "688315",
+      "name": "诺禾致源",
+      "market": "SH",
+      "price": 20.4,
+      "pct": 5.21,
+      "amount": 720342857.0,
+      "turnover": 8.65,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK1599",
+        "name": "其他医疗服务",
+        "passed": 4,
+        "score": 82.55
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Main capital flow is positive",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "Main-rise pullback entry",
+        "timeWindow": "09:30-10:00",
+        "trigger": "Prefer controlled pullbacks near open/VWAP, not limit-up chasing.",
+        "priceRange": [
+          19.93,
+          20.21
+        ],
+        "quality": 13,
+        "priority": 3
+      },
+      "sellPlan": {
+        "targetPrice": 21.03,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 21.03,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 18.94,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sh688315.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/688315/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    }
+  ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收跌 成交额不足1.7万亿 风电板块逆市走强",
-      "url": "https://finance.eastmoney.com/a/202609243883655817.html",
+      "source": "Yicai",
+      "title": "当就业遇上AI，劳动力市场迎来哪些改变？技术本身不是最大障碍  7小时前",
+      "url": "https://www.yicai.com/news/103378271.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "Meta智能体热潮点燃CPU行情",
-      "url": "https://topic.eastmoney.com/detail/mtzntdrcpu.html",
+      "source": "Yicai",
+      "title": "道指跌近两百点，美债收益率再创二十余年新高，油价大涨，美联储官员接连“放鹰”随着美债收益率飙升，市场对美联储进一步加息的预期也在升温。  13小时前",
+      "url": "https://www.yicai.com/news/103378149.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "杨德龙：四季度AI科技板块有望迎来反弹机会",
-      "url": "https://finance.eastmoney.com/a/202609243883525565.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "中信建投证券：医疗器械板块拐点来临 关注脑机接口、AI医疗等主题投资机会",
-      "url": "https://finance.eastmoney.com/a/202609243883094436.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "银河证券：车市进入“金九银十”与年末消费旺季 销量有望逐月环比向上",
-      "url": "https://finance.eastmoney.com/a/202609243883091588.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "国金证券：肺癌治疗迭代 中国新药崛起",
-      "url": "https://finance.eastmoney.com/a/202609243883088191.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中信证券：2026年有望成为液冷产业链订单—业绩集中兑现的转折之年",
-      "url": "https://finance.eastmoney.com/a/202609243883065332.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "924行情两周年 各行业指数走到了哪里？",
-      "url": "https://finance.eastmoney.com/a/202609243883844336.html",
+      "source": "Yicai",
+      "title": "北京官宣现房销售细则：新老项目划断、土地款可分期随着细则落地，市场观望情绪将得到缓解。  昨天 20:55",
+      "url": "https://www.yicai.com/news/103377931.html",
       "time": ""
     }
   ]
