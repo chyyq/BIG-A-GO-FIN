@@ -1,45 +1,49 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-28T15:40:54.895998+08:00",
+    "generatedAt": "2026-09-28T16:03:25.137603+08:00",
     "tradingDate": "2026-09-28",
-    "mode": "cached-fallback",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
         "url": "https://stock.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
         "url": "https://www.yicai.com/news/",
-        "note": "Previous successful source status retained during fallback."
+        "note": "Optional news source OK"
       }
     ],
     "errors": [
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 18.21
+    "runtimeSeconds": 56.07
   },
   "market": {
     "recommendationCount": 0,
-    "qualifiedBoardCount": 12
+    "qualifiedBoardCount": 0
   },
   "boards": [
     {
@@ -196,27 +200,6 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1029",
-      "name": "汽车整车",
-      "kind": "Concept board",
-      "price": 1385.67,
-      "pct": 1.36,
-      "amount": 13458665347.0,
-      "turnover": 1.84,
-      "open": 1361.53,
-      "preClose": 1367.09,
-      "mainNet": 1043198864.0,
-      "rank": 8,
-      "passed": 2,
-      "qualified": false,
-      "score": 40,
-      "criteria": [
-        "Board is near the top of today's movers"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
       "code": "BK1244",
       "name": "小家电",
       "kind": "Industry board",
@@ -227,10 +210,10 @@
       "open": 2166.75,
       "preClose": 2146.67,
       "mainNet": 152764411.0,
-      "rank": 9,
+      "rank": 8,
       "passed": 2,
       "qualified": false,
-      "score": 39,
+      "score": 40,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -248,10 +231,10 @@
       "open": 2134.57,
       "preClose": 2118.86,
       "mainNet": 431753376.0,
-      "rank": 10,
+      "rank": 9,
       "passed": 2,
       "qualified": false,
-      "score": 38,
+      "score": 39,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -269,10 +252,10 @@
       "open": 3202.24,
       "preClose": 3208.77,
       "mainNet": 10374299.0,
-      "rank": 11,
+      "rank": 10,
       "passed": 2,
       "qualified": false,
-      "score": 37,
+      "score": 38,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -290,6 +273,27 @@
       "open": 3238.95,
       "preClose": 3266.14,
       "mainNet": 54798286.0,
+      "rank": 11,
+      "passed": 2,
+      "qualified": false,
+      "score": 37,
+      "criteria": [
+        "Board is near the top of today's movers"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1558",
+      "name": "学历教育",
+      "kind": "Industry board",
+      "price": 2080.38,
+      "pct": 0.99,
+      "amount": 605057998.0,
+      "turnover": 4.72,
+      "open": 2046.07,
+      "preClose": 2060.03,
+      "mainNet": 17199016.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -305,6 +309,12 @@
   "news": [
     {
       "source": "Eastmoney News",
+      "title": "一周流动性观察 | 跨季、跨节呵护信号显著 资金面预计平稳无忧",
+      "url": "https://finance.eastmoney.com/a/202609283885182787.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
       "title": "杨德龙：四季度有望迎来新一轮反弹行情",
       "url": "https://finance.eastmoney.com/a/202609283885165893.html",
       "time": ""
@@ -313,6 +323,12 @@
       "source": "Eastmoney News",
       "title": "A股三大指数集体收跌 汽车整车板块逆市走强",
       "url": "https://finance.eastmoney.com/a/202609283885170096.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "短期调整不改长期韧性 中国之“稳”筑牢资本市场确定性",
+      "url": "https://finance.eastmoney.com/a/202609283885176588.html",
       "time": ""
     },
     {
@@ -335,20 +351,8 @@
     },
     {
       "source": "Yicai",
-      "title": "中国葡萄酒市场，一边出清一边生长|快消栾谈重压之下，中国葡萄酒行业正在分化。  2小时前",
-      "url": "https://www.yicai.com/news/103379398.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "光模块概念股走低，“易中天” 市值跌超1700亿元中际旭创刚完成50亿元股份回购，但似乎未提振市场信心。  3小时前",
-      "url": "https://www.yicai.com/news/103379340.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "A股四大指数集体低开，贵金属、通信设备等板块走低市场逾2400股下跌。  5小时前",
-      "url": "https://www.yicai.com/news/103379061.html",
+      "title": "收盘｜沪指跌1.67% 网络安全股走强全市场超4500只个股下跌。  46分钟前",
+      "url": "https://www.yicai.com/news/103379697.html",
       "time": ""
     }
   ]
