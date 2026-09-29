@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-29T15:31:35.491004+08:00",
+    "generatedAt": "2026-09-29T15:43:56.245871+08:00",
     "tradingDate": "2026-09-29",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,14 +20,14 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [
@@ -39,7 +39,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 47.54
+    "runtimeSeconds": 42.16
   },
   "market": {
     "recommendationCount": 0,
@@ -310,33 +310,45 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Yicai",
-      "title": "收盘｜沪指涨0.18% 房地产板块涨幅居前全市场超3400只个股上涨。  18分钟前",
-      "url": "https://www.yicai.com/news/103381226.html",
+      "source": "Eastmoney News",
+      "title": "A股突变！全天跳水大跌 背后四大原因曝光",
+      "url": "https://finance.eastmoney.com/a/202609283885198059.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "NikeSKIMS 慢闪店来了，耐克加码女性运动市场  32分钟前",
-      "url": "https://www.yicai.com/news/103381202.html",
+      "source": "Eastmoney News",
+      "title": "重磅来袭！亚洲三国突然出手！提振市场",
+      "url": "https://finance.eastmoney.com/a/202609293886355833.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "Anthropic招股书曝光：净亏损420亿美元，预警AI风险披露的招股书内容未包含2026年市场情况。  2小时前",
-      "url": "https://www.yicai.com/news/103381026.html",
+      "source": "Eastmoney News",
+      "title": "中一签浮盈超26万元！A股又见大肉签",
+      "url": "https://finance.eastmoney.com/a/202609293886105722.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "彤程新材正式登陆港股市场，实现A+H两地上市彤程新材被调入港股通标的证券名单，并自2026年9月29日起生效。  3小时前",
-      "url": "https://www.yicai.com/news/103381022.html",
+      "source": "Eastmoney News",
+      "title": "重磅规划出炉！电池板块应声大涨 这12股业绩倍增可期(名单)",
+      "url": "https://finance.eastmoney.com/a/202609293886233767.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "互联网泡沫一幕重现！美股市场广度急剧萎缩，能否顶住债券风暴冲击？市场平静表层之下暗流涌动。  4小时前",
-      "url": "https://www.yicai.com/news/103380770.html",
+      "source": "Eastmoney News",
+      "title": "国庆临近，持股还是持币？杨德龙：优质股可持股过节，假期重点看美股，四季度A股有望反弹｜宅男财经",
+      "url": "https://finance.eastmoney.com/a/202609293886421536.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股三大指数收涨 成交额仅1.42万亿创14个月地量 房地产板块大涨",
+      "url": "https://finance.eastmoney.com/a/202609293886431187.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
       "time": ""
     }
   ]
