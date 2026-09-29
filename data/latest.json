@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-09-29T15:43:56.245871+08:00",
+    "generatedAt": "2026-09-29T22:07:17.898321+08:00",
     "tradingDate": "2026-09-29",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,14 +20,14 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [
@@ -39,7 +39,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 42.16
+    "runtimeSeconds": 60.04
   },
   "market": {
     "recommendationCount": 0,
@@ -310,45 +310,21 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "A股突变！全天跳水大跌 背后四大原因曝光",
-      "url": "https://finance.eastmoney.com/a/202609283885198059.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "重磅来袭！亚洲三国突然出手！提振市场",
-      "url": "https://finance.eastmoney.com/a/202609293886355833.html",
+      "source": "Yicai",
+      "title": "家电市场存量博弈，厂商十一假期低价冲量意愿减弱中秋国庆衔接，线上平台10月12日起启动双11，促销周期被大幅拉长，国庆消费需求被后续大促分流。  1小时前",
+      "url": "https://www.yicai.com/news/103381427.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "中一签浮盈超26万元！A股又见大肉签",
-      "url": "https://finance.eastmoney.com/a/202609293886105722.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "重磅规划出炉！电池板块应声大涨 这12股业绩倍增可期(名单)",
-      "url": "https://finance.eastmoney.com/a/202609293886233767.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "国庆临近，持股还是持币？杨德龙：优质股可持股过节，假期重点看美股，四季度A股有望反弹｜宅男财经",
-      "url": "https://finance.eastmoney.com/a/202609293886421536.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收涨 成交额仅1.42万亿创14个月地量 房地产板块大涨",
-      "url": "https://finance.eastmoney.com/a/202609293886431187.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "source": "Yicai",
+      "title": "挖掘服务消费新赛道，助力国际消费中心城市建设长三角各主力城市的消费市场正经历从“数量增长”向“质量提升”的转变，其中服务消费是最大公约数。  2小时前",
+      "url": "https://www.yicai.com/news/103381651.html",
       "time": ""
     }
   ]
