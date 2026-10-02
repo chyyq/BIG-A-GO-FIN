@@ -1,45 +1,41 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-01T22:32:47.499430+08:00",
-    "tradingDate": "2026-10-01",
-    "mode": "cached-fallback",
+    "generatedAt": "2026-10-02T15:08:33.843762+08:00",
+    "tradingDate": "2026-10-02",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
         "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1518%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
-        "note": "Previous successful source status retained during fallback."
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Previous successful source status retained during fallback."
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 23.2
+    "errors": [],
+    "runtimeSeconds": 18.02
   },
   "market": {
     "recommendationCount": 5,
-    "qualifiedBoardCount": 12
+    "qualifiedBoardCount": 5
   },
   "boards": [
     {
@@ -214,7 +210,7 @@
       "price": 135.68,
       "pct": 4.25,
       "amount": 7199946918.0,
-      "turnover": 9.25,
+      "turnover": 18.22,
       "open": 132.66,
       "preClose": 130.15,
       "mainNet": 211543568.0,
@@ -694,50 +690,50 @@
   "news": [
     {
       "source": "Eastmoney News",
-      "title": "美国8月PCE数据低于预期 市场削减美联储10月加息的押注",
-      "url": "https://finance.eastmoney.com/a/202609303887868954.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "2026年前三季度A股市场各大榜单出炉！",
-      "url": "https://finance.eastmoney.com/a/202609303887802159.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "全球市场：美股三大指数收盘涨跌不一 道指跌近1% 微软第三季度累涨超37%",
-      "url": "https://finance.eastmoney.com/a/202610013887997084.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
       "title": "今日！外围涨疯了 亚洲市场全线暴涨",
       "url": "https://finance.eastmoney.com/a/202610013888230570.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "title": "全球市场：美股三大指数小幅收涨 光通信板块领涨 国际油价涨近3%",
+      "url": "https://finance.eastmoney.com/a/202610023888301793.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "title": "核聚变重大进展！存储龙头获爆买超92亿元！活跃资金三季度加仓股曝光",
+      "url": "https://finance.eastmoney.com/a/202610023888315811.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "十一游客躲避人潮反向涌入小县城，年轻人流行奔县学手艺 县域旅游快速崛起，成为文旅市场的一大亮点。  1小时前",
-      "url": "https://www.yicai.com/news/103383617.html",
+      "source": "Eastmoney News",
+      "title": "10月金股出炉！通信板块热度抬升，有色金属、医药生物人气不减",
+      "url": "https://finance.eastmoney.com/a/202610013888231011.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "武汉发布“828”新政细则，首提保函置换监管资金机制武汉推出了多项本地化的弹性安排，平滑制度切换。  2小时前",
-      "url": "https://www.yicai.com/news/103383600.html",
+      "source": "Eastmoney News",
+      "title": "全球央行艰难重启加息周期，这次有什么不同|海外市场月报",
+      "url": "https://finance.eastmoney.com/a/202610023888331826.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "开源证券：大模型迭代拓展能力边界 应用落地兑现产业价值",
+      "url": "https://finance.eastmoney.com/a/202610023888317721.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "开源证券：算力供需缺口持续扩大 算力租赁行业景气度上行",
+      "url": "https://finance.eastmoney.com/a/202610023888317440.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "华泰证券：AI链放量推动韩国出口继续攀升",
+      "url": "https://finance.eastmoney.com/a/202610023888317197.html",
       "time": ""
     }
   ]
