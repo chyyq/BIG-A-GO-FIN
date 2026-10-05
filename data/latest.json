@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-02T21:55:41.517742+08:00",
-    "tradingDate": "2026-10-02",
+    "generatedAt": "2026-10-05T15:16:02.474947+08:00",
+    "tradingDate": "2026-10-05",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 20.57
+    "runtimeSeconds": 23.4
   },
   "market": {
     "recommendationCount": 5,
@@ -210,7 +210,7 @@
       "price": 135.68,
       "pct": 4.25,
       "amount": 7199946918.0,
-      "turnover": 18.22,
+      "turnover": 9.25,
       "open": 132.66,
       "preClose": 130.15,
       "mainNet": 211543568.0,
@@ -689,51 +689,9 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "核聚变重大进展！存储龙头获爆买超92亿元！活跃资金三季度加仓股曝光",
-      "url": "https://finance.eastmoney.com/a/202610023888315811.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "全球市场：美股三大指数小幅收涨 光通信板块领涨 国际油价涨近3%",
-      "url": "https://finance.eastmoney.com/a/202610023888301793.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "全球央行艰难重启加息周期，这次有什么不同|海外市场月报",
-      "url": "https://finance.eastmoney.com/a/202610023888331826.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "开源证券：大模型迭代拓展能力边界 应用落地兑现产业价值",
-      "url": "https://finance.eastmoney.com/a/202610023888317721.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "开源证券：算力供需缺口持续扩大 算力租赁行业景气度上行",
-      "url": "https://finance.eastmoney.com/a/202610023888317440.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "华泰证券：AI链放量推动韩国出口继续攀升",
-      "url": "https://finance.eastmoney.com/a/202610023888317197.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "source": "Yicai",
+      "title": "恒生科技指数连跌一年，累计跌幅近四成｜市场观察内地假期使得港股缺乏南向资金支撑。  10-02 15:08",
+      "url": "https://www.yicai.com/news/103383874.html",
       "time": ""
     }
   ]
