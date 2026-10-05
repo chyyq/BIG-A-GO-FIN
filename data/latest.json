@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-05T15:16:02.474947+08:00",
+    "generatedAt": "2026-10-05T15:42:11.748126+08:00",
     "tradingDate": "2026-10-05",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 23.4
+    "runtimeSeconds": 23.31
   },
   "market": {
     "recommendationCount": 5,
@@ -688,6 +688,42 @@
     }
   ],
   "news": [
+    {
+      "source": "Eastmoney News",
+      "title": "外资巨头盯上这些A股！AI算力硬件链受青睐",
+      "url": "https://finance.eastmoney.com/a/202610043888547838.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股这一赛道火了！“20cm”涨停后 康希诺紧急公告！",
+      "url": "https://finance.eastmoney.com/a/202610043888572567.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中信证券假期喊话：积极迎接房地产新周期",
+      "url": "https://finance.eastmoney.com/a/202610053888599515.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中外资机构：中美关系回暖 市场风险偏好或渐进修复 中美AI规则沟通深化 孕育新商机！",
+      "url": "https://finance.eastmoney.com/a/202610043888556179.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
     {
       "source": "Yicai",
       "title": "恒生科技指数连跌一年，累计跌幅近四成｜市场观察内地假期使得港股缺乏南向资金支撑。  10-02 15:08",
