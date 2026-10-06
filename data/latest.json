@@ -1,45 +1,41 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-06T16:09:40.724035+08:00",
+    "generatedAt": "2026-10-06T16:23:59.764442+08:00",
     "tradingDate": "2026-10-06",
-    "mode": "cached-fallback",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
         "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1518%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
-        "note": "Previous successful source status retained during fallback."
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
         "url": "https://stock.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
         "url": "https://www.yicai.com/news/",
-        "note": "Previous successful source status retained during fallback."
+        "note": "Optional news source OK"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 18.03
+    "errors": [],
+    "runtimeSeconds": 21.92
   },
   "market": {
     "recommendationCount": 5,
-    "qualifiedBoardCount": 12
+    "qualifiedBoardCount": 5
   },
   "boards": [
     {
@@ -214,7 +210,7 @@
       "price": 135.68,
       "pct": 4.25,
       "amount": 7199946918.0,
-      "turnover": 18.22,
+      "turnover": 9.25,
       "open": 132.66,
       "preClose": 130.15,
       "mainNet": 211543568.0,
@@ -693,9 +689,33 @@
   ],
   "news": [
     {
+      "source": "Eastmoney News",
+      "title": "全球市场：美股三大指数集体收涨 纳指涨超1%创收盘新高",
+      "url": "https://finance.eastmoney.com/a/202610063888706547.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "成交额跌破1.5万亿！四季度A股怎么走？十大券商最新策略来了",
+      "url": "https://finance.eastmoney.com/a/202610063888713852.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
       "source": "Yicai",
-      "title": "恒生科技指数连跌一年，累计跌幅近四成｜市场观察内地假期使得港股缺乏南向资金支撑。  10-02 15:08",
-      "url": "https://www.yicai.com/news/103383874.html",
+      "title": "纳指再创收盘新高，硬盘股反弹、PTC大涨逾33%，国际油价跌近2%市场对本月继续加息的预期仍明显低于一周前。  9小时前",
+      "url": "https://www.yicai.com/news/103384612.html",
       "time": ""
     }
   ]
