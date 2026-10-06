@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-06T16:23:59.764442+08:00",
+    "generatedAt": "2026-10-06T22:15:23.728021+08:00",
     "tradingDate": "2026-10-06",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 21.92
+    "runtimeSeconds": 35.34
   },
   "market": {
     "recommendationCount": 5,
@@ -690,6 +690,12 @@
   "news": [
     {
       "source": "Eastmoney News",
+      "title": "港股两大板块爆发！明星科网股普涨",
+      "url": "https://finance.eastmoney.com/a/202610063888763449.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
       "title": "全球市场：美股三大指数集体收涨 纳指涨超1%创收盘新高",
       "url": "https://finance.eastmoney.com/a/202610063888706547.html",
       "time": ""
@@ -714,7 +720,7 @@
     },
     {
       "source": "Yicai",
-      "title": "纳指再创收盘新高，硬盘股反弹、PTC大涨逾33%，国际油价跌近2%市场对本月继续加息的预期仍明显低于一周前。  9小时前",
+      "title": "纳指再创收盘新高，硬盘股反弹、PTC大涨逾33%，国际油价跌近2%市场对本月继续加息的预期仍明显低于一周前。  15小时前",
       "url": "https://www.yicai.com/news/103384612.html",
       "time": ""
     }
