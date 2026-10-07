@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-07T15:43:59.933375+08:00",
+    "generatedAt": "2026-10-07T15:59:57.739953+08:00",
     "tradingDate": "2026-10-07",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 27.09
+    "runtimeSeconds": 17.89
   },
   "market": {
     "recommendationCount": 5,
@@ -210,7 +210,7 @@
       "price": 135.68,
       "pct": 4.25,
       "amount": 7199946918.0,
-      "turnover": 9.25,
+      "turnover": 18.22,
       "open": 132.66,
       "preClose": 130.15,
       "mainNet": 211543568.0,
@@ -689,15 +689,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "新高！美股三大股指全线上扬，芯片股走强，纳指、标普500再破纪录，中概股普涨，油价小幅上涨芯片股走强进一步推高了市场行情。  8小时前",
-      "url": "https://www.yicai.com/news/103384862.html",
+      "source": "Eastmoney News",
+      "title": "港股两大板块爆发！明星科网股普涨",
+      "url": "https://finance.eastmoney.com/a/202610063888763449.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "纳指再创收盘新高，硬盘股反弹、PTC大涨逾33%，国际油价跌近2%市场对本月继续加息的预期仍明显低于一周前。  昨天 07:05",
-      "url": "https://www.yicai.com/news/103384612.html",
+      "source": "Eastmoney News",
+      "title": "全球市场：美股三大指数集体上涨 纳指、标普500指数创收盘新高",
+      "url": "https://finance.eastmoney.com/a/202610073888831027.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "美股创新高，黄金石油震荡，节后A股如何走？",
+      "url": "https://finance.eastmoney.com/a/202610073888866845.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "节后A股怎么走？多家券商最新研判出炉",
+      "url": "https://finance.eastmoney.com/a/202610073888862971.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "香港主要地产股业绩收官 机构称板块已步入盈利上行周期",
+      "url": "https://finance.eastmoney.com/a/202610073888860786.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "历史大数据揭秘 国庆节后A股这样走？这个冷门行业胜率最高",
+      "url": "https://finance.eastmoney.com/a/202610073888867525.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
       "time": ""
     }
   ]
