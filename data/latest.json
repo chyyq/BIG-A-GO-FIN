@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-06T22:15:23.728021+08:00",
-    "tradingDate": "2026-10-06",
+    "generatedAt": "2026-10-07T15:22:48.657845+08:00",
+    "tradingDate": "2026-10-07",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 35.34
+    "runtimeSeconds": 20.6
   },
   "market": {
     "recommendationCount": 5,
@@ -689,38 +689,14 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "港股两大板块爆发！明星科网股普涨",
-      "url": "https://finance.eastmoney.com/a/202610063888763449.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "全球市场：美股三大指数集体收涨 纳指涨超1%创收盘新高",
-      "url": "https://finance.eastmoney.com/a/202610063888706547.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "成交额跌破1.5万亿！四季度A股怎么走？十大券商最新策略来了",
-      "url": "https://finance.eastmoney.com/a/202610063888713852.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "source": "Yicai",
+      "title": "新高！美股三大股指全线上扬，芯片股走强，纳指、标普500再破纪录，中概股普涨，油价小幅上涨芯片股走强进一步推高了市场行情。  8小时前",
+      "url": "https://www.yicai.com/news/103384862.html",
       "time": ""
     },
     {
       "source": "Yicai",
-      "title": "纳指再创收盘新高，硬盘股反弹、PTC大涨逾33%，国际油价跌近2%市场对本月继续加息的预期仍明显低于一周前。  15小时前",
+      "title": "纳指再创收盘新高，硬盘股反弹、PTC大涨逾33%，国际油价跌近2%市场对本月继续加息的预期仍明显低于一周前。  昨天 07:05",
       "url": "https://www.yicai.com/news/103384612.html",
       "time": ""
     }
