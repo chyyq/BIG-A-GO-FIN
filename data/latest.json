@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-07T15:22:48.657845+08:00",
+    "generatedAt": "2026-10-07T15:43:59.933375+08:00",
     "tradingDate": "2026-10-07",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 20.6
+    "runtimeSeconds": 27.09
   },
   "market": {
     "recommendationCount": 5,
@@ -252,7 +252,7 @@
       "price": 9544.74,
       "pct": 4.22,
       "amount": 30144730703.0,
-      "turnover": 6.27,
+      "turnover": 6.28,
       "open": 9182.39,
       "preClose": 9158.36,
       "mainNet": 2228100720.0,
