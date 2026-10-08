@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-08T15:38:00.375481+08:00",
+    "generatedAt": "2026-10-08T16:00:30.081554+08:00",
     "tradingDate": "2026-10-08",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -39,7 +39,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 39.19
+    "runtimeSeconds": 48.36
   },
   "market": {
     "recommendationCount": 0,
@@ -309,6 +309,42 @@
   "recommendations": [],
   "news": [
     {
+      "source": "Eastmoney News",
+      "title": "重磅利好叠加技术突破 电池板块逆势大涨 行业高质量发展新周期将启(附股)",
+      "url": "https://finance.eastmoney.com/a/202610083889406887.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "十大券商策略：节后A股有望“量价齐升” 科技或重新占优",
+      "url": "https://finance.eastmoney.com/a/202610073888967740.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "千亿飞机维修市场扩容，中国MRO还缺什么？",
+      "url": "https://finance.eastmoney.com/a/202610083889475563.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股三大指数集体收跌 电池板块逆市走强",
+      "url": "https://finance.eastmoney.com/a/202610083889577351.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
@@ -316,38 +352,8 @@
     },
     {
       "source": "Yicai",
-      "title": "连板股追踪丨A股今日共45只个股涨停 新华传媒8连板固态电池板块上海洗霸、传艺科技等多股连板。一图速览今日连板股&gt;&gt;  13分钟前",
+      "title": "连板股追踪丨A股今日共45只个股涨停 新华传媒8连板固态电池板块上海洗霸、传艺科技等多股连板。一图速览今日连板股&gt;&gt;  38分钟前",
       "url": "https://www.yicai.com/news/103386111.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "收盘｜创业板指跌3.15% 半导体产业链调整全市场超3700只个股下跌。  16分钟前",
-      "url": "https://www.yicai.com/news/103386094.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "光芯片价格预期松动，CPO概念板块多股跌停CPO概念板块整体走弱，板块内个股普跌。  4小时前",
-      "url": "https://www.yicai.com/news/103385708.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "A股四大指数开盘表现分化，动物疫苗、石化等板块走强盘面上，光模块、贵金属、房地产板块调整。  6小时前",
-      "url": "https://www.yicai.com/news/103385467.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "盘前必读丨美股下挫道指跌超300点；恒生科技指数将迎重大调整机构认为，节后A股或震荡回升，风格偏向中小盘与成长。  7小时前",
-      "url": "https://www.yicai.com/news/103385282.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "实探国庆上海楼市：购房者加速入场，有客户看了实景想再买一套新政落地更好地稳定了市场预期。  昨天 21:29",
-      "url": "https://www.yicai.com/news/103385152.html",
       "time": ""
     }
   ]
