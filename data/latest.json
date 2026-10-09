@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-09T16:15:23.275043+08:00",
+    "generatedAt": "2026-10-09T22:24:59.524677+08:00",
     "tradingDate": "2026-10-09",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,14 +20,14 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [
@@ -39,7 +39,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 35.54
+    "runtimeSeconds": 59.81
   },
   "market": {
     "recommendationCount": 0,
@@ -311,20 +311,38 @@
   "news": [
     {
       "source": "Eastmoney News",
-      "title": "午后大反攻！抄底资金进场！券商股、黄金股集体异动",
-      "url": "https://finance.eastmoney.com/a/202610093891114958.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
       "title": "A股三大指数探底回升 成交额超1.9万亿 传媒板块掀涨停潮",
       "url": "https://finance.eastmoney.com/a/202610093891224941.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "A股午后上演反转好戏：三大股指收涨，超3200股飘红",
-      "url": "https://finance.eastmoney.com/a/202610093891231910.html",
+      "title": "午后大反攻！抄底资金进场！券商股、黄金股集体异动",
+      "url": "https://finance.eastmoney.com/a/202610093891114958.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "影视、传媒板块涨势扩大！中文在线等十余股涨停",
+      "url": "https://finance.eastmoney.com/a/202610093891183828.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "全球市场：纳指跌超1% 存储、半导体板块下挫 国际油价涨逾3%",
+      "url": "https://finance.eastmoney.com/a/202610093890057356.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "四大积极因素助力A股探底回升 10月风险偏好有望逐步修复",
+      "url": "https://finance.eastmoney.com/a/202610093891378061.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "2026年9月A股新开户191.19万户",
+      "url": "https://finance.eastmoney.com/a/202610093891542998.html",
       "time": ""
     },
     {
@@ -337,12 +355,6 @@
       "source": "Eastmoney News",
       "title": "东方财富证券交易",
       "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     }
   ]
