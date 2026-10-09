@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-09T15:33:58.443795+08:00",
+    "generatedAt": "2026-10-09T16:01:13.645530+08:00",
     "tradingDate": "2026-10-09",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -38,7 +38,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 41.87
+    "runtimeSeconds": 42.36
   },
   "market": {
     "recommendationCount": 0,
@@ -309,39 +309,45 @@
   "recommendations": [],
   "news": [
     {
+      "source": "Eastmoney News",
+      "title": "午后大反攻！抄底资金进场！券商股、黄金股集体异动",
+      "url": "https://finance.eastmoney.com/a/202610093891114958.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "全球市场：纳指跌超1% 存储、半导体板块下挫 国际油价涨逾3%",
+      "url": "https://finance.eastmoney.com/a/202610093890057356.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股午后上演反转好戏：三大股指收涨，超3200股飘红",
+      "url": "https://finance.eastmoney.com/a/202610093891231910.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股三大指数探底回升 成交额超1.9万亿 传媒板块掀涨停潮",
+      "url": "https://finance.eastmoney.com/a/202610093891224941.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "收盘｜上证指数涨0.05% 传媒板块大涨全市场超3200只个股上涨。  9分钟前",
-      "url": "https://www.yicai.com/news/103387696.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "OpenAI营收预期差引发恐慌，算力硬件概念股全线回调A股算力硬件板块遭遇深度调整，产业基本面并未出现松动迹象。  1小时前",
-      "url": "https://www.yicai.com/news/103387484.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "滚动更新丨创业板指探底回升涨0.22%，影视股午后集体爆发沪深两市成交额1.9万亿，较上一个交易日放量2184亿。  4小时前",
-      "url": "https://www.yicai.com/news/103387190.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "A股四大指数集体低开，江淮汽车再度跌停盘面上，光芯片、覆铜板、玻纤板块调整。  5小时前",
-      "url": "https://www.yicai.com/news/103387026.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "盘前必读丨美股半导体、存储板块重挫；多家A股公司三季报预增机构认为，科技仍在寻底，能否企稳看三季报表现及美债拐点。  7小时前",
-      "url": "https://www.yicai.com/news/103386879.html",
       "time": ""
     }
   ]
