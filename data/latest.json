@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-09T16:01:13.645530+08:00",
+    "generatedAt": "2026-10-09T16:15:23.275043+08:00",
     "tradingDate": "2026-10-09",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
         "note": "OK"
       },
       {
@@ -36,9 +36,10 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 42.36
+    "runtimeSeconds": 35.54
   },
   "market": {
     "recommendationCount": 0,
@@ -201,27 +202,6 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1645",
-      "name": "昨日打二板以上表现",
-      "kind": "Concept board",
-      "price": 31478.15,
-      "pct": 6.77,
-      "amount": 8376083912.0,
-      "turnover": 13.71,
-      "open": 31063.57,
-      "preClose": 29480.86,
-      "mainNet": -224644896.0,
-      "rank": 8,
-      "passed": 2,
-      "qualified": false,
-      "score": 40,
-      "criteria": [
-        "Board is near the top of today's movers"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
       "code": "BK1221",
       "name": "数字媒体",
       "kind": "Industry board",
@@ -232,10 +212,10 @@
       "open": 6285.79,
       "preClose": 6291.53,
       "mainNet": 1000306256.0,
-      "rank": 9,
+      "rank": 8,
       "passed": 2,
       "qualified": false,
-      "score": 39,
+      "score": 40,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -253,10 +233,10 @@
       "open": 3241.77,
       "preClose": 3211.22,
       "mainNet": 849066272.0,
-      "rank": 10,
+      "rank": 9,
       "passed": 2,
       "qualified": false,
-      "score": 38,
+      "score": 39,
       "criteria": [
         "Board is near the top of today's movers"
       ],
@@ -274,6 +254,27 @@
       "open": 6256.84,
       "preClose": 6279.65,
       "mainNet": 1019881024.0,
+      "rank": 10,
+      "passed": 2,
+      "qualified": false,
+      "score": 38,
+      "criteria": [
+        "Board is near the top of today's movers"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK1617",
+      "name": "黄金",
+      "kind": "Industry board",
+      "price": 6267.88,
+      "pct": 5.98,
+      "amount": 16025402806.0,
+      "turnover": 3.32,
+      "open": 5987.91,
+      "preClose": 5914.23,
+      "mainNet": 1384875424.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -285,16 +286,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1172",
-      "name": "AI语料",
-      "kind": "Concept board",
-      "price": 1082.8,
-      "pct": 6.07,
-      "amount": 19998015391.0,
-      "turnover": 4.41,
-      "open": 1022.29,
-      "preClose": 1020.88,
-      "mainNet": 1628981392.0,
+      "code": "BK1289",
+      "name": "大众出版",
+      "kind": "Industry board",
+      "price": 1927.35,
+      "pct": 5.88,
+      "amount": 4833774805.0,
+      "turnover": 3.18,
+      "open": 1828.65,
+      "preClose": 1820.29,
+      "mainNet": 379052272.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -316,20 +317,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "全球市场：纳指跌超1% 存储、半导体板块下挫 国际油价涨逾3%",
-      "url": "https://finance.eastmoney.com/a/202610093890057356.html",
+      "title": "A股三大指数探底回升 成交额超1.9万亿 传媒板块掀涨停潮",
+      "url": "https://finance.eastmoney.com/a/202610093891224941.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
       "title": "A股午后上演反转好戏：三大股指收涨，超3200股飘红",
       "url": "https://finance.eastmoney.com/a/202610093891231910.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数探底回升 成交额超1.9万亿 传媒板块掀涨停潮",
-      "url": "https://finance.eastmoney.com/a/202610093891224941.html",
       "time": ""
     },
     {
