@@ -1,45 +1,49 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-12T16:22:38.781376+08:00",
-    "tradingDate": "2026-10-12",
-    "mode": "cached-fallback",
+    "generatedAt": "2026-10-13T00:47:33.915193+08:00",
+    "tradingDate": "2026-10-13",
+    "mode": "fast-snapshot",
     "sourceHealth": [
-      {
-        "name": "Historical cache",
-        "ok": true,
-        "url": "data/latest.json",
-        "note": "External sources failed; kept the last successful snapshot."
-      },
       {
         "name": "Eastmoney",
         "ok": true,
         "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
-        "note": "Previous successful source status retained during fallback."
+        "note": "OK"
+      },
+      {
+        "name": "Eastmoney News",
+        "ok": true,
+        "url": "https://finance.eastmoney.com/a/cjjsp.html",
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
         "url": "https://stock.10jqka.com.cn/",
-        "note": "Previous successful source status retained during fallback."
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
         "url": "https://www.yicai.com/news/",
-        "note": "Previous successful source status retained during fallback."
+        "note": "Optional news source OK"
       }
     ],
     "errors": [
       "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: HTTP 502",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 15.84
+    "runtimeSeconds": 47.54
   },
   "market": {
     "recommendationCount": 0,
-    "qualifiedBoardCount": 12
+    "qualifiedBoardCount": 0
   },
   "boards": [
     {
@@ -307,45 +311,33 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "贵州茅台重夺A股“股王”！联讯仪器近一个月跌近30%",
-      "url": "https://finance.eastmoney.com/a/202610123892612789.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "银行板块再度走强 中国银行、中信银行涨超2%续创历史新高",
-      "url": "https://finance.eastmoney.com/a/202610123892350132.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "十大券商策略：市场积极信号逐渐累积 把握好四季度做多窗口期",
-      "url": "https://finance.eastmoney.com/a/202610113892124764.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收跌 成交额1.55万亿 影视板块逆市大涨",
-      "url": "https://finance.eastmoney.com/a/202610123892633328.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
       "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "title": "宜信立案通报冲击市场，宜人智科美股开盘暴跌44%近乎腰斩。  昨天 23:36",
+      "url": "https://www.yicai.com/news/103390629.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "两只A股前“股王”预告第三季度业绩，净利润暴涨源杰科技和联讯仪器下游包括光模块厂商。  昨天 22:58",
+      "url": "https://www.yicai.com/news/103390615.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "全球流动性拐点已至当前流动性收缩趋势已确立，真实经济强劲是主要驱动力，债券市场率先反映，股票估值开始调整，商品与中国相关硬资产仍具支撑。  昨天 20:05",
+      "url": "https://www.yicai.com/news/103390374.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "需求旺季不涨反跌，碳酸锂价格失守11万元关口远期供需反转、市场悲观预期影响下，碳酸锂期货价格大幅下跌，行业加速高成本产能出清与洗牌。  昨天 19:33",
+      "url": "https://www.yicai.com/news/103390335.html",
       "time": ""
     }
   ]
