@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-13T15:53:08.564704+08:00",
+    "generatedAt": "2026-10-13T16:30:23.606094+08:00",
     "tradingDate": "2026-10-13",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -15,25 +15,23 @@
         "name": "Eastmoney News",
         "ok": true,
         "url": "https://finance.eastmoney.com/a/cjjsp.html",
-        "note": "Optional news source skipped; quote data is unaffected."
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
-    "errors": [
-      "Eastmoney News news skipped: The read operation timed out"
-    ],
-    "runtimeSeconds": 29.85
+    "errors": [],
+    "runtimeSeconds": 25.22
   },
   "market": {
     "recommendationCount": 5,
@@ -695,45 +693,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "清晨集体跳水！股市“吹哨人”突然发声！",
+      "url": "https://finance.eastmoney.com/a/202610133893096930.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共70只个股涨停 传媒板块多股连板文化传媒板块慈文传媒、新经典、龙版传媒均收获3连板。一图速览今日连板股&gt;&gt;  24分钟前",
-      "url": "https://www.yicai.com/news/103391640.html",
+      "source": "Eastmoney News",
+      "title": "A股突然全线拉升！发生了什么？",
+      "url": "https://finance.eastmoney.com/a/202610133893962818.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘｜沪指涨0.1% 冰雪经济板块大涨全市场超2900只个股上涨。  34分钟前",
-      "url": "https://www.yicai.com/news/103391623.html",
+      "source": "Eastmoney News",
+      "title": "美联储突发大消息！日韩股市闪崩",
+      "url": "https://finance.eastmoney.com/a/202610133893327494.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "7.4%高利率“锁死”美国楼市：买家离场、卖家撤牌，横盘僵局何时破？7%是美国房地产市场买家的一道心理防线。  2小时前",
-      "url": "https://www.yicai.com/news/103391417.html",
+      "source": "Eastmoney News",
+      "title": "再现深“V”反转，沪指重回3800点 A股稳了吗？",
+      "url": "https://finance.eastmoney.com/a/202610133894155374.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "IMF：全球金融稳定面临三大风险，主权债收益率急剧上升此次GFSR强调了三个突出的风险，这些风险可能是金融状况急剧收紧和市场动荡的短期催化剂。  4小时前",
-      "url": "https://www.yicai.com/news/103391115.html",
+      "source": "Eastmoney News",
+      "title": "杨德龙：科技股持续调整打击市场信心 呼吁尽快出台真金白银救市措施",
+      "url": "https://finance.eastmoney.com/a/202610133894120267.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "YiwealthSMI｜从市场事件到生活场景，券商社媒运营有哪些新思路？本期为券商社交媒体指数（2026年8月）。  5小时前",
-      "url": "https://www.yicai.com/news/103390991.html",
+      "source": "Eastmoney News",
+      "title": "东方财富证券陈果：年底双创板块有望迎来可观反弹",
+      "url": "https://finance.eastmoney.com/a/202610133894102373.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "博通、英特尔CEO警告资金成为AI扩张瓶颈，美股多只半导体股下跌  5小时前",
-      "url": "https://www.yicai.com/news/103390967.html",
+      "source": "Eastmoney News",
+      "title": "A股三大指数震荡整理 电子元件板块掀涨停潮",
+      "url": "https://finance.eastmoney.com/a/202610133894110332.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "宽基ETF显著放量 大资金托底信号再现",
+      "url": "https://finance.eastmoney.com/a/202610133894110684.html",
       "time": ""
     }
   ]
