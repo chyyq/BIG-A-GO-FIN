@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-13T16:47:39.470850+08:00",
+    "generatedAt": "2026-10-13T23:06:49.521862+08:00",
     "tradingDate": "2026-10-13",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 14.63
+    "runtimeSeconds": 20.68
   },
   "market": {
     "recommendationCount": 5,
@@ -712,32 +712,32 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "政策托底叠加企业盈利上行 A股中长期基本面持续增强",
-      "url": "https://finance.eastmoney.com/a/202610133894185329.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "再现深“V”反转，沪指重回3800点 A股稳了吗？",
-      "url": "https://finance.eastmoney.com/a/202610133894155374.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "杨德龙：科技股持续调整打击市场信心 呼吁尽快出台真金白银救市措施",
-      "url": "https://finance.eastmoney.com/a/202610133894120267.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券陈果：年底双创板块有望迎来可观反弹",
-      "url": "https://finance.eastmoney.com/a/202610133894102373.html",
+      "title": "宽基ETF显著放量 大资金托底信号再现",
+      "url": "https://finance.eastmoney.com/a/202610133894110684.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
       "title": "A股三大指数震荡整理 电子元件板块掀涨停潮",
       "url": "https://finance.eastmoney.com/a/202610133894110332.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "专访北京金融法院丁宇翔：以司法之力护航资本市场清朗空间",
+      "url": "https://finance.eastmoney.com/a/202610133894421852.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "科技股回调谁在卖出？受访险资重申“长钱长投” 不对短期市场波动作评价",
+      "url": "https://finance.eastmoney.com/a/202610133894226084.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "美股三大指数震荡整理 存储板块延续跌势",
+      "url": "https://finance.eastmoney.com/a/202610133894391137.html",
       "time": ""
     }
   ]
