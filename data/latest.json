@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-13T16:30:23.606094+08:00",
+    "generatedAt": "2026-10-13T16:47:39.470850+08:00",
     "tradingDate": "2026-10-13",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 25.22
+    "runtimeSeconds": 14.63
   },
   "market": {
     "recommendationCount": 5,
@@ -712,6 +712,12 @@
     },
     {
       "source": "Eastmoney News",
+      "title": "政策托底叠加企业盈利上行 A股中长期基本面持续增强",
+      "url": "https://finance.eastmoney.com/a/202610133894185329.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
       "title": "再现深“V”反转，沪指重回3800点 A股稳了吗？",
       "url": "https://finance.eastmoney.com/a/202610133894155374.html",
       "time": ""
@@ -732,12 +738,6 @@
       "source": "Eastmoney News",
       "title": "A股三大指数震荡整理 电子元件板块掀涨停潮",
       "url": "https://finance.eastmoney.com/a/202610133894110332.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "宽基ETF显著放量 大资金托底信号再现",
-      "url": "https://finance.eastmoney.com/a/202610133894110684.html",
       "time": ""
     }
   ]
