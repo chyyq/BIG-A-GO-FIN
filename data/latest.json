@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-19T15:10:06.954648+08:00",
+    "generatedAt": "2026-10-19T22:44:14.136289+08:00",
     "tradingDate": "2026-10-19",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -39,7 +39,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 45.49
+    "runtimeSeconds": 42.9
   },
   "market": {
     "recommendationCount": 0,
@@ -317,26 +317,8 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "“绿泡泡”对决“红果果”：微信杀入短剧市场",
-      "url": "https://topic.eastmoney.com/detail/wxsrdjsz.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "摩根大通：如果债券收益率延续企稳态势 将极大支撑股市",
-      "url": "https://finance.eastmoney.com/a/202610193899843010.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中国银河证券章俊：A股核心定价逻辑未变 看好市场中长期表现",
-      "url": "https://finance.eastmoney.com/a/202610193899801766.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "章俊：外部扰动不改A股核心定价逻辑，聚焦新质生产力长期机遇",
-      "url": "https://finance.eastmoney.com/a/202610193899770024.html",
+      "title": "证监会：坚持稳字当头 全力维护资本市场安全稳定",
+      "url": "https://finance.eastmoney.com/a/202610193899961462.html",
       "time": ""
     },
     {
@@ -347,14 +329,32 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "突然！抄底资金涌入！万亿赛道大爆发 宇树科技大涨",
-      "url": "https://finance.eastmoney.com/a/202610193899748556.html",
+      "title": "中原证券邓淑斌：资本市场底层逻辑深刻转变 “十五五”改革筑牢长期向好根基",
+      "url": "https://finance.eastmoney.com/a/202610193900212168.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "title": "中信证券包承超：盈利改善与股东回报提升，有助于增强投资者信心",
+      "url": "https://finance.eastmoney.com/a/202610193900220195.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中信证券包承超：上市公司盈利改善筑牢了投资者信心的根基",
+      "url": "https://finance.eastmoney.com/a/202610193900184189.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中信证券包承超：A股投资价值逐步提升",
+      "url": "https://finance.eastmoney.com/a/202610193900173827.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "吴清“12条”定调资本市场！A股将迎更多增量资金",
+      "url": "https://finance.eastmoney.com/a/202610193900060188.html",
       "time": ""
     }
   ]
