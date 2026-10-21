@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-21T14:10:05.516477+08:00",
+    "generatedAt": "2026-10-21T14:35:52.906987+08:00",
     "tradingDate": "2026-10-21",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1502%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1219%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -31,24 +31,24 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 26.18
+    "runtimeSeconds": 26.17
   },
   "market": {
-    "recommendationCount": 2,
-    "qualifiedBoardCount": 3
+    "recommendationCount": 1,
+    "qualifiedBoardCount": 4
   },
   "boards": [
     {
       "code": "BK0816",
       "name": "昨日连板",
       "kind": "Concept board",
-      "price": 55.85,
-      "pct": 3.58,
-      "amount": 8269822970.0,
-      "turnover": 7.28,
+      "price": 55.72,
+      "pct": 3.34,
+      "amount": 8554399768.0,
+      "turnover": 11.47,
       "open": 56.29,
       "preClose": 53.92,
-      "mainNet": 1163040.0,
+      "mainNet": -39339552.0,
       "rank": 4,
       "passed": 5,
       "qualified": true,
@@ -64,41 +64,16 @@
       "bigUpCount": 3
     },
     {
-      "code": "BK1051",
-      "name": "昨日连板_含一字",
-      "kind": "Concept board",
-      "price": 159.59,
-      "pct": 3.49,
-      "amount": 13169337585.0,
-      "turnover": 10.53,
-      "open": 161.13,
-      "preClose": 154.21,
-      "mainNet": -443808352.0,
-      "rank": 5,
-      "passed": 5,
-      "qualified": true,
-      "score": 98.25,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Limit-up or large-gain members are active",
-        "Board turnover amount is active",
-        "Leader stocks are visible",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 4,
-      "bigUpCount": 7
-    },
-    {
       "code": "BK1512",
       "name": "生猪养殖",
       "kind": "Industry board",
-      "price": 3956.31,
-      "pct": 4.14,
-      "amount": 4245050560.0,
-      "turnover": 1.51,
+      "price": 3958.4,
+      "pct": 4.19,
+      "amount": 4486767455.0,
+      "turnover": 1.58,
       "open": 3788.65,
       "preClose": 3799.09,
-      "mainNet": 240490944.0,
+      "mainNet": 233753952.0,
       "rank": 3,
       "passed": 4,
       "qualified": true,
@@ -113,16 +88,64 @@
       "bigUpCount": 4
     },
     {
+      "code": "BK1291",
+      "name": "电视广播Ⅲ",
+      "kind": "Industry board",
+      "price": 1293.12,
+      "pct": 3.32,
+      "amount": 2875446407.0,
+      "turnover": 2.51,
+      "open": 1258.96,
+      "preClose": 1251.52,
+      "mainNet": 51262753.0,
+      "rank": 5,
+      "passed": 4,
+      "qualified": true,
+      "score": 81.85,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 1,
+      "bigUpCount": 2
+    },
+    {
+      "code": "BK1219",
+      "name": "电视广播Ⅱ",
+      "kind": "Industry board",
+      "price": 1293.12,
+      "pct": 3.32,
+      "amount": 2875446407.0,
+      "turnover": 2.51,
+      "open": 1258.96,
+      "preClose": 1251.52,
+      "mainNet": 51262753.0,
+      "rank": 6,
+      "passed": 4,
+      "qualified": true,
+      "score": 81.5,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 1,
+      "bigUpCount": 2
+    },
+    {
       "code": "BK1295",
       "name": "其他数字媒体",
       "kind": "Industry board",
-      "price": 1314.12,
-      "pct": 8.18,
-      "amount": 3113567415.0,
-      "turnover": 19.67,
+      "price": 1316.71,
+      "pct": 8.39,
+      "amount": 3265848785.0,
+      "turnover": 20.58,
       "open": 1266.11,
       "preClose": 1214.74,
-      "mainNet": -104525824.0,
+      "mainNet": -139871984.0,
       "rank": 1,
       "passed": 3,
       "qualified": false,
@@ -139,13 +162,13 @@
       "code": "BK1292",
       "name": "广告媒体",
       "kind": "Industry board",
-      "price": 2539.34,
-      "pct": 6.33,
-      "amount": 1176538535.0,
-      "turnover": 1.29,
+      "price": 2552.73,
+      "pct": 6.89,
+      "amount": 1260404653.0,
+      "turnover": 1.38,
       "open": 2393.09,
       "preClose": 2388.19,
-      "mainNet": -58460262.0,
+      "mainNet": -64756995.0,
       "rank": 2,
       "passed": 3,
       "qualified": false,
@@ -159,39 +182,16 @@
       "bigUpCount": 1
     },
     {
-      "code": "BK1502",
-      "name": "林业Ⅲ",
-      "kind": "Industry board",
-      "price": 4690.42,
-      "pct": 3.43,
-      "amount": 2570767325.0,
-      "turnover": 13.37,
-      "open": 4497.34,
-      "preClose": 4534.96,
-      "mainNet": 680715904.0,
-      "rank": 6,
-      "passed": 3,
-      "qualified": false,
-      "score": 65.1,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Leader stocks are visible",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 1
-    },
-    {
-      "code": "BK1255",
-      "name": "林业Ⅱ",
-      "kind": "Industry board",
-      "price": 4690.42,
-      "pct": 3.43,
-      "amount": 2570767325.0,
-      "turnover": 13.37,
-      "open": 4497.34,
-      "preClose": 4534.96,
-      "mainNet": 680715904.0,
+      "code": "BK1054",
+      "name": "DRG/DIP",
+      "kind": "Concept board",
+      "price": 933.69,
+      "pct": 3.31,
+      "amount": 5607970418.0,
+      "turnover": 3.31,
+      "open": 907.36,
+      "preClose": 903.74,
+      "mainNet": 50240752.0,
       "rank": 7,
       "passed": 2,
       "qualified": false,
@@ -206,13 +206,13 @@
       "code": "BK1050",
       "name": "昨日涨停_含一字",
       "kind": "Concept board",
-      "price": 217.59,
-      "pct": 3.41,
-      "amount": 43954192821.0,
-      "turnover": 7.82,
+      "price": 217.29,
+      "pct": 3.27,
+      "amount": 46209903161.0,
+      "turnover": 9.16,
       "open": 216.9,
       "preClose": 210.41,
-      "mainNet": -705965056.0,
+      "mainNet": -741685504.0,
       "rank": 8,
       "passed": 2,
       "qualified": false,
@@ -224,16 +224,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1054",
-      "name": "DRG/DIP",
+      "code": "BK1630",
+      "name": "昨日首板",
       "kind": "Concept board",
-      "price": 934.36,
-      "pct": 3.39,
-      "amount": 5335103049.0,
-      "turnover": 3.13,
-      "open": 907.36,
-      "preClose": 903.74,
-      "mainNet": 67354240.0,
+      "price": 8270.22,
+      "pct": 3.15,
+      "amount": 30536377882.0,
+      "turnover": 9.24,
+      "open": 8207.79,
+      "preClose": 8017.94,
+      "mainNet": -289423616.0,
       "rank": 9,
       "passed": 2,
       "qualified": false,
@@ -245,16 +245,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1291",
-      "name": "电视广播Ⅲ",
-      "kind": "Industry board",
-      "price": 1292.69,
-      "pct": 3.29,
-      "amount": 2701975332.0,
-      "turnover": 2.39,
-      "open": 1258.96,
-      "preClose": 1251.52,
-      "mainNet": 49311253.0,
+      "code": "BK1051",
+      "name": "昨日连板_含一字",
+      "kind": "Concept board",
+      "price": 158.97,
+      "pct": 3.09,
+      "amount": 13681222363.0,
+      "turnover": 10.47,
+      "open": 161.13,
+      "preClose": 154.21,
+      "mainNet": -518165936.0,
       "rank": 10,
       "passed": 2,
       "qualified": false,
@@ -266,16 +266,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1219",
-      "name": "电视广播Ⅱ",
-      "kind": "Industry board",
-      "price": 1292.69,
-      "pct": 3.29,
-      "amount": 2701975332.0,
-      "turnover": 2.39,
-      "open": 1258.96,
-      "preClose": 1251.52,
-      "mainNet": 49311253.0,
+      "code": "BK1717",
+      "name": "题材股",
+      "kind": "Concept board",
+      "price": 1399.76,
+      "pct": 3.08,
+      "amount": 48541221031.0,
+      "turnover": 12.46,
+      "open": 1389.89,
+      "preClose": 1357.87,
+      "mainNet": -718085376.0,
       "rank": 11,
       "passed": 2,
       "qualified": false,
@@ -287,16 +287,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1630",
-      "name": "昨日首板",
+      "code": "BK1008",
+      "name": "国资云概念",
       "kind": "Concept board",
-      "price": 8274.03,
-      "pct": 3.19,
-      "amount": 28858271546.0,
-      "turnover": 6.42,
-      "open": 8207.79,
-      "preClose": 8017.94,
-      "mainNet": -330014208.0,
+      "price": 1454.41,
+      "pct": 3.02,
+      "amount": 10116521040.0,
+      "turnover": 2.55,
+      "open": 1430.83,
+      "preClose": 1411.72,
+      "mainNet": 211376720.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -314,10 +314,10 @@
       "code": "603119",
       "name": "浙江荣泰",
       "market": "SH",
-      "price": 51.76,
-      "pct": 2.58,
-      "amount": 1088917874.0,
-      "turnover": 4.46,
+      "price": 51.71,
+      "pct": 2.48,
+      "amount": 1146922305.0,
+      "turnover": 4.7,
       "confidence": 94,
       "winRate": 94,
       "board": {
@@ -347,8 +347,8 @@
         "timeWindow": "09:25-09:40",
         "trigger": "Confirm near open/VWAP after a controlled gap-up.",
         "priceRange": [
-          50.94,
-          51.65
+          50.89,
+          51.6
         ],
         "quality": 16,
         "priority": 5
@@ -361,7 +361,7 @@
         "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
       },
       "stopPlan": {
-        "stopLoss": 50.18,
+        "stopLoss": 50.13,
         "rules": [
           "Lose VWAP and fail to recover within 10 minutes",
           "Break the entry trigger or intraday platform low",
@@ -376,81 +376,6 @@
         {
           "name": "10jqka stock page",
           "url": "https://stockpage.10jqka.com.cn/603119/"
-        },
-        {
-          "name": "Yicai news",
-          "url": "https://www.yicai.com/news/"
-        }
-      ],
-      "sparkline": []
-    },
-    {
-      "rank": 2,
-      "code": "600267",
-      "name": "海正药业",
-      "market": "SH",
-      "price": 14.0,
-      "pct": 5.5,
-      "amount": 1796285014.0,
-      "turnover": 10.91,
-      "confidence": 94,
-      "winRate": 94,
-      "board": {
-        "code": "BK1051",
-        "name": "昨日连板_含一字",
-        "passed": 5,
-        "score": 98.25
-      },
-      "criteria": {
-        "board": [
-          "Board rank is strong or improving",
-          "Limit-up or large-gain members are active",
-          "Board turnover amount is active",
-          "Leader stocks are visible",
-          "Board momentum is positive"
-        ],
-        "stock": [
-          "Board is in main-rising condition",
-          "Stock volume is rising but not exhausted",
-          "Turnover is active",
-          "Gain is below chase-risk zone",
-          "Price holds above opening area"
-        ]
-      },
-      "buyPlan": {
-        "type": "Early strength confirmation",
-        "timeWindow": "09:25-09:40",
-        "trigger": "Confirm near open/VWAP after a controlled gap-up.",
-        "priceRange": [
-          13.78,
-          13.97
-        ],
-        "quality": 16,
-        "priority": 5
-      },
-      "sellPlan": {
-        "targetPrice": 14.38,
-        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
-        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
-        "takeProfit": 14.38,
-        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
-      },
-      "stopPlan": {
-        "stopLoss": 13.47,
-        "rules": [
-          "Lose VWAP and fail to recover within 10 minutes",
-          "Break the entry trigger or intraday platform low",
-          "Single-stock loss should stay within 5%"
-        ]
-      },
-      "sourceLinks": [
-        {
-          "name": "Eastmoney quote",
-          "url": "https://quote.eastmoney.com/sh600267.html"
-        },
-        {
-          "name": "10jqka stock page",
-          "url": "https://stockpage.10jqka.com.cn/600267/"
         },
         {
           "name": "Yicai news",
