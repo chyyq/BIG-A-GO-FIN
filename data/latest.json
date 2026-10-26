@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-26T15:16:22.763257+08:00",
+    "generatedAt": "2026-10-26T22:22:09.579938+08:00",
     "tradingDate": "2026-10-26",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -39,7 +39,7 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 47.51
+    "runtimeSeconds": 52.27
   },
   "market": {
     "recommendationCount": 0,
@@ -321,32 +321,32 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
-      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "万联证券：A股修复逻辑渐清晰",
-      "url": "https://finance.eastmoney.com/a/202610263907879186.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
       "title": "A股三大指数涨跌不一 游戏、医药商业、白酒板块涨幅居前",
       "url": "https://finance.eastmoney.com/a/202610263907922657.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "title": "救市场不救机构！债市互换便利落地 股、债稳市机制成型",
+      "url": "https://finance.eastmoney.com/a/202610263908316388.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中信建投：预计本轮急跌行情有望结束，迎来反弹修复行情",
+      "url": "https://finance.eastmoney.com/a/202610263908572676.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股震荡分化 该离场还是布局？",
+      "url": "https://finance.eastmoney.com/a/202610263908559186.html",
       "time": ""
     }
   ]
