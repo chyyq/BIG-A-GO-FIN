@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-27T15:08:30.732418+08:00",
+    "generatedAt": "2026-10-27T21:19:59.741128+08:00",
     "tradingDate": "2026-10-27",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -32,14 +32,14 @@
     ],
     "errors": [
       "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: HTTP 502",
+      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 41.94
+    "runtimeSeconds": 50.75
   },
   "market": {
     "recommendationCount": 0,
@@ -309,45 +309,51 @@
   "recommendations": [],
   "news": [
     {
+      "source": "Eastmoney News",
+      "title": "A股三大指数收跌 成交额不足1.5万亿 银行股逆市走强",
+      "url": "https://finance.eastmoney.com/a/202610273909730882.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "3万亿巨头创新高 总市值重回A股第一！银行股逆势走强 红利资产再获资金青睐",
+      "url": "https://finance.eastmoney.com/a/202610273909469584.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "广发基金宏观策略部总经理武幼辉：盈利周期向上叠加AI产业兑现 资本市场向好基础坚实",
+      "url": "https://finance.eastmoney.com/a/202610273910434218.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "汇添富基金研究总监刘伟林：多因素构筑坚实支撑 市场具备企稳向上动能",
+      "url": "https://finance.eastmoney.com/a/202610273910434890.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "奥迪中国重新分家：四环标归一汽，上汽押注字母标专注和聚焦能让传统豪华车赢回中国市场吗？  5分钟前",
-      "url": "https://www.yicai.com/news/103411133.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "为什么黄仁勋帮不了欧洲人工智能欧洲处于AI边缘地带，这是产业断裂、人才积累不足和资金匮乏等多方因素造成的。  55分钟前",
-      "url": "https://www.yicai.com/news/103411000.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "财报解读｜“红”退“白”进：沉闷的葡萄酒市场正在换引擎白葡萄酒迎来风口，但钱并不好赚。  4小时前",
-      "url": "https://www.yicai.com/news/103410694.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "A股四大指数集体高开，半导体、CPO等板块走强市场逾2700股上涨。  5小时前",
-      "url": "https://www.yicai.com/news/103410521.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "美国上演“老登股”行情：可口可乐礼来创新高，伯克希尔收复巴菲特“交棒”后所有失地“股神”接班人开始获得市场认可。  6小时前",
-      "url": "https://www.yicai.com/news/103410421.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "股市熔断！巴西遭遇股债汇三杀投机资金疯狂出逃。  6小时前",
-      "url": "https://www.yicai.com/news/103410393.html",
       "time": ""
     }
   ]
