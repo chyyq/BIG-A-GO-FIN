@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-28T15:29:30.466388+08:00",
+    "generatedAt": "2026-10-28T15:46:56.948258+08:00",
     "tradingDate": "2026-10-28",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
         "note": "OK"
       },
       {
@@ -36,10 +36,9 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 42.96
+    "runtimeSeconds": 41.69
   },
   "market": {
     "recommendationCount": 0,
@@ -287,16 +286,16 @@
       "bigUpCount": 0
     },
     {
-      "code": "BK1438",
-      "name": "合成树脂",
-      "kind": "Industry board",
-      "price": 7971.85,
-      "pct": 4.9,
-      "amount": 5325762202.0,
-      "turnover": 4.67,
-      "open": 7660.09,
-      "preClose": 7599.79,
-      "mainNet": 400791456.0,
+      "code": "BK1145",
+      "name": "机器人执行器",
+      "kind": "Concept board",
+      "price": 2081.36,
+      "pct": 5.05,
+      "amount": 29466990305.0,
+      "turnover": 4.49,
+      "open": 1986.99,
+      "preClose": 1981.38,
+      "mainNet": 1719880976.0,
       "rank": 12,
       "passed": 2,
       "qualified": false,
@@ -342,8 +341,8 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "如何看A股当下的配置性价比？易方达、招商、富国等头部公募发声",
-      "url": "https://finance.eastmoney.com/a/202610283911778326.html",
+      "title": "华创证券姚佩：A股盈利质量持续改善 股东回报提升中长期配置价值",
+      "url": "https://finance.eastmoney.com/a/202610283911766945.html",
       "time": ""
     },
     {
