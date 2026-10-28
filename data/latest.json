@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-10-28T15:46:56.948258+08:00",
+    "generatedAt": "2026-10-28T22:04:43.498591+08:00",
     "tradingDate": "2026-10-28",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,25 +20,25 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: HTTP 502",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 41.69
+    "runtimeSeconds": 55.87
   },
   "market": {
     "recommendationCount": 0,
@@ -310,51 +310,21 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "韩国股市涨到“熔断”！三星电子、SK海力士暴涨",
-      "url": "https://finance.eastmoney.com/a/202610283911297121.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
-      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
+      "source": "Yicai",
+      "title": "历史经典产业“十五五”如何迈向世界市场历史经典产业一头连着千年文脉，一头连着就业富民。  28分钟前",
+      "url": "https://www.yicai.com/news/103413926.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "A股超调 机构：估值、筹码、情绪多维度呈现底部特征",
-      "url": "https://finance.eastmoney.com/a/202610283911798059.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "浙商证券王大霁：蓝筹股债性价比优势突出，后市宜价值打底、博弈成长反弹",
-      "url": "https://finance.eastmoney.com/a/202610283911787457.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "华创证券姚佩：估值回落增厚安全边际，A股优质资产配置价值凸显",
-      "url": "https://finance.eastmoney.com/a/202610283911791830.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "华创证券姚佩：A股盈利质量持续改善 股东回报提升中长期配置价值",
-      "url": "https://finance.eastmoney.com/a/202610283911766945.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数反弹 创业板指大涨3.4% 逾4100只股上涨",
-      "url": "https://finance.eastmoney.com/a/202610283911792487.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "source": "Yicai",
+      "title": "两融余额回撤6200亿，杠杆资金结构性换仓从3.03万亿到2.41万亿，融资余额已回吐年内全部增量。  42分钟前",
+      "url": "https://www.yicai.com/news/103413911.html",
       "time": ""
     }
   ]
