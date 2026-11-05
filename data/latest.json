@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-05T16:49:25.694876+08:00",
+    "generatedAt": "2026-11-05T23:34:24.353209+08:00",
     "tradingDate": "2026-11-05",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -15,23 +15,25 @@
         "name": "Eastmoney News",
         "ok": true,
         "url": "https://finance.eastmoney.com/a/cjjsp.html",
-        "note": "Optional news source OK"
+        "note": "Optional news source skipped; quote data is unaffected."
       },
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
-    "errors": [],
-    "runtimeSeconds": 75.35
+    "errors": [
+      "Eastmoney News news skipped: The read operation timed out"
+    ],
+    "runtimeSeconds": 43.39
   },
   "market": {
     "recommendationCount": 5,
@@ -695,51 +697,27 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "增量资金集结待入市 26家券商宣布中标 已披露金额近600亿元！",
-      "url": "https://finance.eastmoney.com/a/202611043922305630.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "持续加仓！近5400亿“抄底资金”入场",
-      "url": "https://finance.eastmoney.com/a/202611043922300262.html",
+      "source": "Yicai",
+      "title": "上交所召开并购重组专题座谈会 汇聚市场合力助推上市公司提质增效助力上市公司更好运用并购重组工具，实现提质增效。  2小时前",
+      "url": "https://www.yicai.com/news/103428152.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "国务院关于金融工作情况的报告：支持中央汇金公司发挥类平准基金作用 巩固完善资本市场稳市机制",
-      "url": "https://finance.eastmoney.com/a/202611053923339644.html",
+      "source": "Yicai",
+      "title": "下半年A股新开户逐月降温，前10个月总量仍超去年全年10月A股新开户数创年内新低。  2小时前",
+      "url": "https://www.yicai.com/news/103428113.html",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "民主党横扫美国会两院！光伏板块迎政策暖风 产业链修复可期(名单)",
-      "url": "https://finance.eastmoney.com/a/202611053923296417.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
-      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "华宝基金丁靖斐：A股当前位置或具备一定反弹空间",
-      "url": "https://finance.eastmoney.com/a/202611053923532622.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中泰国际李迅雷：回报机制与稳市机制并进，资本市场改革成效持续显现",
-      "url": "https://finance.eastmoney.com/a/202611053923523574.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "收评：创业板指冲高回落涨0.87% AI漫剧概念持续活跃",
-      "url": "https://finance.eastmoney.com/a/202611053923483964.html",
+      "source": "Yicai",
+      "title": "资金博弈光伏周期底部，三季度主产业链亏损300亿22家主产业链公司净亏313.95亿元，19家亏损，无一家龙头整体盈利。  3小时前",
+      "url": "https://www.yicai.com/news/103427952.html",
       "time": ""
     }
   ]
