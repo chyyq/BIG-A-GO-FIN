@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-06T16:31:06.374525+08:00",
+    "generatedAt": "2026-11-06T16:49:18.308060+08:00",
     "tradingDate": "2026-11-06",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 61.05
+    "runtimeSeconds": 69.02
   },
   "market": {
     "recommendationCount": 4,
@@ -632,6 +632,12 @@
     },
     {
       "source": "Eastmoney News",
+      "title": "稳市机制迈向常态化！中原证券邓淑斌：投融资改革从“单点突破”进入“系统集成”",
+      "url": "https://finance.eastmoney.com/a/202611063924852232.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
       "title": "杨德龙：隔夜美股大跌致亚太股市重挫 A股港股体现出一定的韧性",
       "url": "https://finance.eastmoney.com/a/202611063924841352.html",
       "time": ""
@@ -646,12 +652,6 @@
       "source": "Eastmoney News",
       "title": "金融街证券首席经济学家张一：国产替代是一笔“效率账”",
       "url": "https://finance.eastmoney.com/a/202611063924800532.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数缩量收跌 银行等红利资产逆市上涨",
-      "url": "https://finance.eastmoney.com/a/202611063924777565.html",
       "time": ""
     }
   ]
