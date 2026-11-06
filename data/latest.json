@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-06T16:49:18.308060+08:00",
+    "generatedAt": "2026-11-06T23:08:37.620878+08:00",
     "tradingDate": "2026-11-06",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 69.02
+    "runtimeSeconds": 18.52
   },
   "market": {
     "recommendationCount": 4,
@@ -45,7 +45,7 @@
       "price": 43930.04,
       "pct": 10.03,
       "amount": 2609949005.0,
-      "turnover": 16.22,
+      "turnover": 26.68,
       "open": 42603.13,
       "preClose": 39926.15,
       "mainNet": 59810080.0,
@@ -268,7 +268,7 @@
       "price": 190.45,
       "pct": 2.11,
       "amount": 31672646105.0,
-      "turnover": 15.6,
+      "turnover": 35.39,
       "open": 188.4,
       "preClose": 186.51,
       "mainNet": -547326720.0,
@@ -620,8 +620,20 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "韩国财政部：将采取必要措施 避免股市脱离基本面过度波动",
-      "url": "https://finance.eastmoney.com/a/202611063924135259.html",
+      "title": "国常会：完善资本市场稳市机制 增强股市内在稳定性",
+      "url": "https://finance.eastmoney.com/a/202611063924966184.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中金公司、银河证券已在“互换便利”项下买入股票",
+      "url": "https://finance.eastmoney.com/a/202611063924788483.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股三大指数缩量收跌 银行等红利资产逆市上涨",
+      "url": "https://finance.eastmoney.com/a/202611063924777565.html",
       "time": ""
     },
     {
@@ -632,26 +644,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "稳市机制迈向常态化！中原证券邓淑斌：投融资改革从“单点突破”进入“系统集成”",
-      "url": "https://finance.eastmoney.com/a/202611063924852232.html",
+      "title": "天弘基金黄子函：A股筹码问题明显缓和 维持11月有条件超跌反弹判断",
+      "url": "https://finance.eastmoney.com/a/202611063925121082.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "杨德龙：隔夜美股大跌致亚太股市重挫 A股港股体现出一定的韧性",
-      "url": "https://finance.eastmoney.com/a/202611063924841352.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "富国基金王乐乐：新一轮行情驱动力，来自持仓轻且业绩大幅改善的方向",
-      "url": "https://finance.eastmoney.com/a/202611063924822643.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "金融街证券首席经济学家张一：国产替代是一笔“效率账”",
-      "url": "https://finance.eastmoney.com/a/202611063924800532.html",
+      "title": "耶鲁大学投委会前主席查尔斯&#183;埃利斯：中国A股市场，主动投资仍有“取胜”空间",
+      "url": "https://finance.eastmoney.com/a/202611063925133554.html",
       "time": ""
     }
   ]
