@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-09T16:55:06.097225+08:00",
-    "tradingDate": "2026-11-09",
+    "generatedAt": "2026-11-10T01:37:07.701636+08:00",
+    "tradingDate": "2026-11-10",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 22.23
+    "runtimeSeconds": 16.63
   },
   "market": {
     "recommendationCount": 2,
@@ -466,51 +466,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "突然爆发！19分钟 20%涨停！A股迎来双重利好",
+      "url": "https://finance.eastmoney.com/a/202611093926106885.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "租房“淡季”市场分化，上海深圳住宅租金连涨八个月在季节性效应影响下，重点城市住宅租金“先扬后抑”。  1分钟前",
-      "url": "https://www.yicai.com/news/103432376.html",
+      "source": "Eastmoney News",
+      "title": "A股靠什么托举？这些重要变量正在集聚",
+      "url": "https://finance.eastmoney.com/a/202611093925775778.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "首届“楚超”收官：综合经济影响超382亿元赛事仍需解决资源失衡、市场化不足及流量长效沉淀等挑战。  42分钟前",
-      "url": "https://www.yicai.com/news/103432427.html",
+      "source": "Eastmoney News",
+      "title": "沪指小幅收涨 深成指与创业板指冲高回落 煤炭与机器人板块走强",
+      "url": "https://finance.eastmoney.com/a/202611093926213181.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘丨沪指涨0.32% 煤炭板块走强沪深两市成交额1.48万亿，较上一个交易日缩量1752亿。  1小时前",
-      "url": "https://www.yicai.com/news/103432389.html",
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "扩内需如何长短结合？CF40报告：澄清7个认知困境需求不足的本质是市场失灵。  1小时前",
-      "url": "https://www.yicai.com/news/103432051.html",
+      "source": "Eastmoney News",
+      "title": "国常会部署重点工作 首提完善资本市场稳市机制",
+      "url": "https://topic.eastmoney.com/detail/gchstwszbscwsjz.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股四大指数集体高开，市场逾4800股上涨盘面上，太空算力、物理AI、玻纤板块走强。油气、银行、白酒板块调整。  7小时前",
-      "url": "https://www.yicai.com/news/103431709.html",
+      "source": "Eastmoney News",
+      "title": "中信建投、华泰、浙商出手买入！至少10家券商已进场 增量资金加速入市",
+      "url": "https://finance.eastmoney.com/a/202611093926433155.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "盘前必读丨事关股市！国常会最新部署；华新建材拟超百亿元跨境并购机构认为，震荡蓄势、结构性轮动预计仍是短期基调。  8小时前",
-      "url": "https://www.yicai.com/news/103431562.html",
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "零售巨头齐聚进博会：加强本土化，中外合作寻商机进博会已成为中外零售商深化供应链合作、挖掘存量市场及推动产品出海的重要平台。  昨天 21:34",
-      "url": "https://www.yicai.com/news/103431442.html",
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
       "time": ""
     }
   ]
