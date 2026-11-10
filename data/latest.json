@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-10T17:01:30.598175+08:00",
+    "generatedAt": "2026-11-10T23:38:46.989394+08:00",
     "tradingDate": "2026-11-10",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 21.28
+    "runtimeSeconds": 27.46
   },
   "market": {
     "recommendationCount": 5,
@@ -143,7 +143,7 @@
       "price": 1840.57,
       "pct": 6.73,
       "amount": 5369502212.0,
-      "turnover": 4.15,
+      "turnover": 1.75,
       "open": 1768.33,
       "preClose": 1724.43,
       "mainNet": 181952992.0,
@@ -212,7 +212,7 @@
       "price": 202.05,
       "pct": 5.95,
       "amount": 8284881130.0,
-      "turnover": 12.27,
+      "turnover": 16.12,
       "open": 200.81,
       "preClose": 190.7,
       "mainNet": -751384128.0,
@@ -233,7 +233,7 @@
       "price": 46649.85,
       "pct": 5.72,
       "amount": 5644310578.0,
-      "turnover": 36.81,
+      "turnover": 30.02,
       "open": 45199.98,
       "preClose": 44124.61,
       "mainNet": -359051456.0,
@@ -699,32 +699,20 @@
     },
     {
       "source": "Yicai",
-      "title": "进博会五项核心数据创新高，外企“不只把中国当销售市场”进博会的溢出效应正从“成交数字”转向“确定性预期”  10分钟前",
-      "url": "https://www.yicai.com/news/103434485.html",
+      "title": "票据利率持续“地板价”，信贷统计口径调整讨论升温近期市场已重新开始关注票据在统计口径上的信贷属性合理性。  1小时前",
+      "url": "https://www.yicai.com/news/103435108.html",
       "time": ""
     },
     {
       "source": "Yicai",
-      "title": "连板股追踪丨A股今日共95只个股涨停 这只光伏股3连板机器人板块光洋股份2连板。一图速览今日连板股&gt;&gt;  23分钟前",
-      "url": "https://www.yicai.com/news/103434492.html",
+      "title": "暴走“梧桐区”、围观新生代，跨国品牌沉浸式捕获消费新机遇品牌IP、创意产品、前沿趋势密集的进博会，也是跨国消费品牌汲取灵感、试水中国市场的重要平台。  2小时前",
+      "url": "https://www.yicai.com/news/103435009.html",
       "time": ""
     },
     {
       "source": "Yicai",
-      "title": "收盘｜四大股指集体收涨 AI短剧、物理AI领涨概念指数全市场超4200只个股上涨，95只个股涨停。  1小时前",
-      "url": "https://www.yicai.com/news/103434268.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "宇树科技股价一度冲高到A股第三， 多重催化点燃人形机器人板块近日，通用大模型相关消息持续发酵。  3小时前",
-      "url": "https://www.yicai.com/news/103433904.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "国家发改委发布民生大礼包将统筹各类资金渠道继续加大“一老一小”服务保障支持力度  4小时前",
-      "url": "https://www.yicai.com/news/103433774.html",
+      "title": "奥迪全球CEO高德诺：任用本土管理者模式有望全球推广高德诺称，随着全球市场日益复杂，必须进一步推进本土化，任用熟悉本土市场的管理者是顺理成章的一步。  2小时前",
+      "url": "https://www.yicai.com/news/103434967.html",
       "time": ""
     }
   ]
