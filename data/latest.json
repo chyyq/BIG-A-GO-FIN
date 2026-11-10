@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-10T16:32:01.446681+08:00",
+    "generatedAt": "2026-11-10T16:50:34.946114+08:00",
     "tradingDate": "2026-11-10",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 19.93
+    "runtimeSeconds": 24.91
   },
   "market": {
     "recommendationCount": 5,
@@ -143,7 +143,7 @@
       "price": 1840.57,
       "pct": 6.73,
       "amount": 5369502212.0,
-      "turnover": 4.15,
+      "turnover": 18.02,
       "open": 1768.33,
       "preClose": 1724.43,
       "mainNet": 181952992.0,
@@ -212,7 +212,7 @@
       "price": 202.05,
       "pct": 5.95,
       "amount": 8284881130.0,
-      "turnover": 12.27,
+      "turnover": 7.13,
       "open": 200.81,
       "preClose": 190.7,
       "mainNet": -751384128.0,
@@ -233,7 +233,7 @@
       "price": 46649.85,
       "pct": 5.72,
       "amount": 5644310578.0,
-      "turnover": 36.81,
+      "turnover": 28.12,
       "open": 45199.98,
       "preClose": 44124.61,
       "mainNet": -359051456.0,
@@ -692,45 +692,39 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收涨 创业板指涨1.46% 近4300只股上涨",
-      "url": "https://finance.eastmoney.com/a/202611103927273312.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
-      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "国常会部署重点工作 首提完善资本市场稳市机制",
-      "url": "https://topic.eastmoney.com/detail/gchstwszbscwsjz.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "【博时市场点评11月10日】指数震荡收涨，成交量有所上涨",
-      "url": "https://finance.eastmoney.com/a/202611103927322264.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
       "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "title": "连板股追踪丨A股今日共95只个股涨停 这只光伏股3连板机器人板块光洋股份2连板。一图速览今日连板股&gt;&gt;  14分钟前",
+      "url": "https://www.yicai.com/news/103434492.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "收盘｜四大股指集体收涨 AI短剧、物理AI领涨概念指数全市场超4200只个股上涨，95只个股涨停。  1小时前",
+      "url": "https://www.yicai.com/news/103434268.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "宇树科技股价一度冲高到A股第三， 多重催化点燃人形机器人板块近日，通用大模型相关消息持续发酵。  3小时前",
+      "url": "https://www.yicai.com/news/103433904.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "国家发改委发布民生大礼包将统筹各类资金渠道继续加大“一老一小”服务保障支持力度  4小时前",
+      "url": "https://www.yicai.com/news/103433774.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "A股四大指数集体高开，油气、海运等板块调整市场逾4800股上涨。  7小时前",
+      "url": "https://www.yicai.com/news/103433463.html",
       "time": ""
     }
   ]
