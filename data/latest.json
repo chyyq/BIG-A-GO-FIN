@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-10T16:50:34.946114+08:00",
+    "generatedAt": "2026-11-10T17:01:30.598175+08:00",
     "tradingDate": "2026-11-10",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 24.91
+    "runtimeSeconds": 21.28
   },
   "market": {
     "recommendationCount": 5,
@@ -143,7 +143,7 @@
       "price": 1840.57,
       "pct": 6.73,
       "amount": 5369502212.0,
-      "turnover": 18.02,
+      "turnover": 4.15,
       "open": 1768.33,
       "preClose": 1724.43,
       "mainNet": 181952992.0,
@@ -212,7 +212,7 @@
       "price": 202.05,
       "pct": 5.95,
       "amount": 8284881130.0,
-      "turnover": 7.13,
+      "turnover": 12.27,
       "open": 200.81,
       "preClose": 190.7,
       "mainNet": -751384128.0,
@@ -233,7 +233,7 @@
       "price": 46649.85,
       "pct": 5.72,
       "amount": 5644310578.0,
-      "turnover": 28.12,
+      "turnover": 36.81,
       "open": 45199.98,
       "preClose": 44124.61,
       "mainNet": -359051456.0,
@@ -699,7 +699,13 @@
     },
     {
       "source": "Yicai",
-      "title": "连板股追踪丨A股今日共95只个股涨停 这只光伏股3连板机器人板块光洋股份2连板。一图速览今日连板股&gt;&gt;  14分钟前",
+      "title": "进博会五项核心数据创新高，外企“不只把中国当销售市场”进博会的溢出效应正从“成交数字”转向“确定性预期”  10分钟前",
+      "url": "https://www.yicai.com/news/103434485.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "连板股追踪丨A股今日共95只个股涨停 这只光伏股3连板机器人板块光洋股份2连板。一图速览今日连板股&gt;&gt;  23分钟前",
       "url": "https://www.yicai.com/news/103434492.html",
       "time": ""
     },
@@ -719,12 +725,6 @@
       "source": "Yicai",
       "title": "国家发改委发布民生大礼包将统筹各类资金渠道继续加大“一老一小”服务保障支持力度  4小时前",
       "url": "https://www.yicai.com/news/103433774.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "A股四大指数集体高开，油气、海运等板块调整市场逾4800股上涨。  7小时前",
-      "url": "https://www.yicai.com/news/103433463.html",
       "time": ""
     }
   ]
