@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-11T16:24:58.922156+08:00",
+    "generatedAt": "2026-11-11T16:41:34.614835+08:00",
     "tradingDate": "2026-11-11",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 21.06
+    "runtimeSeconds": 21.8
   },
   "market": {
     "recommendationCount": 5,
@@ -732,14 +732,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "兴业证券段超：海外风险扰动不改资本市场长期向好",
-      "url": "https://finance.eastmoney.com/a/202611113928414690.html",
+      "title": "东北证券廖博：科技为矛、商品为盾，“双创”板块有望实现估值修复",
+      "url": "https://finance.eastmoney.com/a/202611113928439617.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "一场券商策略会，看懂2027宏观大势、A股节奏与配置主线",
-      "url": "https://finance.eastmoney.com/a/202611113928269880.html",
+      "title": "兴业证券段超：海外风险扰动不改资本市场长期向好",
+      "url": "https://finance.eastmoney.com/a/202611113928414690.html",
       "time": ""
     }
   ]
