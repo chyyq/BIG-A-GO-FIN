@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-12T16:51:35.010509+08:00",
+    "generatedAt": "2026-11-12T17:03:04.197419+08:00",
     "tradingDate": "2026-11-12",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 19.41
+    "runtimeSeconds": 16.64
   },
   "market": {
     "recommendationCount": 5,
@@ -45,7 +45,7 @@
       "price": 49598.38,
       "pct": 4.15,
       "amount": 15976976429.0,
-      "turnover": 23.4,
+      "turnover": 55.1,
       "open": 49499.89,
       "preClose": 47622.45,
       "mainNet": -1633444832.0,
@@ -708,14 +708,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "央行发布2026年第三季度中国货币政策执行报告提出：加力实施支持资本市场两项货币政策工具",
-      "url": "https://finance.eastmoney.com/a/202611123928811684.html",
+      "title": "年内创业板“募资王”来了！超聚变今日迎考 多只概念股业绩有望高增",
+      "url": "https://finance.eastmoney.com/a/202611123929281169.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "年内创业板“募资王”来了！超聚变今日迎考 多只概念股业绩有望高增",
-      "url": "https://finance.eastmoney.com/a/202611123929281169.html",
+      "title": "央行发布2026年第三季度中国货币政策执行报告提出：加力实施支持资本市场两项货币政策工具",
+      "url": "https://finance.eastmoney.com/a/202611123928811684.html",
       "time": ""
     },
     {
