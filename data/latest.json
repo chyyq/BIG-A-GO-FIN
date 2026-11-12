@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-12T17:03:04.197419+08:00",
-    "tradingDate": "2026-11-12",
+    "generatedAt": "2026-11-13T00:01:09.888679+08:00",
+    "tradingDate": "2026-11-13",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 16.64
+    "runtimeSeconds": 17.02
   },
   "market": {
     "recommendationCount": 5,
@@ -45,7 +45,7 @@
       "price": 49598.38,
       "pct": 4.15,
       "amount": 15976976429.0,
-      "turnover": 55.1,
+      "turnover": 32.06,
       "open": 49499.89,
       "preClose": 47622.45,
       "mainNet": -1633444832.0,
@@ -690,12 +690,6 @@
   "news": [
     {
       "source": "Eastmoney News",
-      "title": "央行：用好债市非银大额赎回互换便利 维护股票、债券、外汇等金融市场平稳运行",
-      "url": "https://finance.eastmoney.com/a/202611113928506743.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
       "title": "证监会副主席刘浩凌：中国政府高度重视资本市场平稳健康发展 中国资产的安全、韧性和创新价值将持续凸显",
       "url": "https://finance.eastmoney.com/a/202611123929347043.html",
       "time": ""
@@ -708,14 +702,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "年内创业板“募资王”来了！超聚变今日迎考 多只概念股业绩有望高增",
-      "url": "https://finance.eastmoney.com/a/202611123929281169.html",
+      "title": "午后！亚太市场大跳水！发生了什么？",
+      "url": "https://finance.eastmoney.com/a/202611123929422331.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "央行发布2026年第三季度中国货币政策执行报告提出：加力实施支持资本市场两项货币政策工具",
-      "url": "https://finance.eastmoney.com/a/202611123928811684.html",
+      "title": "创业板年内最大上会项目来了！超聚变IPO迎考 拟募资80亿元",
+      "url": "https://finance.eastmoney.com/a/202611113928663090.html",
       "time": ""
     },
     {
@@ -734,6 +728,12 @@
       "source": "Eastmoney News",
       "title": "美国10月CPI超预期 市场押注美联储12月加息",
       "url": "https://topic.eastmoney.com/detail/mg10ytccyq.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "华创证券首席经济学家张瑜：产业创新重构A股盈利结构 长期价值根基越扎越牢",
+      "url": "https://finance.eastmoney.com/a/202611123929901394.html",
       "time": ""
     }
   ]
