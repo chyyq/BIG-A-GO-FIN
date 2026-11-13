@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-13T16:47:06.439730+08:00",
+    "generatedAt": "2026-11-13T16:57:11.725622+08:00",
     "tradingDate": "2026-11-13",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -15,7 +15,7 @@
         "name": "Eastmoney News",
         "ok": true,
         "url": "https://finance.eastmoney.com/a/cjjsp.html",
-        "note": "Optional news source skipped; quote data is unaffected."
+        "note": "Optional news source OK"
       },
       {
         "name": "10jqka",
@@ -27,13 +27,13 @@
         "name": "Yicai",
         "ok": true,
         "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "note": "Optional news source skipped; quote data is unaffected."
       }
     ],
     "errors": [
-      "Eastmoney News news skipped: The read operation timed out"
+      "Yicai news skipped: The read operation timed out"
     ],
-    "runtimeSeconds": 36.46
+    "runtimeSeconds": 73.22
   },
   "market": {
     "recommendationCount": 5,
