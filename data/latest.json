@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-13T16:57:11.725622+08:00",
+    "generatedAt": "2026-11-13T23:28:17.543995+08:00",
     "tradingDate": "2026-11-13",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1299%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1299%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -20,20 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source skipped; quote data is unaffected."
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
-    "errors": [
-      "Yicai news skipped: The read operation timed out"
-    ],
-    "runtimeSeconds": 73.22
+    "errors": [],
+    "runtimeSeconds": 95.9
   },
   "market": {
     "recommendationCount": 5,
@@ -693,39 +691,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "A股三大指数收跌 影视板块逆市大涨 银行板块走强",
+      "url": "https://finance.eastmoney.com/a/202611133930659580.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共38只个股涨停 这只汽车零部件股4连板机器人板块北纬科技收获3连板。一图速览今日连板股&gt;&gt;  11分钟前",
-      "url": "https://www.yicai.com/news/103440076.html",
+      "source": "Eastmoney News",
+      "title": "A股明年怎么走？多家龙头券商最新研判",
+      "url": "https://finance.eastmoney.com/a/202611123929803838.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘｜创业板指跌3.32% 银行板块逆势拉升沪深两市成交额1.66万亿，较上一个交易日缩量2764亿。  1小时前",
-      "url": "https://www.yicai.com/news/103439927.html",
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "埃德加·斯诺的中国缘，始于股市上赚到的800美元斯诺的职业积累，不仅让他成为新闻史上最著名的记者之一，也使他成为中国现代史的见证者和记录者。  7小时前",
-      "url": "https://www.yicai.com/news/103439241.html",
+      "source": "Eastmoney News",
+      "title": "年内创业板“募资王”来了",
+      "url": "https://topic.eastmoney.com/detail/nncxymzw.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股四大指数集体高开，半导体、通信设备等板块走强市场逾2700股上涨。  7小时前",
-      "url": "https://www.yicai.com/news/103439205.html",
+      "source": "Eastmoney News",
+      "title": "美国10月CPI超预期 市场押注美联储12月加息",
+      "url": "https://topic.eastmoney.com/detail/mg10ytccyq.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "盘前必读丨美股收跌英伟达跌超4%；天赐材料拟不超50亿元扩产电解液机构认为，市场修复不会一蹴而就，控制仓位，关注自主可控产业链。  8小时前",
-      "url": "https://www.yicai.com/news/103439091.html",
+      "source": "Eastmoney News",
+      "title": "美国10月PPI同比增长6.5% 低于市场预期",
+      "url": "https://finance.eastmoney.com/a/202611133930933912.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
       "time": ""
     }
   ]
