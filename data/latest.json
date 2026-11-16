@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-16T16:36:45.284326+08:00",
+    "generatedAt": "2026-11-16T16:50:34.750615+08:00",
     "tradingDate": "2026-11-16",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1300%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1300%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 33.78
+    "runtimeSeconds": 24.09
   },
   "market": {
     "recommendationCount": 1,
@@ -69,7 +69,7 @@
       "price": 68.01,
       "pct": 5.41,
       "amount": 3257030994.0,
-      "turnover": 16.79,
+      "turnover": 19.44,
       "open": 67.33,
       "preClose": 64.52,
       "mainNet": -175052800.0,
@@ -392,7 +392,7 @@
     },
     {
       "source": "Yicai",
-      "title": "连板股追踪丨A股今日共33只个股涨停 这只机器人概念股4连板零售板块广百股份3连板。一图速览今日连板股&gt;&gt;  29分钟前",
+      "title": "连板股追踪丨A股今日共33只个股涨停 这只机器人概念股4连板零售板块广百股份3连板。一图速览今日连板股&gt;&gt;  42分钟前",
       "url": "https://www.yicai.com/news/103442076.html",
       "time": ""
     },
@@ -404,7 +404,7 @@
     },
     {
       "source": "Yicai",
-      "title": "房地产市场出现积极变化一线城市价格改善情况优于二、三线城市。  1小时前",
+      "title": "房地产市场出现积极变化一线城市价格改善情况优于二、三线城市。  2小时前",
       "url": "https://www.yicai.com/news/103441849.html",
       "time": ""
     },
