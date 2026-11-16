@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-16T16:50:34.750615+08:00",
-    "tradingDate": "2026-11-16",
+    "generatedAt": "2026-11-17T01:07:32.132895+08:00",
+    "tradingDate": "2026-11-17",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 24.09
+    "runtimeSeconds": 26.24
   },
   "market": {
     "recommendationCount": 1,
@@ -69,7 +69,7 @@
       "price": 68.01,
       "pct": 5.41,
       "amount": 3257030994.0,
-      "turnover": 19.44,
+      "turnover": 6.12,
       "open": 67.33,
       "preClose": 64.52,
       "mainNet": -175052800.0,
@@ -385,39 +385,51 @@
   ],
   "news": [
     {
+      "source": "Eastmoney News",
+      "title": "港股逆市飙升！股市“吹哨人”最新发声！",
+      "url": "https://finance.eastmoney.com/a/202611163931651721.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "A股三大指数收跌 成交额不足1.5万亿 银行与保险板块逆市走强",
+      "url": "https://finance.eastmoney.com/a/202611163931755498.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "年内创业板“募资王”来了",
+      "url": "https://topic.eastmoney.com/detail/nncxymzw.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "股市急跌能预警吗？AI如何带动 “一人公司” 增长？数量经济学给出新答案",
+      "url": "https://finance.eastmoney.com/a/202611163932154429.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券交易",
+      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共33只个股涨停 这只机器人概念股4连板零售板块广百股份3连板。一图速览今日连板股&gt;&gt;  42分钟前",
-      "url": "https://www.yicai.com/news/103442076.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "收盘｜沪指跌0.87% CPO概念领跌沪深两市成交额1.48万亿，较上一个交易日缩量1712亿。  1小时前",
-      "url": "https://www.yicai.com/news/103441962.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "房地产市场出现积极变化一线城市价格改善情况优于二、三线城市。  2小时前",
-      "url": "https://www.yicai.com/news/103441849.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "股价暴跌后，英特尔遭股东集体诉讼美国芯片巨头英特尔因被指控未能及时披露个人电脑市场需求放缓及库存积压等负面信息而遭股东提起证券欺诈集体诉讼。  3小时前",
-      "url": "https://www.yicai.com/news/103441661.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "首届上海大宗商品周主会场活动成功举行 聚焦期现衍联动与场外市场高质量发展  5小时前",
-      "url": "https://www.yicai.com/news/103441565.html",
       "time": ""
     }
   ]
