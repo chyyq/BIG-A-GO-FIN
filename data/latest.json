@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-17T17:44:19.168256+08:00",
+    "generatedAt": "2026-11-17T17:57:41.674796+08:00",
     "tradingDate": "2026-11-17",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 18.53
+    "runtimeSeconds": 16.89
   },
   "market": {
     "recommendationCount": 5,
