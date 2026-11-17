@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-17T17:23:11.861555+08:00",
+    "generatedAt": "2026-11-17T17:44:19.168256+08:00",
     "tradingDate": "2026-11-17",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 23.34
+    "runtimeSeconds": 18.53
   },
   "market": {
     "recommendationCount": 5,
@@ -692,27 +692,45 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "利好来了！A股公司回购公告密集发布",
+      "url": "https://finance.eastmoney.com/a/202611163932150943.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共38只个股涨停 长虹美菱、小熊电器收获2连板一图速览今日连板股&gt;&gt;  46分钟前",
-      "url": "https://www.yicai.com/news/103443760.html",
+      "source": "Eastmoney News",
+      "title": "部分宽基ETF尾盘放量 创业板ETF广发成交超50亿元创历史天量",
+      "url": "https://finance.eastmoney.com/a/202611173932820497.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘｜上证指数跌0.5% 半导体板块逆势上涨沪深两市成交额1.46万亿，较上一个交易日缩量268亿。  2小时前",
-      "url": "https://www.yicai.com/news/103443602.html",
+      "source": "Eastmoney News",
+      "title": "A股三大指数收跌 成交额不足1.5万亿 光刻机概念股逆市走强",
+      "url": "https://finance.eastmoney.com/a/202611173932825433.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "COP31要抓“落实”，企业出海，“绿色”是负担还是优势？李效良认为，中国企业出海包含两层含义，首先是市场走出去，其次更为重要的是理念走出去。  3小时前",
-      "url": "https://www.yicai.com/news/103443275.html",
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "瑞银吕子杰：AI长期趋势未改，但市场波动凸显多元配置重要性",
+      "url": "https://finance.eastmoney.com/a/202611173932899895.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "西南证券叶凡：资本市场改革显成效，市场长期成长潜力进一步增强",
+      "url": "https://finance.eastmoney.com/a/202611173932883379.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "英伟达财报会明早来袭：“后黄仁勋时代”首次大考 市场聚焦四大看点",
+      "url": "https://finance.eastmoney.com/a/202611173932835650.html",
       "time": ""
     }
   ]
