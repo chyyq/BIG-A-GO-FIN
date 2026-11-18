@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-18T16:42:02.581583+08:00",
+    "generatedAt": "2026-11-18T17:12:03.699095+08:00",
     "tradingDate": "2026-11-18",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 15.67
+    "runtimeSeconds": 28.19
   },
   "market": {
     "recommendationCount": 5,
@@ -45,7 +45,7 @@
       "price": 880.99,
       "pct": 3.62,
       "amount": 64642120650.0,
-      "turnover": 2.57,
+      "turnover": 2.56,
       "open": 855.79,
       "preClose": 850.25,
       "mainNet": 5117594112.0,
@@ -727,12 +727,6 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "小螺号｜短期扰动不改中长期向好逻辑，A股或进入战略性配置窗口",
-      "url": "https://finance.eastmoney.com/a/202611183933986977.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
       "title": "东方财富证券开户",
       "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
       "time": ""
@@ -741,6 +735,12 @@
       "source": "Eastmoney News",
       "title": "东方财富证券交易",
       "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     }
   ]
