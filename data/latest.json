@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-18T17:34:18.595466+08:00",
-    "tradingDate": "2026-11-18",
+    "generatedAt": "2026-11-19T00:30:42.777454+08:00",
+    "tradingDate": "2026-11-19",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1449%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1449%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 21.97
+    "runtimeSeconds": 46.14
   },
   "market": {
     "recommendationCount": 5,
@@ -715,14 +715,8 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "国海证券研究所策略首席分析师赵阳：改革红利持续释放 A股长期韧性稳固",
-      "url": "https://finance.eastmoney.com/a/202611183934003287.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "广发证券郭磊：四方面政策信号助力后续市场稳定性提升",
-      "url": "https://finance.eastmoney.com/a/202611183934003610.html",
+      "title": "国金证券牟一凌：中国科技板块有望成为全球成长资金的避风港",
+      "url": "https://finance.eastmoney.com/a/202611183934268181.html",
       "time": ""
     },
     {
@@ -741,6 +735,12 @@
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "上市次日股价便跌停，多只次新股累计跌幅超四成在A股市场回调背景下，多只次新股的股价涨势持续性较差。  昨天 20:58",
+      "url": "https://www.yicai.com/news/103445621.html",
       "time": ""
     }
   ]
