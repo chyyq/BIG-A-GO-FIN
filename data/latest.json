@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-19T17:31:09.210982+08:00",
+    "generatedAt": "2026-11-19T17:42:33.668150+08:00",
     "tradingDate": "2026-11-19",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1328%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1626%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -30,16 +30,12 @@
         "note": "Optional news/reference source"
       }
     ],
-    "errors": [
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response"
-    ],
-    "runtimeSeconds": 103.87
+    "errors": [],
+    "runtimeSeconds": 20.24
   },
   "market": {
     "recommendationCount": 5,
-    "qualifiedBoardCount": 3
+    "qualifiedBoardCount": 4
   },
   "boards": [
     {
@@ -74,7 +70,7 @@
       "price": 213.08,
       "pct": 4.17,
       "amount": 11691017168.0,
-      "turnover": 10.73,
+      "turnover": 20.87,
       "open": 212.0,
       "preClose": 204.55,
       "mainNet": -1157144784.0,
@@ -118,6 +114,30 @@
       "bigUpCount": 2
     },
     {
+      "code": "BK0816",
+      "name": "昨日连板",
+      "kind": "Concept board",
+      "price": 65.34,
+      "pct": 1.87,
+      "amount": 7304337894.0,
+      "turnover": 18.84,
+      "open": 65.42,
+      "preClose": 64.14,
+      "mainNet": -523437824.0,
+      "rank": 5,
+      "passed": 4,
+      "qualified": true,
+      "score": 81.85,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
+        "Leader stocks are visible",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 2,
+      "bigUpCount": 2
+    },
+    {
       "code": "BK1412",
       "name": "氨纶",
       "kind": "Industry board",
@@ -132,28 +152,6 @@
       "passed": 2,
       "qualified": false,
       "score": 49.4,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
-    },
-    {
-      "code": "BK0816",
-      "name": "昨日连板",
-      "kind": "Concept board",
-      "price": 65.34,
-      "pct": 1.87,
-      "amount": 7304337894.0,
-      "turnover": 4.71,
-      "open": 65.42,
-      "preClose": 64.14,
-      "mainNet": -523437824.0,
-      "rank": 5,
-      "passed": 2,
-      "qualified": false,
-      "score": 49.05,
       "criteria": [
         "Board rank is strong or improving",
         "Board momentum is positive"
