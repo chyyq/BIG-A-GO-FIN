@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-19T16:57:19.676806+08:00",
+    "generatedAt": "2026-11-19T17:31:09.210982+08:00",
     "tradingDate": "2026-11-19",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1626%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
+        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1328%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -20,22 +20,26 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
-    "errors": [],
-    "runtimeSeconds": 26.08
+    "errors": [
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response",
+      "Eastmoney clist failed: Remote end closed connection without response"
+    ],
+    "runtimeSeconds": 103.87
   },
   "market": {
     "recommendationCount": 5,
-    "qualifiedBoardCount": 4
+    "qualifiedBoardCount": 3
   },
   "boards": [
     {
@@ -114,30 +118,6 @@
       "bigUpCount": 2
     },
     {
-      "code": "BK0816",
-      "name": "昨日连板",
-      "kind": "Concept board",
-      "price": 65.34,
-      "pct": 1.87,
-      "amount": 7304337894.0,
-      "turnover": 4.71,
-      "open": 65.42,
-      "preClose": 64.14,
-      "mainNet": -523437824.0,
-      "rank": 5,
-      "passed": 4,
-      "qualified": true,
-      "score": 81.85,
-      "criteria": [
-        "Board rank is strong or improving",
-        "Limit-up or large-gain members are active",
-        "Leader stocks are visible",
-        "Board momentum is positive"
-      ],
-      "limitUpCount": 2,
-      "bigUpCount": 2
-    },
-    {
       "code": "BK1412",
       "name": "氨纶",
       "kind": "Industry board",
@@ -152,6 +132,28 @@
       "passed": 2,
       "qualified": false,
       "score": 49.4,
+      "criteria": [
+        "Board rank is strong or improving",
+        "Board momentum is positive"
+      ],
+      "limitUpCount": 0,
+      "bigUpCount": 0
+    },
+    {
+      "code": "BK0816",
+      "name": "昨日连板",
+      "kind": "Concept board",
+      "price": 65.34,
+      "pct": 1.87,
+      "amount": 7304337894.0,
+      "turnover": 4.71,
+      "open": 65.42,
+      "preClose": 64.14,
+      "mainNet": -523437824.0,
+      "rank": 5,
+      "passed": 2,
+      "qualified": false,
+      "score": 49.05,
       "criteria": [
         "Board rank is strong or improving",
         "Board momentum is positive"
@@ -690,39 +692,45 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "经济日报：稳资本市场意义重大",
+      "url": "https://finance.eastmoney.com/a/202611193934396946.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共28只个股涨停 算力概念多股连板算力概念股真视通、全筑股份3连板，华升股份2连板。一图速览今日连板股&gt;&gt;  50分钟前",
-      "url": "https://www.yicai.com/news/103446730.html",
+      "source": "Eastmoney News",
+      "title": "四大证券报齐发文：勿让“小作文”扰乱资本市场 官方及时发声稳预期",
+      "url": "https://finance.eastmoney.com/a/202611193934499755.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘｜沪指跌0.28% 家用电器板块全天强势沪深两市成交额1.31万亿，较上一个交易日缩量646亿。  1小时前",
-      "url": "https://www.yicai.com/news/103446630.html",
+      "source": "Eastmoney News",
+      "title": "国产算力板块暴跌 业界称“三星开始穿透严查代工”的市场传闻不准确",
+      "url": "https://finance.eastmoney.com/a/202611193934935630.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股四大指数集体低开，燃气、电信板块逆势活跃盘面上，基本金属、传媒、光通信板块调整。  7小时前",
-      "url": "https://www.yicai.com/news/103446006.html",
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "盘前必读丨新一轮国资国企改革全面实施；行云科技再签AI词元跨境“大订单”机构认为，市场短期情绪与筹码压制，科技左侧磨底仍将延续。  8小时前",
-      "url": "https://www.yicai.com/news/103445857.html",
+      "source": "Eastmoney News",
+      "title": "华创证券首席经济学家张瑜：股票市场将进入盈利和估值的博弈期",
+      "url": "https://finance.eastmoney.com/a/202611193935081717.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "堪比互联网泡沫破灭和金融危机！美国科技股市盈率暴跌42%，转折点是否临近统计显示，本轮美股牛市出现大幅调整后反弹力度更强。  8小时前",
-      "url": "https://www.yicai.com/news/103445844.html",
+      "source": "Eastmoney News",
+      "title": "抄底资金涌入！6只宽基ETF成交额破百亿",
+      "url": "https://finance.eastmoney.com/a/202611193935035568.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "东方财富证券开户",
+      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
       "time": ""
     }
   ]
