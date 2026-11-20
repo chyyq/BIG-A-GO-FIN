@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-20T17:29:41.163834+08:00",
-    "tradingDate": "2026-11-20",
+    "generatedAt": "2026-11-21T00:13:17.969240+08:00",
+    "tradingDate": "2026-11-21",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 71.58
+    "runtimeSeconds": 16.58
   },
   "market": {
     "recommendationCount": 0,
@@ -224,7 +224,7 @@
       "price": 1725.59,
       "pct": 0.87,
       "amount": 12023974510.0,
-      "turnover": 0.08,
+      "turnover": 0.47,
       "open": 1710.04,
       "preClose": 1710.67,
       "mainNet": 372442336.0,
@@ -330,26 +330,26 @@
     },
     {
       "source": "Eastmoney News",
+      "title": "两部门联合公布4起编造传播资本市场虚假信息典型案例",
+      "url": "https://finance.eastmoney.com/a/202611203936137553.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
       "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
       "url": "https://finance.eastmoney.com/a/202608203846763215.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "华泰证券张继强：4个角度看A股中长期前景",
-      "url": "https://finance.eastmoney.com/a/202611203936135730.html",
+      "title": "招商证券李昊阳：A股深度调整后结构性配置机会显现",
+      "url": "https://finance.eastmoney.com/a/202611203936510912.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "沪指守住3500点 第10次罕见超跌信号再现！陈果：相信价值",
-      "url": "https://finance.eastmoney.com/a/202611203936061290.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "中信建投证券首席经济学家黄文涛：资本市场终将回归基本面定价，震荡之中孕育长期配置机遇",
-      "url": "https://finance.eastmoney.com/a/202611203936110539.html",
+      "title": "德邦证券程强：耐心资本成为确定性增量",
+      "url": "https://finance.eastmoney.com/a/202611203936490353.html",
       "time": ""
     }
   ]
