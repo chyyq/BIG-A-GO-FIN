@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-23T18:04:54.953969+08:00",
-    "tradingDate": "2026-11-23",
+    "generatedAt": "2026-11-24T03:17:59.167562+08:00",
+    "tradingDate": "2026-11-24",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 19.57
+    "runtimeSeconds": 16.03
   },
   "market": {
     "recommendationCount": 0,
@@ -94,7 +94,7 @@
       "price": 68.61,
       "pct": 10.0,
       "amount": 3394554243.0,
-      "turnover": 9.47,
+      "turnover": 7.46,
       "open": 65.18,
       "preClose": 62.37,
       "mainNet": 277083568.0,
@@ -118,7 +118,7 @@
       "price": 47253.72,
       "pct": 9.99,
       "amount": 2659540154.0,
-      "turnover": 6.81,
+      "turnover": 5.02,
       "open": 44897.14,
       "preClose": 42961.1,
       "mainNet": -18749200.0,
@@ -210,7 +210,7 @@
       "price": 1786.25,
       "pct": 7.88,
       "amount": 22600235126.0,
-      "turnover": 3.77,
+      "turnover": 3.74,
       "open": 1629.45,
       "preClose": 1655.83,
       "mainNet": 1828257296.0,
@@ -252,7 +252,7 @@
       "price": 327.06,
       "pct": 7.79,
       "amount": 30129762489.0,
-      "turnover": 7.34,
+      "turnover": 14.14,
       "open": 310.25,
       "preClose": 303.43,
       "mainNet": 286731008.0,
@@ -294,7 +294,7 @@
       "price": 252.97,
       "pct": 7.45,
       "amount": 71069311299.0,
-      "turnover": 33.04,
+      "turnover": 28.59,
       "open": 231.92,
       "preClose": 235.43,
       "mainNet": 3207135744.0,
@@ -313,14 +313,14 @@
   "news": [
     {
       "source": "Eastmoney News",
-      "title": "A股迎稳市组合拳 有望带来4000亿增量资金",
-      "url": "https://finance.eastmoney.com/a/202611223936952553.html",
+      "title": "A股重磅！监管明确两融风控细则 稳妥处置违约",
+      "url": "https://finance.eastmoney.com/a/202611233937278151.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "深交所拟在创业板引入做市商制度",
-      "url": "https://finance.eastmoney.com/a/202611223936924084.html",
+      "title": "创业板指大涨超3% 超4600只股飘红 逾150只股涨停",
+      "url": "https://finance.eastmoney.com/a/202611233937232623.html",
       "time": ""
     },
     {
@@ -349,14 +349,14 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "大盘超跌反弹，沪指重返3500点大关，后市怎么走？",
-      "url": "https://finance.eastmoney.com/a/202611233937346221.html",
+      "title": "稳市举措齐发力 券商板块配置价值凸显",
+      "url": "https://finance.eastmoney.com/a/202611243937743040.html",
       "time": ""
     },
     {
       "source": "Eastmoney News",
-      "title": "摩根大通：亚洲股市投资者持仓降至历史低位 市场有望迎来大幅反弹",
-      "url": "https://finance.eastmoney.com/a/202611233937227021.html",
+      "title": "从“引水”到“疏渠”：稳市场政策组合拳接续发力",
+      "url": "https://finance.eastmoney.com/a/202611243937728857.html",
       "time": ""
     }
   ]
