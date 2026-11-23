@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-23T17:17:53.972282+08:00",
+    "generatedAt": "2026-11-23T17:50:17.662679+08:00",
     "tradingDate": "2026-11-23",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 21.19
+    "runtimeSeconds": 19.83
   },
   "market": {
     "recommendationCount": 0,
@@ -319,13 +319,13 @@
     },
     {
       "source": "Yicai",
-      "title": "连板股追踪丨A股今日共152只个股涨停 这只算力股5连板算力概念股真视通收获5连板、荣联科技2连板。一图速览今日连板股&gt;&gt;  45分钟前",
+      "title": "连板股追踪丨A股今日共152只个股涨停 这只算力股5连板算力概念股真视通收获5连板、荣联科技2连板。一图速览今日连板股&gt;&gt;  1小时前",
       "url": "https://www.yicai.com/news/103450495.html",
       "time": ""
     },
     {
       "source": "Yicai",
-      "title": "A股放量拉升之后，板块如何加速轮动？｜市场观察周末推出稳定市场政策后A股低开高走。  51分钟前",
+      "title": "A股放量拉升之后，板块如何加速轮动？｜市场观察周末推出稳定市场政策后A股低开高走。  1小时前",
       "url": "https://www.yicai.com/news/103450480.html",
       "time": ""
     },
@@ -337,7 +337,7 @@
     },
     {
       "source": "Yicai",
-      "title": "多重利好催化，宇树股价重回700元、人形机器人板块掀起涨停潮模型层面，GPT-6.2 Astra展现了更强的操作能力。  1小时前",
+      "title": "多重利好催化，宇树股价重回700元、人形机器人板块掀起涨停潮模型层面，GPT-6.2 Astra展现了更强的操作能力。  2小时前",
       "url": "https://www.yicai.com/news/103450358.html",
       "time": ""
     },
@@ -345,12 +345,6 @@
       "source": "Yicai",
       "title": "收盘｜创业板指涨超3% AI应用端掀涨停浪潮全市场超4600只个股上涨，其中151只个股涨停。  2小时前",
       "url": "https://www.yicai.com/news/103450327.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "门店扩张让位于品牌重塑，锐步重启中国市场拒绝盲目追求门店扩张规模。  3小时前",
-      "url": "https://www.yicai.com/news/103449186.html",
       "time": ""
     }
   ]
