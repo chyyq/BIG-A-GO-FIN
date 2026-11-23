@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-23T17:50:17.662679+08:00",
+    "generatedAt": "2026-11-23T18:04:54.953969+08:00",
     "tradingDate": "2026-11-23",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 19.83
+    "runtimeSeconds": 19.57
   },
   "market": {
     "recommendationCount": 0,
@@ -312,39 +312,51 @@
   "recommendations": [],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "A股迎稳市组合拳 有望带来4000亿增量资金",
+      "url": "https://finance.eastmoney.com/a/202611223936952553.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共152只个股涨停 这只算力股5连板算力概念股真视通收获5连板、荣联科技2连板。一图速览今日连板股&gt;&gt;  1小时前",
-      "url": "https://www.yicai.com/news/103450495.html",
+      "source": "Eastmoney News",
+      "title": "深交所拟在创业板引入做市商制度",
+      "url": "https://finance.eastmoney.com/a/202611223936924084.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "A股放量拉升之后，板块如何加速轮动？｜市场观察周末推出稳定市场政策后A股低开高走。  1小时前",
-      "url": "https://www.yicai.com/news/103450480.html",
+      "source": "Eastmoney News",
+      "title": "宇树跻身A股第三贵！人形机器人掀涨停潮 发生了什么？",
+      "url": "https://finance.eastmoney.com/a/202611233937126772.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "周末救市难抵“黑色星期一”！韩国股市跌破4800点，AI交易是否终结？今年以来，许多大型科技公司的估值已经因为盈利增速超过了股价涨幅而有所回落。  1小时前",
-      "url": "https://www.yicai.com/news/103450401.html",
+      "source": "Eastmoney News",
+      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
+      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "多重利好催化，宇树股价重回700元、人形机器人板块掀起涨停潮模型层面，GPT-6.2 Astra展现了更强的操作能力。  2小时前",
-      "url": "https://www.yicai.com/news/103450358.html",
+      "source": "Eastmoney News",
+      "title": "韩国启动股市稳定基金救市",
+      "url": "https://topic.eastmoney.com/detail/hgqdgswdjjjs.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘｜创业板指涨超3% AI应用端掀涨停浪潮全市场超4600只个股上涨，其中151只个股涨停。  2小时前",
-      "url": "https://www.yicai.com/news/103450327.html",
+      "source": "Eastmoney News",
+      "title": "稳市场稳预期 监管层“三箭齐发”",
+      "url": "https://topic.eastmoney.com/detail/sanjian3.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "大盘超跌反弹，沪指重返3500点大关，后市怎么走？",
+      "url": "https://finance.eastmoney.com/a/202611233937346221.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "摩根大通：亚洲股市投资者持仓降至历史低位 市场有望迎来大幅反弹",
+      "url": "https://finance.eastmoney.com/a/202611233937227021.html",
       "time": ""
     }
   ]
