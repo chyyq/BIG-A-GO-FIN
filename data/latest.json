@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-24T19:52:48.343902+08:00",
-    "tradingDate": "2026-11-24",
+    "generatedAt": "2026-11-25T02:56:29.384591+08:00",
+    "tradingDate": "2026-11-25",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 17.03
+    "runtimeSeconds": 20.54
   },
   "market": {
     "recommendationCount": 4,
@@ -645,12 +645,6 @@
     },
     {
       "source": "Eastmoney News",
-      "title": "2026年A股上市公司控制权变更观察：交易价值从“壳”转向“产业”，市场结构性降温",
-      "url": "https://finance.eastmoney.com/a/202611243938603459.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
       "title": "东方财富证券开户",
       "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
       "time": ""
@@ -659,6 +653,12 @@
       "source": "Eastmoney News",
       "title": "东方财富证券交易",
       "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     }
   ]
