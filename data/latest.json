@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-24T19:12:03.843739+08:00",
+    "generatedAt": "2026-11-24T19:38:53.094772+08:00",
     "tradingDate": "2026-11-24",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://www.10jqka.com.cn/",
-        "note": "Optional news/reference source"
+        "url": "https://stock.10jqka.com.cn/",
+        "note": "Optional news source OK"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/",
-        "note": "Optional news/reference source"
+        "url": "https://www.yicai.com/news/",
+        "note": "Optional news source OK"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 18.96
+    "runtimeSeconds": 17.97
   },
   "market": {
     "recommendationCount": 4,
@@ -614,51 +614,15 @@
   ],
   "news": [
     {
-      "source": "Eastmoney News",
-      "title": "A股三大指数高开低走 能源金属板块涨幅居前",
-      "url": "https://finance.eastmoney.com/a/202611243938398040.html",
+      "source": "Yicai",
+      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
+      "url": "https://www.yicai.com/topic/102892546/",
       "time": ""
     },
     {
-      "source": "Eastmoney News",
-      "title": "全球市场：美股三大指数集体大涨 纳指涨超6% 英伟达暴涨逾30%",
-      "url": "https://finance.eastmoney.com/a/202611243937757635.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
-      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "韩国启动股市稳定基金救市",
-      "url": "https://topic.eastmoney.com/detail/hgqdgswdjjjs.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "稳市场稳预期 监管层“三箭齐发”",
-      "url": "https://topic.eastmoney.com/detail/sanjian3.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "杨德龙：黄仁勋回归推动美股暴涨 A股有望同步大涨",
-      "url": "https://finance.eastmoney.com/a/202611243938454710.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "【博时市场点评11月24日】指数高开低走，成交量继续放大",
-      "url": "https://finance.eastmoney.com/a/202611243938454098.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "高开低走！A股震荡分化 多只银行股逼近新高",
-      "url": "https://finance.eastmoney.com/a/202611243938559360.html",
+      "source": "Yicai",
+      "title": "深圳召开上市公司座谈会，鼓励开展回购增持工业富联、立讯精密、中兴通讯、中国平安、招商银行、中信证券、国信证券等参会。  1小时前",
+      "url": "https://www.yicai.com/news/103452432.html",
       "time": ""
     }
   ]
