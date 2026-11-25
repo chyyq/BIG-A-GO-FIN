@@ -1,14 +1,14 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-25T17:58:54.312094+08:00",
+    "generatedAt": "2026-11-25T18:30:57.445483+08:00",
     "tradingDate": "2026-11-25",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
         "name": "Eastmoney",
         "ok": true,
-        "url": "https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=240&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90%2Bt%3A3&fields=f12%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf62",
+        "url": "https://4.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=50&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=b%3ABK1645%2Bf%3A%2150&fields=f12%2Cf13%2Cf14%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf10%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf62%2Cf66%2Cf100",
         "note": "OK"
       },
       {
@@ -35,14 +35,13 @@
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response",
-      "Eastmoney clist failed: Remote end closed connection without response",
       "Eastmoney clist failed: Remote end closed connection without response"
     ],
-    "runtimeSeconds": 45.43
+    "runtimeSeconds": 42.97
   },
   "market": {
-    "recommendationCount": 0,
-    "qualifiedBoardCount": 0
+    "recommendationCount": 1,
+    "qualifiedBoardCount": 1
   },
   "boards": [
     {
@@ -57,16 +56,18 @@
       "preClose": 48173.15,
       "mainNet": -604052672.0,
       "rank": 3,
-      "passed": 3,
-      "qualified": false,
-      "score": 66.15,
+      "passed": 5,
+      "qualified": true,
+      "score": 98.95,
       "criteria": [
         "Board rank is strong or improving",
+        "Limit-up or large-gain members are active",
         "Board turnover amount is active",
+        "Leader stocks are visible",
         "Board momentum is positive"
       ],
-      "limitUpCount": 0,
-      "bigUpCount": 0
+      "limitUpCount": 4,
+      "bigUpCount": 4
     },
     {
       "code": "BK1514",
@@ -305,48 +306,130 @@
       "bigUpCount": 0
     }
   ],
-  "recommendations": [],
+  "recommendations": [
+    {
+      "rank": 1,
+      "code": "605018",
+      "name": "长华集团",
+      "market": "SH",
+      "price": 13.03,
+      "pct": 4.91,
+      "amount": 683704100.0,
+      "turnover": 11.18,
+      "confidence": 94,
+      "winRate": 94,
+      "board": {
+        "code": "BK1645",
+        "name": "昨日打二板以上表现",
+        "passed": 5,
+        "score": 98.95
+      },
+      "criteria": {
+        "board": [
+          "Board rank is strong or improving",
+          "Limit-up or large-gain members are active",
+          "Board turnover amount is active",
+          "Leader stocks are visible",
+          "Board momentum is positive"
+        ],
+        "stock": [
+          "Board is in main-rising condition",
+          "Stock volume is rising but not exhausted",
+          "Turnover is active",
+          "Gain is below chase-risk zone",
+          "Price holds above opening area"
+        ]
+      },
+      "buyPlan": {
+        "type": "Early strength confirmation",
+        "timeWindow": "09:25-09:40",
+        "trigger": "Confirm near open/VWAP after a controlled gap-up.",
+        "priceRange": [
+          12.82,
+          13.0
+        ],
+        "quality": 16,
+        "priority": 5
+      },
+      "sellPlan": {
+        "targetPrice": 13.46,
+        "targetTime": "Intraday 10:00-14:30; extend to next morning only if the board stays strong.",
+        "strategy": "Take profit in batches near target, on intraday weakness, or if the board cools down.",
+        "takeProfit": 13.46,
+        "timeWindow": "Intraday 10:00-14:30; extend to next morning only if the board stays strong."
+      },
+      "stopPlan": {
+        "stopLoss": 12.63,
+        "rules": [
+          "Lose VWAP and fail to recover within 10 minutes",
+          "Break the entry trigger or intraday platform low",
+          "Single-stock loss should stay within 5%"
+        ]
+      },
+      "sourceLinks": [
+        {
+          "name": "Eastmoney quote",
+          "url": "https://quote.eastmoney.com/sh605018.html"
+        },
+        {
+          "name": "10jqka stock page",
+          "url": "https://stockpage.10jqka.com.cn/605018/"
+        },
+        {
+          "name": "Yicai news",
+          "url": "https://www.yicai.com/news/"
+        }
+      ],
+      "sparkline": []
+    }
+  ],
   "news": [
-    {
-      "source": "Eastmoney News",
-      "title": "A股三大指数收跌 成交额不足1.4万亿 退税商店概念股逆市走强",
-      "url": "https://finance.eastmoney.com/a/202611253939487357.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "美股巨头财报大分化后，全市场都在等英伟达财报 | 对话美港探案",
-      "url": "https://finance.eastmoney.com/a/202608203846763215.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "韩国启动股市稳定基金救市",
-      "url": "https://topic.eastmoney.com/detail/hgqdgswdjjjs.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "稳市场稳预期 监管层“三箭齐发”",
-      "url": "https://topic.eastmoney.com/detail/sanjian3.html",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券开户",
-      "url": "https://acttg.eastmoney.com/pub/web_kh_dcsy_dbtkwzl_01_01_01_0",
-      "time": ""
-    },
-    {
-      "source": "Eastmoney News",
-      "title": "东方财富证券交易",
-      "url": "https://acttg.eastmoney.com/pub/pctg_hskh_act_dfcfzqjy_01_01_01_0",
-      "time": ""
-    },
     {
       "source": "Yicai",
       "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
       "url": "https://www.yicai.com/topic/102892546/",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "深圳APEC开启亚太经济秩序新篇章亚太合作正从依靠市场规模扩大和生产要素流动获得增长红利，转向通过规则协调、技术协同和发展能力建设创造新的制度红利。  6分钟前",
+      "url": "https://www.yicai.com/news/103454022.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "高盛：2027年中国经济三大支撑因素显现，超配银行等五大板块“高盛当前的核心投资主线，是围绕持续演进的中国成长股版图进行布局。”  15分钟前",
+      "url": "https://www.yicai.com/news/103453988.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "ST人福研发了19年以上的新药宣告放弃，4亿资金打水漂了好不容易熬到了申请上市阶段，但过程并不顺利。  23分钟前",
+      "url": "https://www.yicai.com/news/103454004.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "华发股份拟将110亿股东借款转成永续债此次不发生资金实际划转。  1小时前",
+      "url": "https://www.yicai.com/news/103453897.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "连板股追踪丨A股今日共58只个股涨停 这只猪肉股4连板一图速览今日连板股&gt;&gt;  1小时前",
+      "url": "https://www.yicai.com/news/103453893.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "收盘丨创业板指跌4.19% 物理AI概念股跌幅居前沪深两市成交额1.38万亿，较上一个交易日缩量2720亿。  3小时前",
+      "url": "https://www.yicai.com/news/103453747.html",
+      "time": ""
+    },
+    {
+      "source": "Yicai",
+      "title": "美光股价较高点腰斩，超级存储周期还能走多远？市场正面临“2028年盈利悬崖”叙事的风险？  3小时前",
+      "url": "https://www.yicai.com/news/103453709.html",
       "time": ""
     }
   ]
