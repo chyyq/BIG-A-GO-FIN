@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-27T18:09:00.008828+08:00",
+    "generatedAt": "2026-11-27T18:22:47.053144+08:00",
     "tradingDate": "2026-11-27",
     "mode": "fast-snapshot",
     "sourceHealth": [
@@ -31,7 +31,7 @@
       }
     ],
     "errors": [],
-    "runtimeSeconds": 15.46
+    "runtimeSeconds": 22.09
   },
   "market": {
     "recommendationCount": 1,
@@ -195,7 +195,7 @@
       "price": 3653.91,
       "pct": 14.76,
       "amount": 42017777813.0,
-      "turnover": 5.25,
+      "turnover": 5.54,
       "open": 3203.96,
       "preClose": 3183.84,
       "mainNet": 3588157184.0,
@@ -402,7 +402,7 @@
     },
     {
       "source": "Yicai",
-      "title": "连板股追踪丨A股今日共439只个股涨停 这只机器人股6连板医药股天圣制药4连板，算力概念股全筑股份4连板。一图速览今日连板股&gt;&gt;  1小时前",
+      "title": "连板股追踪丨A股今日共439只个股涨停 这只机器人股6连板医药股天圣制药4连板，算力概念股全筑股份4连板。一图速览今日连板股&gt;&gt;  2小时前",
       "url": "https://www.yicai.com/news/103457874.html",
       "time": ""
     },
@@ -414,7 +414,7 @@
     },
     {
       "source": "Yicai",
-      "title": "如何理解国常会对资本市场的最新定调？专家解读来了“稳市不再是单一部门的战术操作，而是跨部门协同的宏观逆周期调节核心。”  3小时前",
+      "title": "如何理解国常会对资本市场的最新定调？专家解读来了“稳市不再是单一部门的战术操作，而是跨部门协同的宏观逆周期调节核心。”  4小时前",
       "url": "https://www.yicai.com/news/103457477.html",
       "time": ""
     },
@@ -422,12 +422,6 @@
       "source": "Yicai",
       "title": "月内两提资本市场，国常会定调“资本市场事关经济发展大局”提振信心国常会重磅信息密集发布，A股市场再迎来明确呵护信号。  4小时前",
       "url": "https://www.yicai.com/news/103457371.html",
-      "time": ""
-    },
-    {
-      "source": "Yicai",
-      "title": "A股指数午后直线拉升，科创综指、科创50均涨超11%盘面上，光刻机、半导体、存储芯片、先进封装等板块涨幅居前。  4小时前",
-      "url": "https://www.yicai.com/news/103457351.html",
       "time": ""
     }
   ]
