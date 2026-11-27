@@ -1,8 +1,8 @@
 {
   "meta": {
     "schemaVersion": 4,
-    "generatedAt": "2026-11-27T18:22:47.053144+08:00",
-    "tradingDate": "2026-11-27",
+    "generatedAt": "2026-11-28T01:30:30.579185+08:00",
+    "tradingDate": "2026-11-28",
     "mode": "fast-snapshot",
     "sourceHealth": [
       {
@@ -20,18 +20,18 @@
       {
         "name": "10jqka",
         "ok": true,
-        "url": "https://stock.10jqka.com.cn/",
-        "note": "Optional news source OK"
+        "url": "https://www.10jqka.com.cn/",
+        "note": "Optional news/reference source"
       },
       {
         "name": "Yicai",
         "ok": true,
-        "url": "https://www.yicai.com/news/",
-        "note": "Optional news source OK"
+        "url": "https://www.yicai.com/",
+        "note": "Optional news/reference source"
       }
     ],
     "errors": [],
-    "runtimeSeconds": 22.09
+    "runtimeSeconds": 17.72
   },
   "market": {
     "recommendationCount": 1,
@@ -195,7 +195,7 @@
       "price": 3653.91,
       "pct": 14.76,
       "amount": 42017777813.0,
-      "turnover": 5.54,
+      "turnover": 5.25,
       "open": 3203.96,
       "preClose": 3183.84,
       "mainNet": 3588157184.0,
@@ -395,33 +395,51 @@
   ],
   "news": [
     {
-      "source": "Yicai",
-      "title": "公告臻选｜捕捉每日公告中的“黄金机会”告别信息过载，把握市场先机，捕捉每天公告中的“黄金机会”。  2025-11-03 14:49",
-      "url": "https://www.yicai.com/topic/102892546/",
+      "source": "Eastmoney News",
+      "title": "如何理解国常会对资本市场的最新定调？专家解读来了",
+      "url": "https://finance.eastmoney.com/a/202611273941634358.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "连板股追踪丨A股今日共439只个股涨停 这只机器人股6连板医药股天圣制药4连板，算力概念股全筑股份4连板。一图速览今日连板股&gt;&gt;  2小时前",
-      "url": "https://www.yicai.com/news/103457874.html",
+      "source": "Eastmoney News",
+      "title": "创业板指涨11.61% 科创50指数涨15.07% 超400只股涨停",
+      "url": "https://finance.eastmoney.com/a/202611273941649592.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "收盘｜沪指涨3.73% 存储芯片板块大涨全市场超5300只个股上涨，超400只个股涨停。  2小时前",
-      "url": "https://www.yicai.com/news/103457764.html",
+      "source": "Eastmoney News",
+      "title": "新华社：国常会关于资本市场部署释放五大鲜明信号",
+      "url": "https://finance.eastmoney.com/a/202611273941653520.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "如何理解国常会对资本市场的最新定调？专家解读来了“稳市不再是单一部门的战术操作，而是跨部门协同的宏观逆周期调节核心。”  4小时前",
-      "url": "https://www.yicai.com/news/103457477.html",
+      "source": "Eastmoney News",
+      "title": "监管部门将全力维护资本市场平稳运行",
+      "url": "https://finance.eastmoney.com/a/202611273941582334.html",
       "time": ""
     },
     {
-      "source": "Yicai",
-      "title": "月内两提资本市场，国常会定调“资本市场事关经济发展大局”提振信心国常会重磅信息密集发布，A股市场再迎来明确呵护信号。  4小时前",
-      "url": "https://www.yicai.com/news/103457371.html",
+      "source": "Eastmoney News",
+      "title": "国常会一个月内两提资本市场史上首次 稳市内容涉及较多",
+      "url": "https://finance.eastmoney.com/a/202611273941587192.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "李强主持召开国务院常务会议 研究持续深化资本市场投融资综合改革工作",
+      "url": "https://finance.eastmoney.com/a/202611273941563415.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "中国银河证券杨超：稳市机制建设与制度改革协同推进",
+      "url": "https://finance.eastmoney.com/a/202611273942076197.html",
+      "time": ""
+    },
+    {
+      "source": "Eastmoney News",
+      "title": "广发证券郭磊：国常会新部署有助于市场形成“预期锚”“价值锚”“生态锚”“韧性锚”",
+      "url": "https://finance.eastmoney.com/a/202611273942068482.html",
       "time": ""
     }
   ]
